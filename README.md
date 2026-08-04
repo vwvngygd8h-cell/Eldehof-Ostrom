@@ -1,14 +1,12 @@
-# Eldehof Ostrom Auth Fix
+# Eldehof – Ostrom 404 Vertragsfix
 
-Ersetzt im bestehenden Cloudflare-Repository die bisherige `worker.js`.
+Der Verbindungstest prüft jetzt nur noch die OAuth-Anmeldung. Die Vertragsnummer wird beim Laden eines Monats verwendet.
 
-Verbesserungen:
+Empfohlene Cloudflare-Secrets:
 
-- entfernt versehentliche Leerzeichen an Client-ID und Client-Secret,
-- testet Ostrom bereits bei „Verbinden und testen“,
-- unterstützt zwei übliche OAuth-Übertragungsarten,
-- zeigt den sicheren Ostrom-Fehlertext und HTTP-Status an,
-- unterstützt `OSTROM_ENV=PRODUCTION` oder `SANDBOX`,
-- zeigt bei erfolgreichem Test die erkannte Vertrags-ID.
+- OSTROM_CLIENT_ID
+- OSTROM_CLIENT_SECRET
+- ELDEHOF_APP_KEY
+- OSTROM_CONTRACT_ID
 
-Standardmäßig ist `OSTROM_ENV=PRODUCTION` gesetzt.
+`OSTROM_CONTRACT_ID` ist deine Ostrom-Vertragsnummer. Sie verhindert den fehlerhaften automatischen Abruf der Vertragsliste.
