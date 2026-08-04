@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Eldehof">
+  <meta name="description" content="Datenschutzfreundliches Energie-Cockpit für den Eldehof.">
+  <title>Eldehof 3.1 – Ostrom</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <div class="brand"><span class="brand-icon">⌂</span><span>Eldehof</span></div>
+        <p id="headerSubtitle">Energie • Verbrauch • Kosten</p>
+      </div>
+      <button class="status-pill" id="privacyStatus" data-open-view="settingsView" aria-label="Datenschutzstatus öffnen">
+        <span class="status-dot"></span>
+        <span><strong>Lokal</strong><small>Datenschutz</small></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="view active" id="homeView">
+        <article class="hero-card">
+          <div class="hero-top">
+            <div>
+              <span class="eyebrow">AKTUELLER DATENMONAT</span>
+              <h1 id="heroMonth">Noch keine Daten</h1>
+            </div>
+            <button class="icon-button" id="editLatestBtn" aria-label="Aktuellen Monat bearbeiten">✎</button>
+          </div>
+          <div class="hero-value"><strong id="heroTotal">–</strong><span>kWh gesamt</span></div>
+          <div class="hero-meta">
+            <span id="heroComparison">Vergleich wird berechnet</span>
+            <span id="heroCost">Kosten –</span>
+          </div>
+          <div class="hero-progress"><span id="heroProgress"></span></div>
+          <div class="hero-progress-labels"><small>Jahresverlauf</small><small id="yearProgressText">–</small></div>
+        </article>
+
+        <div class="kpi-grid" id="kpiGrid"></div>
+
+        <article class="insight-card">
+          <div class="insight-symbol">✦</div>
+          <div><span class="eyebrow">ELDEHOF-HINWEIS</span><strong id="insightTitle">Bereit für deine Daten</strong><p id="insightText">Importiere dein privates Backup oder füge einen Monat hinzu.</p></div>
+        </article>
+
+        <section class="panel ostrom-live-panel">
+          <div class="panel-head">
+            <div><span class="eyebrow">OSTROM LIVE</span><h2>SimplyDynamic</h2></div>
+            <button class="secondary compact" id="refreshOstromBtn">Aktualisieren</button>
+          </div>
+          <div id="ostromDisconnected" class="ostrom-empty">
+            Unter „Mehr“ den persönlichen Eldehof-App-Schlüssel eintragen.
+          </div>
+          <div id="ostromLiveContent" class="hidden">
+            <div class="ostrom-kpis" id="ostromKpis"></div>
+            <div class="chart-wrap ostrom-chart"><canvas id="ostromPriceChart"></canvas></div>
+            <div class="ostrom-month-box">
+              <label>Abrechnungsmonat
+                <input id="ostromMonthSelect" type="month">
+              </label>
+              <button class="secondary" id="loadOstromMonthBtn">Monat laden</button>
+            </div>
+            <div id="ostromMonthSummary" class="ostrom-summary"></div>
+            <button class="primary hidden" id="applyOstromMonthBtn">In Monatswerte übernehmen</button>
+          </div>
+        </section>
+
+        <section class="panel chart-panel">
+          <div class="panel-head">
+            <div><span class="eyebrow">12-MONATS-TREND</span><h2>Gesamtverbrauch</h2></div>
+            <span class="trend-badge" id="trendBadge">–</span>
+          </div>
+          <div class="chart-wrap home-chart"><canvas id="homeChart"></canvas></div>
+        </section>
+
+        <section class="panel annual-panel">
+          <div class="panel-head"><div><span class="eyebrow">JAHRESBLICK</span><h2 id="annualTitle">Aktuelles Jahr</h2></div></div>
+          <div class="annual-grid" id="annualGrid"></div>
+        </section>
+      </section>
+
+      <section class="view" id="analyticsView">
+        <div class="section-heading">
+          <div><span class="eyebrow">ANALYSE</span><h1>Verbrauch verstehen</h1></div>
+          <select id="periodSelect" aria-label="Zeitraum auswählen">
+            <option value="12">12 Monate</option>
+            <option value="24">24 Monate</option>
+            <option value="all">Gesamt</option>
+          </select>
+        </div>
+
+        <section class="panel chart-panel">
+          <div class="panel-head"><div><span class="eyebrow">VERLAUF</span><h2>Alle Bereiche</h2></div></div>
+          <div class="chart-wrap tall"><canvas id="lineChart"></canvas></div>
+          <div class="legend" id="lineLegend"></div>
+        </section>
+
+        <section class="panel chart-panel">
+          <div class="panel-head"><div><span class="eyebrow">ZUSAMMENSETZUNG</span><h2>Monatliche Anteile</h2></div></div>
+          <div class="chart-wrap tall"><canvas id="stackedChart"></canvas></div>
+          <div class="legend" id="stackLegend"></div>
+        </section>
+
+        <section class="panel chart-panel">
+          <div class="panel-head"><div><span class="eyebrow">JAHRESVERGLEICH</span><h2>Gesamtverbrauch</h2></div></div>
+          <div class="chart-wrap"><canvas id="yearChart"></canvas></div>
+        </section>
+
+        <section class="panel chart-panel">
+          <div class="panel-head">
+            <div><span class="eyebrow">ANTEILE</span><h2>Verteilung im Jahr</h2></div>
+            <select id="shareYear" aria-label="Jahr auswählen"></select>
+          </div>
+          <div class="donut-layout">
+            <div class="chart-wrap donut"><canvas id="donutChart"></canvas></div>
+            <div class="share-list" id="shareList"></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" id="dataView">
+        <div class="section-heading">
+          <div><span class="eyebrow">DATEN</span><h1>Monatswerte</h1></div>
+          <button class="primary compact" id="addMonthTop">＋ Monat</button>
+        </div>
+
+        <section class="data-toolbar panel">
+          <select id="dataYearFilter" aria-label="Jahr filtern"><option value="all">Alle Jahre</option></select>
+          <button class="secondary" id="exportCsvBtn">CSV</button>
+          <button class="secondary" id="exportBackupBtn">Backup</button>
+          <label class="secondary file-button">Import<input type="file" id="importBackupInput" accept="application/json"></label>
+        </section>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section class="view" id="settingsView">
+        <div class="section-heading"><div><span class="eyebrow">EINSTELLUNGEN</span><h1>Eldehof verwalten</h1></div></div>
+
+        <section class="panel settings-panel ostrom-settings-panel">
+          <span class="eyebrow">OSTROM-VERBINDUNG</span>
+          <h2>Sichere Cloudflare-Anbindung</h2>
+          <p class="helper">Client-ID und Client-Secret bleiben verschlüsselt in Cloudflare. In Eldehof wird nur dein selbst gewählter App-Schlüssel gespeichert.</p>
+          <label for="ostromAppKeyInput">Eldehof-App-Schlüssel</label>
+          <input id="ostromAppKeyInput" type="password" autocomplete="off" placeholder="Derselbe Wert wie ELDEHOF_APP_KEY">
+          <div class="settings-actions">
+            <button class="primary" id="connectOstromBtn">Verbinden und testen</button>
+            <button class="secondary" id="disconnectOstromBtn">Verbindung entfernen</button>
+          </div>
+          <p id="ostromConnectionStatus" class="connection-status">Noch nicht verbunden.</p>
+        </section>
+
+        <section class="panel settings-panel">
+          <span class="eyebrow">DYNAMISCHER TARIF</span>
+          <h2>Ostrom-Kosten</h2>
+          <p class="helper">Für exakte Monatskosten kannst du beim Monatswert den verbrauchsgewichteten Durchschnittspreis aus deiner Ostrom-Abrechnung und die monatlichen Fixkosten eintragen.</p>
+          <label for="fallbackPrice">Fallback-Arbeitspreis in €/kWh</label>
+          <input id="fallbackPrice" type="number" min="0" step="0.001" inputmode="decimal">
+          <label for="defaultBaseFee">Standard-Fixkosten pro Monat in €</label>
+          <input id="defaultBaseFee" type="number" min="0" step="0.01" inputmode="decimal">
+          <button class="primary" id="saveSettingsBtn">Einstellungen speichern</button>
+        </section>
+
+        <section class="panel settings-panel privacy-panel">
+          <span class="eyebrow">DATENSCHUTZ</span>
+          <h2>Deine Werte bleiben privat</h2>
+          <p class="helper">Die öffentliche GitHub-App enthält keine Verbrauchsdaten. Importierte und neu eingegebene Werte werden ausschließlich im lokalen Safari-Speicher dieses Geräts abgelegt.</p>
+          <p class="warning-text">Private Backups niemals in das öffentliche GitHub-Repository hochladen.</p>
+        </section>
+
+        <section class="panel settings-panel">
+          <span class="eyebrow">SICHERUNG</span>
+          <h2>Backup & Export</h2>
+          <div class="settings-actions">
+            <button class="secondary" id="settingsBackupBtn">Backup exportieren</button>
+            <label class="secondary file-button">Backup importieren<input type="file" id="settingsImportInput" accept="application/json"></label>
+            <button class="secondary" id="settingsCsvBtn">CSV exportieren</button>
+          </div>
+        </section>
+
+        <section class="panel settings-panel">
+          <span class="eyebrow">INSTALLATION</span>
+          <h2>Als iPhone-App nutzen</h2>
+          <ol class="instructions"><li>Diese Seite in Safari öffnen.</li><li>Auf „Teilen“ tippen.</li><li>„Zum Home-Bildschirm“ auswählen.</li></ol>
+        </section>
+
+        <section class="panel settings-panel danger-zone">
+          <span class="eyebrow">GEFAHRENBEREICH</span>
+          <h2>Lokale Daten löschen</h2>
+          <p class="helper">Vorher unbedingt ein Backup exportieren.</p>
+          <button class="danger" id="resetAppBtn">Eldehof zurücksetzen</button>
+        </section>
+
+        <p class="version-label">Eldehof 3.1 • Ostrom & lokale PWA</p>
+      </section>
+    </main>
+
+    <button class="fab" id="addMonthFab" aria-label="Monat hinzufügen">＋</button>
+
+    <nav class="bottom-nav" aria-label="Hauptnavigation">
+      <button class="active" data-view="homeView"><span>⌂</span><small>Übersicht</small></button>
+      <button data-view="analyticsView"><span>⌁</span><small>Analyse</small></button>
+      <button data-view="dataView"><span>▤</span><small>Daten</small></button>
+      <button data-view="settingsView"><span>⚙</span><small>Mehr</small></button>
+    </nav>
+  </div>
+
+  <dialog id="entryDialog">
+    <form method="dialog" id="entryForm">
+      <div class="dialog-head">
+        <div><span class="eyebrow">MONATSWERT</span><h2 id="dialogTitle">Monat hinzufügen</h2></div>
+        <button type="button" class="icon-button" id="closeDialog">×</button>
+      </div>
+      <input type="hidden" id="originalMonth">
+      <label>Monat<input id="monthInput" type="month" required></label>
+      <div class="form-grid">
+        <label>Wärmepumpe (kWh)<input id="heatPumpInput" type="number" min="0" step="1" inputmode="numeric"></label>
+        <label>Altenteil (kWh)<input id="annexInput" type="number" min="0" step="1" inputmode="numeric"></label>
+      </div>
+      <label>Gesamtverbrauch (kWh)<input id="totalInput" type="number" min="0" step="1" inputmode="numeric"></label>
+      <div class="calculated-row"><span>Schlee/Klus automatisch</span><strong id="calculatedValue">–</strong></div>
+      <div class="form-grid">
+        <label>Ø Ostrom-Preis (ct/kWh)<input id="priceCtInput" type="number" min="-100" step="0.001" inputmode="decimal" placeholder="optional"></label>
+        <label>Fixkosten (€)<input id="baseFeeInput" type="number" min="0" step="0.01" inputmode="decimal" placeholder="optional"></label>
+      </div>
+      <label>Notiz<textarea id="noteInput" rows="3" placeholder="z. B. kalter Monat, Urlaub, Heizkurve geändert"></textarea></label>
+      <p class="form-error" id="formError"></p>
+      <button type="submit" class="primary">Speichern</button>
+      <button type="button" class="danger hidden" id="deleteEntryBtn">Monat löschen</button>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

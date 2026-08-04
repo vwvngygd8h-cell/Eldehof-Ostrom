@@ -1,0 +1,1 @@
+Diese Dateien dürfen in ein öffentliches GitHub-Repository hochgeladen werden. Sie enthalten keine persönlichen Monatswerte und keine Ostrom-Secrets.
