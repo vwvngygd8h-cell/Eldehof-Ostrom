@@ -1,24 +1,14 @@
-# Eldehof – Cloudflare Build Fix
+# Eldehof Ostrom Auth Fix
 
-Dieser Fix passt zum bereits eingerichteten Cloudflare **Workers Build** mit dem Deploy-Befehl:
+Ersetzt im bestehenden Cloudflare-Repository die bisherige `worker.js`.
 
-`npx wrangler deploy`
+Verbesserungen:
 
-## Enthalten
+- entfernt versehentliche Leerzeichen an Client-ID und Client-Secret,
+- testet Ostrom bereits bei „Verbinden und testen“,
+- unterstützt zwei übliche OAuth-Übertragungsarten,
+- zeigt den sicheren Ostrom-Fehlertext und HTTP-Status an,
+- unterstützt `OSTROM_ENV=PRODUCTION` oder `SANDBOX`,
+- zeigt bei erfolgreichem Test die erkannte Vertrags-ID.
 
-- `worker.js`: Ostrom-Backend und vollständige Eldehof-App in einer sicheren Worker-Datei
-- `wrangler.jsonc`: eindeutige Deployment-Konfiguration
-
-Es gibt absichtlich kein `assets`-Verzeichnis und keine `_worker.js`-Assetdatei. Damit kann Wrangler den Servercode nicht versehentlich als öffentliche statische Datei hochladen.
-
-## Cloudflare
-
-- Build command: leer
-- Deploy command: `npx wrangler deploy`
-- Root directory: leer beziehungsweise Repository-Wurzel
-- Secrets bleiben im Cloudflare-Dashboard:
-  - `OSTROM_CLIENT_ID`
-  - `OSTROM_CLIENT_SECRET`
-  - `ELDEHOF_APP_KEY`
-
-`OSTROM_ZIP_CODE=19306` ist bereits in `wrangler.jsonc` enthalten.
+Standardmäßig ist `OSTROM_ENV=PRODUCTION` gesetzt.
