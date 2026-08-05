@@ -1,13 +1,12 @@
-# Eldehof 3.6.2 – Abbruch- und Gesamtzeit-Fix
+# Eldehof 3.6.3 – Harter Timeout
 
-Behebt den wirkungslosen Abbrechen-Button und endlos wirkende Analysen.
+Diese Version beseitigt das endlose Warten auf zwei Ebenen:
 
-- Der Abbruch beendet die Oberfläche sofort.
-- Eine verspätete Serverantwort wird verworfen.
-- 30 Tage haben serverseitig etwa 65 Sekunden Gesamtzeit.
-- Einzelne History-Abrufe haben höchstens 16 Sekunden und keinen Retry.
-- Vorhandene Teildaten werden ausgewertet statt verworfen.
-
-Aktive Version:
-
-`3.6.2-ABBRUCH-GESAMTZEIT-20260805`
+- Jeder Ostrom-Subrequest wird mit `Promise.race` hart begrenzt.
+  Der Worker kehrt zurück, auch wenn `AbortController.abort()` den
+  eigentlichen Netzwerkabruf nicht sofort beendet.
+- Der sichtbare Sekundenzähler beendet die App-Analyse selbstständig.
+  Für 30 Tage geschieht das spätestens nach 60 Sekunden.
+- Der Abbrechen-Button besitzt zusätzlich einen direkten Aufruf.
+- Im Analysebereich steht sichtbar `App 3.6.3`, damit Frontend und
+  Worker getrennt geprüft werden können.

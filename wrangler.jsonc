@@ -10,9 +10,9 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.6.2-ABBRUCH-GESAMTZEIT-20260805",
-    "ELDEHOF_HISTORY_MODE": "total-deadline-partial",
-    "ELDEHOF_CANCEL_MODE": "instant-client-race"
+    "ELDEHOF_BUILD_ID": "3.6.3-HARTER-TIMEOUT-20260805",
+    "ELDEHOF_HISTORY_MODE": "hard-promise-race-timeout",
+    "ELDEHOF_CANCEL_MODE": "interval-hard-stop"
   },
   "observability": {
     "enabled": true
