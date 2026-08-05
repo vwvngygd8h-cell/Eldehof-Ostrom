@@ -8,7 +8,8 @@
   "keep_vars": true,
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
-    "OSTROM_ENV": "PRODUCTION"
+    "OSTROM_ENV": "PRODUCTION",
+    "ELDEHOF_AUTH_FIX": "BASIC_ONLY_2026_08_05"
   },
   "observability": {
     "enabled": true

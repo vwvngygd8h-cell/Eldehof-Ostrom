@@ -115,48 +115,67 @@ function requireKey(request, env) {
 async function getToken(env, forceRefresh = false) {
   const clientId = clean(env.OSTROM_CLIENT_ID);
   const clientSecret = clean(env.OSTROM_CLIENT_SECRET);
-  if (!clientId || !clientSecret) throw httpError(500, "Ostrom-Secrets fehlen.");
+  if (!clientId || !clientSecret) {
+    throw httpError(500, "Ostrom-Secrets fehlen.");
+  }
 
   if (!forceRefresh && tokenCache.value && tokenCache.expiresAt > Date.now() + 60000) {
     return tokenCache.value;
   }
 
   const endpoints = ostromEndpoints(env);
-  const attempts = [
-    {
-      label: "HTTP Basic",
-      headers: {
-        "authorization": `Basic ${btoa(`${clientId}:${clientSecret}`)}`,
-        "content-type": "application/x-www-form-urlencoded",
-        "accept": "application/json"
-      },
-      body: "grant_type=client_credentials"
-    },
-    {
-      label: "Formular",
-      headers: {
-        "content-type": "application/x-www-form-urlencoded",
-        "accept": "application/json"
-      },
-      body: new URLSearchParams({
-        grant_type: "client_credentials",
-        client_id: clientId,
-        client_secret: clientSecret
-      }).toString()
-    }
-  ];
+  const authorization = `Basic ${base64Utf8(`${clientId}:${clientSecret}`)}`;
+  const body = "grant_type=client_credentials";
+  let target = endpoints.auth;
 
-  let lastFailure = null;
-  for (const attempt of attempts) {
-    const response = await fetch(endpoints.auth, {
+  // Manuell folgen, damit der Authorization-Header bei einer Weiterleitung
+  // nicht unbemerkt verloren geht.
+  for (let redirectCount = 0; redirectCount <= 3; redirectCount++) {
+    const response = await fetch(target, {
       method: "POST",
-      headers: attempt.headers,
-      body: attempt.body
+      headers: {
+        "Authorization": authorization,
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json"
+      },
+      body,
+      redirect: "manual"
     });
+
+    if ([301, 302, 303, 307, 308].includes(response.status)) {
+      const location = response.headers.get("location");
+      if (!location) {
+        throw httpError(
+          502,
+          `Ostrom-Authentifizierung antwortet mit Weiterleitung ${response.status}, aber ohne Zieladresse.`
+        );
+      }
+
+      const next = new URL(location, target);
+      if (
+        next.protocol !== "https:" ||
+        !(
+          next.hostname === "auth.production.ostrom-api.io" ||
+          next.hostname === "auth.sandbox.ostrom-api.io"
+        )
+      ) {
+        throw httpError(
+          502,
+          `Ostrom-Authentifizierung leitet unerwartet zu ${next.hostname} weiter. Zugangsdaten wurden aus Sicherheitsgründen nicht weitergesendet.`
+        );
+      }
+
+      target = next.toString();
+      continue;
+    }
 
     const raw = await response.text();
     let payload = {};
-    try { payload = raw ? JSON.parse(raw) : {}; } catch {}
+    try {
+      payload = raw ? JSON.parse(raw) : {};
+    } catch {
+      payload = {};
+    }
 
     if (response.ok && payload.access_token) {
       tokenCache = {
@@ -166,29 +185,32 @@ async function getToken(env, forceRefresh = false) {
       return tokenCache.value;
     }
 
-    lastFailure = {
-      status: response.status,
-      error: safeText(payload.error),
-      description: safeText(payload.error_description || payload.message),
-      method: attempt.label,
-      mode: endpoints.mode
-    };
+    const errorName = safeText(payload.error);
+    const description = safeText(payload.error_description || payload.message);
+    const authChallenge = safeText(response.headers.get("www-authenticate") || "");
+    const details = [
+      `Ostrom-Anmeldung fehlgeschlagen (${response.status})`,
+      errorName,
+      description,
+      authChallenge ? `Serverhinweis: ${authChallenge}` : "",
+      `Methode: HTTP Basic`,
+      `Umgebung: ${endpoints.mode}`
+    ].filter(Boolean).join(" • ");
 
-    // Retry the alternative credential transport only for auth-related failures.
-    if (![400, 401, 403].includes(response.status)) break;
+    throw httpError(
+      response.status || 502,
+      `${details}. Prüfe den Production-Client und kopiere Client-ID sowie Client-Secret ohne Bezeichnungen oder Anführungszeichen neu in die Cloudflare-Secrets.`
+    );
   }
 
-  const detail = [
-    `Ostrom-Anmeldung fehlgeschlagen (${lastFailure?.status || "unbekannt"})`,
-    lastFailure?.error,
-    lastFailure?.description,
-    `Umgebung: ${lastFailure?.mode || "PRODUCTION"}`
-  ].filter(Boolean).join(" • ");
+  throw httpError(502, "Zu viele Weiterleitungen bei der Ostrom-Authentifizierung.");
+}
 
-  throw httpError(
-    lastFailure?.status || 502,
-    `${detail}. Prüfe Client-ID/Secret und ob der API-Client für dieselbe Umgebung erstellt wurde.`
-  );
+function base64Utf8(value) {
+  const bytes = new TextEncoder().encode(value);
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary);
 }
 
 async function getContractId(env, token) {
