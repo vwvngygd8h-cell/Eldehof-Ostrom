@@ -1,0 +1,17 @@
+ELDEHOF 3.9.1 – TESTCHECKLISTE
+
+□ App zeigt 3.9.1
+□ Analyse zeigt „Energie-Coach & Monatsbericht“
+□ Juli 2026 zeigt Gesamt, Wärmepumpe, Altenteil und übriges Haus
+□ Arbeitszahl und Warmwasseranteil werden angezeigt
+□ Coach-Aussagen tragen eine Vertrauensstufe
+□ Datenqualität zeigt vorhandene und fehlende Quellen
+□ Vorjahresvergleich erscheint bei vorhandenen Vergleichsdaten
+□ Bericht lässt sich lokal archivieren
+□ Archivstatus erkennt spätere Datenänderungen
+□ PDF-/Druckansicht öffnet einen ausführlichen Bericht
+□ Bericht-CSV enthält Kennzahlen und Coach-Aussagen
+□ Monatsabschluss archiviert den Bericht automatisch
+□ Privates Backup enthält energyCoachReports
+□ Backup-Import stellt das Berichtsarchiv wieder her
+□ Zurücksetzen löscht auch das lokale Berichtsarchiv

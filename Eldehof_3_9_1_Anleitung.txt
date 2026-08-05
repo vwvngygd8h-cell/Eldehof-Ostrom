@@ -1,0 +1,53 @@
+ELDEHOF 3.9.1 – ENERGIE-COACH & MONATSBERICHT
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=391
+
+ERWARTET
+version: 3.9.1-ENERGIE-COACH-MONATSBERICHT-20260806
+energyCoach: monthly-rules-confidence-actions
+coachReport: measured-inferred-estimated-separated
+coachArchive: local-versioned-month-snapshots
+coachExports: csv-print-pdf
+coachAutoArchive: on-month-close
+frontendBuildExpected: 3.9.1-ENERGIE-COACH-MONATSBERICHT-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.9.1&cache=energie-coach-neu
+
+Im Analysebereich muss „App 3.9.1“ stehen.
+
+VERWENDUNG
+1. Analyse öffnen.
+2. Im Bereich „Energie-Coach & Monatsbericht“ einen Monat auswählen.
+3. Zusammenfassung, Vergleiche und Coach-Aussagen prüfen.
+4. „Bericht archivieren“ speichert eine lokale Momentaufnahme.
+5. „PDF / Drucken“ öffnet den druckfreundlichen Bericht.
+6. „Bericht-CSV“ exportiert alle Kennzahlen und Aussagen.
+
+AUTOMATISCHES ARCHIV
+Wird ein Monat im Monatseditor oder im Monatsassistenten abgeschlossen,
+archiviert Eldehof den Bericht automatisch. Werden Monatsdaten später
+geändert, kennzeichnet Eldehof die frühere Archivfassung als veraltet.
+
+VERTRAUENSSTUFEN
+Hohe Sicherheit:
+abgeschlossene Kernwerte und gemessene Vaillant-Daten.
+
+Mittlere Sicherheit:
+rechnerische Monats-, Vorjahres- oder Wettervergleiche.
+
+Schätzung:
+Geräteprofile und Lastplaner-Ersparnisse ohne Einzelmessung.
+
+DATENSCHUTZ
+Das Archiv bleibt lokal im Browser, enthält keine Vaillant-Rohzeilen,
+Dateinamen oder Seriennummern und wird nur im privaten Backup exportiert.

@@ -1,28 +1,28 @@
-# Eldehof 3.9 – Wärmepumpen- & Wetteranalyse
+# Eldehof 3.9.1 – Energie-Coach & Monatsbericht
 
-Diese Version erweitert den lokalen myVAILLANT-Import um dauerhaft gespeicherte Monatsaggregate aus den Temperatur- und Systemexporten.
+Der Energie-Coach verbindet pro Monat:
 
-Gespeichert werden ausschließlich Monatswerte:
+- Ostrom-Gesamtverbrauch, Preis und Kosten
+- Vaillant-Strom, erzeugte Wärme und Arbeitszahlen
+- Altenteil und übriges Haus
+- Vorjahres- und Vormonatsvergleich
+- wetterähnlichen Heizstromvergleich
+- protokollierte Lastplaner-Nutzungen
 
-- Außentemperatur: Mittelwert, Minimum, Maximum und Anzahl Messpunkte
-- Raumtemperatur: Mittelwert, Minimum und Maximum
-- Raum-Solltemperatur und manueller Sollwert: Monatsmittel
-- Warmwasserspeicher: Mittelwert, Minimum und Maximum
+Jede Aussage erhält eine Vertrauensstufe:
 
-Rohzeilen, Dateinamen, Kommentarzeilen und Seriennummern werden nicht gespeichert.
+- Hohe Sicherheit: direkt gemessene und abgeschlossene Monatsdaten
+- Mittlere Sicherheit: abgeleitete Vergleiche
+- Schätzung: Geräteprofile und Lastplaner-Modellwerte
 
-Die Analyse zeigt:
+Berichte können als CSV oder über Safari als PDF/Druckansicht exportiert
+werden. Beim Monatsabschluss wird automatisch eine lokale Momentaufnahme
+archiviert. Änderungen an später importierten Daten machen die
+Archivfassung sichtbar als veraltet.
 
-- Wärmepumpenstrom und erzeugte Wärme
-- gewichtete Gesamtarbeitszahl
-- getrennte Arbeitszahlen für Raumheizung und Warmwasser
-- Warmwasseranteil am Wärmepumpenstrom
-- Umweltwärme im Analyse-CSV
-- Vergleich zum Vorjahresmonat
-- wetterbewussten Vergleich bei ähnlicher Außentemperatur
-- statistischen Zusammenhang zwischen Außentemperatur und Heizstrom
-- beste und schwächste Monatsarbeitszahl
+Das Archiv enthält keine Rohdaten, Dateinamen oder Seriennummern und wird
+im privaten Eldehof-Backup mitgesichert.
 
 Aktive Version:
 
-`3.9-WAERMEPUMPEN-WETTERANALYSE-20260806`
+`3.9.1-ENERGIE-COACH-MONATSBERICHT-20260806`
