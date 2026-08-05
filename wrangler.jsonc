@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.8-WAERMEPUMPEN-AUTOMATIK-20260805",
+    "ELDEHOF_BUILD_ID": "3.8.1-MONATSASSISTENT-20260805",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -24,7 +24,10 @@
     "ELDEHOF_HEATPUMP_AUTOMATION": "ostrom-minus-vaillant-minus-annex",
     "ELDEHOF_VAILLANT_ADAPTER": "normalized-read-only-bridge",
     "ELDEHOF_VAILLANT_SCHEMA": "eldehof-vaillant-month-v1",
-    "ELDEHOF_VAILLANT_API_STATE": "awaiting-official-access"
+    "ELDEHOF_VAILLANT_API_STATE": "awaiting-official-access",
+    "ELDEHOF_MONTHLY_ASSISTANT": "four-step-guided-month-close",
+    "ELDEHOF_ASSISTANT_PREFILL": "existing-vaillant-previous-annex",
+    "ELDEHOF_ASSISTANT_PLAUSIBILITY": "source-sums-efficiency-period-comparison"
   },
   "observability": {
     "enabled": true

@@ -1,0 +1,52 @@
+ELDEHOF 3.8.1 – MONATSASSISTENT & PLAUSIBILITÄT
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+WORKER PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=381
+
+ERWARTET
+version: 3.8.1-MONATSASSISTENT-20260805
+monthlyAssistant: four-step-guided-month-close
+assistantPrefill: existing-vaillant-previous-annex
+assistantPlausibility: source-sums-efficiency-period-comparison
+assistantDraftStorage: local-only
+frontendBuildExpected: 3.8.1-MONATSASSISTENT-20260805
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.8.1&cache=monatsassistent-neu
+
+Im Analysebereich muss „App 3.8.1“ stehen.
+
+MONATSASSISTENT VERWENDEN
+1. Daten öffnen.
+2. „Monatsassistent starten“ antippen.
+3. Schritt 1:
+   vorgeschlagenen Monat prüfen; Ostrom wird beim Weitergehen geladen.
+4. Schritt 2:
+   Wärmepumpenstrom und erzeugte Wärmemenge aus myVAILLANT prüfen.
+   Bereits gespeicherte Werte sind vorbelegt.
+5. Schritt 3:
+   Altenteil prüfen. Der Vormonatswert wird als Vorschlag angezeigt.
+6. Schritt 4:
+   Restverbrauch, Kosten, Arbeitszahl, Vergleiche und Hinweise prüfen.
+7. Monat speichern oder direkt abschließen.
+
+PLAUSIBILITÄT
+Rote Fehler verhindern das Speichern.
+Gelbe Hinweise erlauben das Speichern, sollten aber geprüft werden.
+Grüne Prüfung bedeutet, dass alle verfügbaren Kontrollen plausibel sind.
+
+ENTWURF
+Wird der Assistent geschlossen, bleibt der aktuelle Schritt lokal
+gespeichert. Es werden keine Entwurfsdaten an einen zusätzlichen Dienst
+übertragen.
+
+Die vorhandenen Ostrom- und optionalen Vaillant-Adapter-Secrets bleiben
+unverändert.

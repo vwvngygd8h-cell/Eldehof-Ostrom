@@ -1,44 +1,35 @@
-# Eldehof 3.8 – Wärmepumpen-Automatik
+# Eldehof 3.8.1 – Monatsassistent & Plausibilitätsprüfung
 
-## Sofort nutzbar
+Der neue Monatsassistent führt in vier Schritten durch den Abschluss:
 
-- Vaillant-Monatswerte lokal aus der myVAILLANT-App erfassen
-- Wärmepumpenstrom und erzeugte Wärme speichern
-- Arbeitszahl automatisch berechnen
-- Heizung und Warmwasser optional getrennt erfassen
-- Monatswerte um Vaillant-Daten ergänzen
-- Schnellabschluss: nur noch Altenteil eingeben
-- Gesamt, Tarif und Fixkosten automatisch von Ostrom abrufen
-- Übriges Haus automatisch berechnen:
-  `Ostrom Gesamt - Vaillant Wärmepumpe - Altenteil`
-- Backup und CSV enthalten Wärmemenge, Arbeitszahl und Datenquelle
-- Warnung bei niedriger Wärmepumpen-Arbeitszahl
+1. Abrechnungsmonat wählen und Ostrom automatisch laden
+2. Wärmepumpenstrom und erzeugte Wärme aus myVAILLANT prüfen
+3. nur den Verbrauch des Altenteils bestätigen
+4. Ergebnis, Vormonatsvergleich und Plausibilität prüfen
 
-## Offizielle Live-Anbindung
+Automatische Vorbelegung:
 
-Der direkte produktive Vaillant-Zugriff wird erst nach Freigabe der
-offiziellen Energy Management API aktiviert. Eldehof enthält dafür einen
-sicheren, nur lesenden Adapter.
+- zuletzt abgeschlossener Kalendermonat
+- bestehender Ostrom-/Monatsdatensatz
+- bereits gespeicherte Vaillant-Werte
+- Altenteilwert des direkten Vormonats als sichtbarer Vorschlag
+- vorhandene Notiz und Abschlussstatus
 
-Cloudflare-Konfiguration nach Bereitstellung eines offiziellen Adapters:
+Geprüft werden:
 
-- Secret/Variable `VAILLANT_DATA_URL`
-  - HTTPS-URL
-  - `{month}` kann als Platzhalter verwendet werden
-- optionales Secret `VAILLANT_DATA_TOKEN`
+- alle Pflichtwerte
+- keine negativen Verbräuche
+- Ostrom Gesamt >= Wärmepumpe + Altenteil
+- Arbeitszahl auf auffällige Werte
+- Summe Heizung + Warmwasser gegen Vaillant-Gesamt
+- Vergleich mit dem Vormonat
+- Vergleich des Gesamtverbrauchs mit dem Vorjahresmonat
+- Ostrom-Arbeitspreis und Fixkosten
+- laufender oder zukünftiger Monat
 
-Erwartetes Antwortformat steht in `vaillant-month-schema.json`.
-
-Eldehof speichert:
-- kein Vaillant-Passwort im Browser
-- keine Seriennummer im Browser oder GitHub
-- keine Vaillant-API-Zugangsdaten im Frontend
-
-## API
-
-- `/api/vaillant/status`
-- `/api/vaillant/month?month=YYYY-MM`
+Der Entwurf wird ausschließlich lokal gespeichert und kann nach dem
+Schließen fortgesetzt werden.
 
 Aktive Version:
 
-`3.8-WAERMEPUMPEN-AUTOMATIK-20260805`
+`3.8.1-MONATSASSISTENT-20260805`

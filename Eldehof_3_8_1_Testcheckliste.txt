@@ -1,0 +1,15 @@
+ELDEHOF 3.8.1 – KURZE TESTCHECKLISTE
+
+□ App zeigt 3.8.1
+□ Daten → Monatsassistent ist sichtbar
+□ Vorgeschlagen wird der letzte abgeschlossene Kalendermonat
+□ Schritt 1 lädt Ostrom und springt zu Schritt 2
+□ Vorhandene Vaillant-Werte sind vorbelegt
+□ Arbeitszahl ändert sich sofort bei den beiden Vaillant-Werten
+□ Altenteilwert des Vormonats wird vorgeschlagen
+□ Negativer Restverbrauch erzeugt einen roten Fehler
+□ Abweichende Heizung-/Warmwasser-Summen erzeugen einen gelben Hinweis
+□ Schritt 4 zeigt Vormonatsvergleiche
+□ Nach Speichern steht der Monat in den Monatswerten
+□ Geschlossener vergangener Monat ist als abgeschlossen markiert
+□ Schließen und erneutes Öffnen setzt einen begonnenen Entwurf fort
