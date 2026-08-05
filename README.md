@@ -1,12 +1,22 @@
-# Eldehof 3.6.3 – Harter Timeout
+# Eldehof 3.6.4 – Abschnittsanalyse
 
-Diese Version beseitigt das endlose Warten auf zwei Ebenen:
+Die Langzeitanalyse wird nicht mehr in einem einzigen großen
+Cloudflare-/Ostrom-Aufruf berechnet.
 
-- Jeder Ostrom-Subrequest wird mit `Promise.race` hart begrenzt.
-  Der Worker kehrt zurück, auch wenn `AbortController.abort()` den
-  eigentlichen Netzwerkabruf nicht sofort beendet.
-- Der sichtbare Sekundenzähler beendet die App-Analyse selbstständig.
-  Für 30 Tage geschieht das spätestens nach 60 Sekunden.
-- Der Abbrechen-Button besitzt zusätzlich einen direkten Aufruf.
-- Im Analysebereich steht sichtbar `App 3.6.3`, damit Frontend und
-  Worker getrennt geprüft werden können.
+Stattdessen:
+
+- Der gewählte Zeitraum wird in feste 7-Tage-Abschnitte zerlegt.
+- Die App lädt einen Abschnitt nach dem anderen.
+- Fortschritt erscheint als `Abschnitt 2/5`.
+- Jeder erfolgreiche Abschnitt wird sofort lokal gespeichert.
+- Ein langsamer Abschnitt wird übersprungen; andere Ergebnisse bleiben.
+- Der Abbrechen-Button beendet den aktuellen Abschnitt und die Schleife.
+- 30 Tage benötigen ungefähr fünf kleine API-Aufrufe.
+
+Neue API:
+
+`/api/history-chunk?startDate=...&endDate=...`
+
+Aktive Version:
+
+`3.6.4-ABSCHNITTSANALYSE-20260805`
