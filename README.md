@@ -1,32 +1,44 @@
-# Eldehof 3.7 – Energie-Warnungen
+# Eldehof 3.8 – Wärmepumpen-Automatik
 
-Die neue Warnzentrale bewertet lokal auf dem iPhone:
+## Sofort nutzbar
 
-- ungewöhnlich hohen Tagesverbrauch
-- gestiegene Grundlast
-- verspätete Smart-Meter-Daten
-- drohende Überschreitung des Monatsbudgets
-- teure Stunden und günstige Verschiebefenster
-- unvollständige Mess- oder Preisdaten
+- Vaillant-Monatswerte lokal aus der myVAILLANT-App erfassen
+- Wärmepumpenstrom und erzeugte Wärme speichern
+- Arbeitszahl automatisch berechnen
+- Heizung und Warmwasser optional getrennt erfassen
+- Monatswerte um Vaillant-Daten ergänzen
+- Schnellabschluss: nur noch Altenteil eingeben
+- Gesamt, Tarif und Fixkosten automatisch von Ostrom abrufen
+- Übriges Haus automatisch berechnen:
+  `Ostrom Gesamt - Vaillant Wärmepumpe - Altenteil`
+- Backup und CSV enthalten Wärmemenge, Arbeitszahl und Datenquelle
+- Warnung bei niedriger Wärmepumpen-Arbeitszahl
 
-Funktionen:
+## Offizielle Live-Anbindung
 
-- Prioritäten: Dringend, Prüfen, Beobachten und Gelegenheit
-- Zähler an der Übersicht-Navigation
-- einzelne Hinweise bestätigen
-- alle aktuellen Hinweise bestätigen
-- ausgeblendete Hinweise zurücksetzen
-- frei einstellbare Warnschwellen unter „Mehr“
-- Warnungen werden bei neuen Ostrom- oder Analysedaten neu berechnet
-- Status wird nur lokal gespeichert
+Der direkte produktive Vaillant-Zugriff wird erst nach Freigabe der
+offiziellen Energy Management API aktiviert. Eldehof enthält dafür einen
+sicheren, nur lesenden Adapter.
 
-Datenschutz:
+Cloudflare-Konfiguration nach Bereitstellung eines offiziellen Adapters:
 
-- keine zusätzliche Cloud-Übertragung
-- keine Push-Abonnements
-- keine Weitergabe von Verbrauchsdaten
-- diese Version zeigt Warnungen nur innerhalb von Eldehof
+- Secret/Variable `VAILLANT_DATA_URL`
+  - HTTPS-URL
+  - `{month}` kann als Platzhalter verwendet werden
+- optionales Secret `VAILLANT_DATA_TOKEN`
+
+Erwartetes Antwortformat steht in `vaillant-month-schema.json`.
+
+Eldehof speichert:
+- kein Vaillant-Passwort im Browser
+- keine Seriennummer im Browser oder GitHub
+- keine Vaillant-API-Zugangsdaten im Frontend
+
+## API
+
+- `/api/vaillant/status`
+- `/api/vaillant/month?month=YYYY-MM`
 
 Aktive Version:
 
-`3.7-ENERGIE-WARNUNGEN-20260805`
+`3.8-WAERMEPUMPEN-AUTOMATIK-20260805`

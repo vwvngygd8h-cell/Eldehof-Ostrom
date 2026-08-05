@@ -1,0 +1,35 @@
+Betreff: Antrag auf Testzugang – Vaillant Energy Management API
+
+Guten Tag,
+
+ich möchte einen kostenlosen Testzugang zur Vaillant Energy Management API
+für ein privates, nicht kommerzielles Energie-Dashboard beantragen.
+
+Anwendungsfall:
+- ausschließlich lesender Zugriff auf die eigene Wärmepumpenanlage
+- monatlicher beziehungsweise täglicher elektrischer Energieverbrauch
+- erzeugte Wärmemenge
+- nach Möglichkeit getrennte Werte für Raumheizung und Warmwasser
+- Zusammenführung mit dem eigenen dynamischen Stromtarif und Smart Meter
+- keine Fernsteuerung der Anlage in der ersten Ausbaustufe
+
+Vorhandenes System:
+- Vaillant aroTHERM plus
+- uniTOWER plus
+- sensoCOMFORT VRC 720
+- sensoNET VR 921
+- Anlage ist in der myVAILLANT App verbunden
+- Verbrauch und erzeugte Wärmemenge werden in der App angezeigt
+
+Bitte stellen Sie mir Informationen zu folgenden Punkten bereit:
+- OAuth-/Autorisierungsablauf für die Zustimmung des Anlageninhabers
+- erforderliche Scopes für Verbrauchs- und Wärmeertragsdaten
+- Endpunkte und Datenmodell für Tag/Monat/Jahr
+- Rate Limits und empfohlene Abrufintervalle
+- Test-/Sandbox-Zugang
+- Bedingungen für einen privaten Prototypen
+
+Aus Sicherheitsgründen sende ich Seriennummern und Zugangsdaten erst über
+einen von Vaillant vorgesehenen geschützten Prozess.
+
+Vielen Dank und freundliche Grüße

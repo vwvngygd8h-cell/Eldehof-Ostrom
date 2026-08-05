@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.7-ENERGIE-WARNUNGEN-20260805",
+    "ELDEHOF_BUILD_ID": "3.8-WAERMEPUMPEN-AUTOMATIK-20260805",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -20,7 +20,11 @@
     "ELDEHOF_DATA_QUALITY": "meter-price-recency-completeness",
     "ELDEHOF_WARNINGS": "local-in-app-rule-engine",
     "ELDEHOF_WARNING_TYPES": "consumption-base-load-meter-budget-price-coverage",
-    "ELDEHOF_NOTIFICATIONS": "in-app-only"
+    "ELDEHOF_NOTIFICATIONS": "in-app-only",
+    "ELDEHOF_HEATPUMP_AUTOMATION": "ostrom-minus-vaillant-minus-annex",
+    "ELDEHOF_VAILLANT_ADAPTER": "normalized-read-only-bridge",
+    "ELDEHOF_VAILLANT_SCHEMA": "eldehof-vaillant-month-v1",
+    "ELDEHOF_VAILLANT_API_STATE": "awaiting-official-access"
   },
   "observability": {
     "enabled": true

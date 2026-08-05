@@ -1,0 +1,69 @@
+ELDEHOF 3.8 – WÄRMEPUMPEN-AUTOMATIK
+
+ZIEL
+Gesamtverbrauch von Ostrom
+minus Wärmepumpenstrom von Vaillant
+minus manuell gemeldetes Altenteil
+ergibt den automatisch berechneten übrigen Hausverbrauch.
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. In Cloudflare auf das grüne aktive Deployment warten.
+
+WORKER PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=38
+
+ERWARTET
+version: 3.8-WAERMEPUMPEN-AUTOMATIK-20260805
+heatPumpAutomation: ostrom-minus-vaillant-minus-annex
+vaillantAdapter: normalized-read-only-bridge
+vaillantCredentialsInBrowser: false
+officialApiAccessRequired: true
+frontendBuildExpected: 3.8-WAERMEPUMPEN-AUTOMATIK-20260805
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.8&cache=waermepumpe-neu
+
+Im Analysebereich muss „App 3.8“ stehen.
+
+SOFORTIGER TEST OHNE API-ZUGANG
+1. Übersicht → Wärmepumpen-Automatik.
+2. Monat auswählen.
+3. „App-Werte erfassen“ antippen.
+4. Aus myVAILLANT eintragen:
+   - Stromverbrauch der Wärmepumpe
+   - erzeugte Wärmemenge
+   - optional Heizung und Warmwasser getrennt
+5. Speichern.
+6. Daten → „Nur Altenteil melden“.
+7. Monat und Altenteil eintragen.
+8. „Nur Altenteil melden & Monat berechnen“ antippen.
+
+Eldehof lädt Gesamt, Preis und Fixkosten automatisch von Ostrom und
+verrechnet die gespeicherten Vaillant-Werte.
+
+OFFIZIELLER VAILLANT-LIVE-ABRUF
+Die genaue Vaillant-Authentifizierung und die produktiven Endpunkte sind
+erst nach Anmeldung im Vaillant Developer Programme zugänglich.
+
+Im ZIP liegt:
+- Vaillant_API_Testzugang_Antrag.txt
+- vaillant-month-schema.json
+
+Nach offizieller Freigabe werden die von Vaillant bereitgestellten
+Zugangsdaten ausschließlich als Cloudflare-Secrets eingerichtet.
+Keine Zugangsdaten in GitHub, Eldehof oder diesen Chat kopieren.
+
+OPTIONALER ADAPTER
+VAILLANT_DATA_URL:
+HTTPS-Endpunkt, der das Schema aus vaillant-month-schema.json liefert.
+Die URL darf den Platzhalter {month} enthalten.
+
+VAILLANT_DATA_TOKEN:
+optionales Bearer-Token als Cloudflare-Secret.
+
+Die vorhandenen Ostrom-Secrets bleiben unverändert.
