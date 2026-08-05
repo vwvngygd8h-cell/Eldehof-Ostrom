@@ -1,21 +1,19 @@
-# Eldehof 3.6.5 – Vorbereitungs-Fix
+# Eldehof 3.6.6 – Diagnose & Datenqualität
 
-Behoben wird der Zustand:
+Neue Funktionen:
 
-`Abschnitt 0/5 • Vorbereitung • 0 geladen`
+- Status für jeden 7-Tage-Abschnitt:
+  `Geladen`, `Gespeichert`, `Lädt`, `Fehlt`, `Wartet`
+- Fehlende Abschnitte gezielt nachladen
+- Messdaten-Abdeckung und Preisabdeckung getrennt anzeigen
+- Alter des jüngsten Smart-Meter-Wertes verständlich bewerten
+- Zeitpunkt der letzten vollständigen Analyse speichern
+- Diagnose als JSON exportieren
+- Der Diagnoseexport enthält keine App-Schlüssel, OAuth-Tokens oder
+  Client-Zugangsdaten
+- Bereits vorhandene 3.6.5-Analyse wird einmalig übernommen
+- Abschnittsstatus bleibt beim Wechsel zwischen Eldehof-Ansichten erhalten
 
-Ursache:
-Der Fortschritts-Renderer aktualisierte zunächst die Anzeige, lief danach
-aber weiter und griff auf `historyData.summary` zu. Nach einer zuvor
-fehlgeschlagenen Analyse war `historyData` leer. Der JavaScript-Fehler
-entstand vor Beginn der Abschnittsschleife; nur der Sekundenzähler blieb
-aktiv.
+Aktive Version:
 
-Änderungen:
-
-- Während einer laufenden Analyse beendet der Renderer seine Arbeit direkt
-  nach der Fortschrittsanzeige.
-- Die Anzeige startet unmittelbar mit `Abschnitt 1/5`.
-- Der alte, inkompatible Analyse-Ergebniscache wird nicht mehr geladen.
-- Zusätzliche Null-Prüfungen schützen die Diagramme.
-- Der Worker-Endpunkt der 7-Tage-Abschnittsanalyse bleibt unverändert.
+`3.6.6-DIAGNOSE-DATENQUALITAET-20260805`
