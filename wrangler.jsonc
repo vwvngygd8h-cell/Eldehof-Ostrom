@@ -9,7 +9,7 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_AUTH_FIX": "EXACT_REQUEST_DIAG_3_2_2"
+    "ELDEHOF_VERSION": "3.3.0"
   },
   "observability": {
     "enabled": true
