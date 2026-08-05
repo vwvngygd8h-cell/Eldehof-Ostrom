@@ -1,0 +1,22 @@
+ELDEHOF 3.9 – TESTCHECKLISTE
+
+□ App zeigt 3.9
+□ /api/version zeigt den Build 3.9
+□ myVAILLANT-Import erkennt 6 Energie- und 4 Zusatzdateien
+□ Vorschau zeigt 30 Energiemonate
+□ Vorschau zeigt 30 Klimamonate
+□ 28 Energiemonate sind vollständig
+□ Juli 2026 zeigt 128,216 kWh Strom
+□ Juli 2026 zeigt 467,106 kWh Wärme
+□ Juli 2026 zeigt 354,760 kWh Umweltwärme im Analyse-CSV
+□ Klimaimport speichert keine Rohzeilen oder Dateinamen
+□ Analyse zeigt Gesamt-, Heizungs- und Warmwasser-Arbeitszahl
+□ Jahresfilter funktioniert
+□ Energie-/Wärmediagramm wird angezeigt
+□ Arbeitszahldiagramm wird angezeigt
+□ Monatsvergleich zeigt vorhandene Temperaturwerte
+□ Leere Wettermonate bleiben leer und werden nicht geschätzt
+□ Analyse-CSV lässt sich laden
+□ Backup enthält vaillantClimateMonths
+□ Backup-Import stellt vaillantClimateMonths wieder her
+□ Safari speichert weiterhin Werte mit drei Nachkommastellen

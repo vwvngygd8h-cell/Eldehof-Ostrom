@@ -1,20 +1,28 @@
-# Eldehof 3.8.3.1 – CSV-Präzisions-Hotfix
+# Eldehof 3.9 – Wärmepumpen- & Wetteranalyse
 
-Der Hotfix behebt das Springen zum Feld „Erzeugte Wärme“, wenn ein
-importierter Monatswert erneut gespeichert wird.
+Diese Version erweitert den lokalen myVAILLANT-Import um dauerhaft gespeicherte Monatsaggregate aus den Temperatur- und Systemexporten.
 
-Ursache:
+Gespeichert werden ausschließlich Monatswerte:
 
-- myVAILLANT-CSV-Werte besitzen drei Nachkommastellen
-- das bisherige Monatsformular erlaubte nur 0,1- oder 1-kWh-Schritte
-- Safari blockierte den Submit vor Eldehofs eigener Validierung
+- Außentemperatur: Mittelwert, Minimum, Maximum und Anzahl Messpunkte
+- Raumtemperatur: Mittelwert, Minimum und Maximum
+- Raum-Solltemperatur und manueller Sollwert: Monatsmittel
+- Warmwasserspeicher: Mittelwert, Minimum und Maximum
 
-Korrektur:
+Rohzeilen, Dateinamen, Kommentarzeilen und Seriennummern werden nicht gespeichert.
 
-- relevante Energie- und Wärmefelder akzeptieren 0,001 kWh
-- Monats- und Vaillant-Formulare verwenden Eldehofs eigene Prüfung
-- CSV-Import, Ostrom-Daten und bestehende Monatswerte bleiben erhalten
+Die Analyse zeigt:
+
+- Wärmepumpenstrom und erzeugte Wärme
+- gewichtete Gesamtarbeitszahl
+- getrennte Arbeitszahlen für Raumheizung und Warmwasser
+- Warmwasseranteil am Wärmepumpenstrom
+- Umweltwärme im Analyse-CSV
+- Vergleich zum Vorjahresmonat
+- wetterbewussten Vergleich bei ähnlicher Außentemperatur
+- statistischen Zusammenhang zwischen Außentemperatur und Heizstrom
+- beste und schwächste Monatsarbeitszahl
 
 Aktive Version:
 
-`3.8.3.1-CSV-PRAEZISIONS-HOTFIX-20260806`
+`3.9-WAERMEPUMPEN-WETTERANALYSE-20260806`

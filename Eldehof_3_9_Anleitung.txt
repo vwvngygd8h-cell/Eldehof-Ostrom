@@ -1,0 +1,53 @@
+ELDEHOF 3.9 – WÄRMEPUMPEN- & WETTERANALYSE
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=390
+
+ERWARTET
+version: 3.9-WAERMEPUMPEN-WETTERANALYSE-20260806
+heatPumpAnalysis: monthly-energy-heat-cop-weather
+climateStorage: local-monthly-aggregates
+climateMetrics: outdoor-room-setpoint-dhw-tank
+heatPumpComparisons: year-over-year-weather-aware
+climatePrivacy: no-raw-rows-no-serials-browser-only
+frontendBuildExpected: 3.9-WAERMEPUMPEN-WETTERANALYSE-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.9&cache=waermepumpen-analyse-neu
+
+Im Analysebereich muss „App 3.9“ stehen.
+
+EINMALIGER KLIMAIMPORT
+1. Vorher ein Eldehof-Backup exportieren.
+2. Daten → myVAILLANT CSV öffnen.
+3. Die sechs Energieexporte und vier Temperatur-/Systemexporte gemeinsam auswählen.
+4. Vorschau prüfen.
+5. Energie- und Klimamonate übernehmen.
+6. Importbericht laden.
+
+Bestehende Ostrom-Werte, Altenteilwerte, Preise, Notizen und Abschlussstatus bleiben erhalten. Die Energieexporte werden erneut angeboten, wenn die Umweltwärme bisher noch nicht im Vaillant-Monatsspeicher vorhanden war.
+
+ANALYSE
+1. Unten „Analyse“ öffnen.
+2. Zum Bereich „Wärmepumpen- & Wetteranalyse“ gehen.
+3. Alle Jahre oder ein einzelnes Jahr auswählen.
+4. Diagramme, Arbeitszahlen, Hinweise und Monatsvergleich prüfen.
+5. Mit „Analyse-CSV“ eine Tabellen-Datei exportieren.
+
+DATENABDECKUNG DER BISHERIGEN EXPORTE
+- Außentemperatur: 2025
+- Raumtemperatur: März–Dezember 2024 und Januar–August 2026
+- Warmwasserspeicher: Januar–August 2026
+
+Leere Wetterfelder in anderen Monaten sind daher korrekt und werden nicht geschätzt.
+
+WICHTIG
+Der wetterbewusste Vorjahresvergleich verwendet nur Monate mit ähnlich gemessener mittlerer Außentemperatur. Das ist keine normierte Heizgradtag- oder Gebäudeenergie-Berechnung.

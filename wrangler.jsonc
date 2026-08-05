@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.8.3.1-CSV-PRAEZISIONS-HOTFIX-20260806",
+    "ELDEHOF_BUILD_ID": "3.9-WAERMEPUMPEN-WETTERANALYSE-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -37,7 +37,10 @@
     "ELDEHOF_VAILLANT_CSV_PRIVACY": "browser-only-no-upload-no-serial-storage",
     "ELDEHOF_CSV_PRECISION": "three-decimal-kwh-editor",
     "ELDEHOF_MONTH_EDITOR_VALIDATION": "custom-validation-no-native-step-block",
-    "ELDEHOF_SAFARI_FIX": "imported-decimals-save-without-field-jump"
+    "ELDEHOF_SAFARI_FIX": "imported-decimals-save-without-field-jump",
+    "ELDEHOF_HEAT_PUMP_ANALYSIS": "monthly-energy-heat-cop-weather",
+    "ELDEHOF_CLIMATE_STORAGE": "local-monthly-aggregates",
+    "ELDEHOF_CLIMATE_PRIVACY": "no-raw-rows-no-serials-browser-only"
   },
   "observability": {
     "enabled": true
