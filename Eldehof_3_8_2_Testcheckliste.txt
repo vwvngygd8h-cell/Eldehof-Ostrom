@@ -1,0 +1,16 @@
+ELDEHOF 3.8.2 – TESTCHECKLISTE
+
+□ App zeigt 3.8.2
+□ Startseite zeigt „Mein Haus“
+□ Zehn benannte Geräteprofile sind sichtbar
+□ Wärmepumpe heißt Vaillant aroTHERM plus VWL 125/6 A
+□ Wärmepumpe zeigt vorhandenen myVAILLANT-Monatswert
+□ GARDENA, Geschirrspüler, Waschmaschine und Trockner sind planbar
+□ Kühlschrank ist als Grundlast gekennzeichnet
+□ Kochfeld und Dunstabzug sind gekoppelte Nutzungen
+□ Datenquellen Messwert / Herstellerwert / Schätzung sind sichtbar
+□ „Als genutzt markieren“ erzeugt einen Eintrag
+□ Mehr → Geräteprofile zeigt Modell, Kategorie und Planungsart
+□ Hauskatalog lässt sich wiederherstellen
+□ Eigene Profile bleiben bei Wiederherstellung erhalten
+□ Maximal 20 Profile werden zugelassen

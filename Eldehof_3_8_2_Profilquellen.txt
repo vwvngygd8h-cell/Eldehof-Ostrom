@@ -1,0 +1,24 @@
+ELDEHOF 3.8.2 – PROFILQUELLEN UND SCHÄTZWERTE
+
+GARDENA 6000/6E:
+Offizielle Produktseite nennt 1.300 W Motorleistung, 6.000 l/h maximale
+Fördermenge und 5,5 bar maximalen Druck.
+https://www.gardena.com/de/produkte/pumpen/hauswasserversorgung/haus--gartenautomat-60006-lcd-inox/967296501.html
+
+Samsung UE65KS9090:
+Offizielle Samsung-Supportseite:
+https://www.samsung.com/uk/support/model/UE65KS9090TXZG/
+
+Samsung RF65A977FSR:
+Offizielle Samsung-Supportseite zum 637-l-French-Door-Modell:
+https://www.samsung.com/de/support/model/RF65A977FSR/EF/
+
+NEFF:
+Offizielle Produktseiten bestätigen die Modelle:
+https://www.neff-home.com/de/de/mkt-product/kunden-sortimente/S255HCX29E
+https://www.neff-home.com/de/de/mkt-product/B27CS22G0
+https://www.neff-home.com/de/de/mkt-product/T58PS21X0
+
+Mit Ausnahme des GARDENA-Nennwerts und der vom Nutzer in myVAILLANT
+erfassten Wärmepumpenwerte sind die Energie-je-Nutzung-Werte zunächst
+editierbare Eldehof-Schätzungen. Sie sind in der App so gekennzeichnet.

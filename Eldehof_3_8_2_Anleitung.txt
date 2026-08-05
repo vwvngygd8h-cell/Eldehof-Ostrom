@@ -1,0 +1,41 @@
+ELDEHOF 3.8.2 – HAUSGERÄTEPROFILE
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+WORKER PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=382
+
+ERWARTET
+version: 3.8.2-HAUSGERAETEPROFILE-20260805
+deviceCatalog: eldehof-home-v1
+deviceProfiles: model-category-source-planning-mode
+deviceProfileCount: 10
+heatPumpProfile: vaillant-arotherm-plus-vwl-125-6-a
+frontendBuildExpected: 3.8.2-HAUSGERAETEPROFILE-20260805
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.8.2&cache=hausgeraete-neu
+
+Im Analysebereich muss „App 3.8.2“ stehen.
+
+NEU
+Auf der Startseite erscheint „Mein Haus – Geräteprofile &
+Verbrauchsrollen“. Flexible Geräte werden im Ostrom-Lastplaner geplant.
+Kühlschrank, Kochfeld, Haube, Backofen und Fernseher werden ihrer realen
+Nutzungsrolle entsprechend nicht künstlich verschoben.
+
+Unter „Mehr → Geräteprofile“ sind Modell, Kategorie, Planungsart,
+Datenquelle, Energie je Nutzung, Laufzeit und Häufigkeit editierbar.
+
+„Hauskatalog wiederherstellen“ setzt die zehn Standardprofile zurück und
+behält zusätzlich angelegte eigene Geräte.
+
+Die meisten Startverbräuche sind bewusst als Eldehof-Schätzung markiert.
+Sie können später anhand von Energielabeln oder Smart-Plug-Messungen
+angepasst werden. Eldehof steuert kein Gerät.

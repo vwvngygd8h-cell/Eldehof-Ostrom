@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.8.1-MONATSASSISTENT-20260805",
+    "ELDEHOF_BUILD_ID": "3.8.2-HAUSGERAETEPROFILE-20260805",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -27,7 +27,10 @@
     "ELDEHOF_VAILLANT_API_STATE": "awaiting-official-access",
     "ELDEHOF_MONTHLY_ASSISTANT": "four-step-guided-month-close",
     "ELDEHOF_ASSISTANT_PREFILL": "existing-vaillant-previous-annex",
-    "ELDEHOF_ASSISTANT_PLAUSIBILITY": "source-sums-efficiency-period-comparison"
+    "ELDEHOF_ASSISTANT_PLAUSIBILITY": "source-sums-efficiency-period-comparison",
+    "ELDEHOF_DEVICE_CATALOG": "eldehof-home-v1",
+    "ELDEHOF_DEVICE_PROFILE_COUNT": "10",
+    "ELDEHOF_DEVICE_PROFILE_MODES": "flexible-suggest-monitor-base-load-coupled-measured"
   },
   "observability": {
     "enabled": true
