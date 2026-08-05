@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.9.1-ENERGIE-COACH-MONATSBERICHT-20260806",
+    "ELDEHOF_BUILD_ID": "3.9.2-GERAETEKALIBRIERUNG-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -44,7 +44,10 @@
     "ELDEHOF_ENERGY_COACH": "monthly-rules-confidence-actions",
     "ELDEHOF_COACH_REPORT": "measured-inferred-estimated-separated",
     "ELDEHOF_COACH_ARCHIVE": "local-versioned-month-snapshots",
-    "ELDEHOF_COACH_AUTO_ARCHIVE": "on-month-close"
+    "ELDEHOF_COACH_AUTO_ARCHIVE": "on-month-close",
+    "ELDEHOF_DEVICE_CALIBRATION": "manual-measurements-profile-suggestions",
+    "ELDEHOF_CALIBRATION_METRICS": "energy-duration-frequency",
+    "ELDEHOF_CALIBRATION_APPLY": "explicit-user-confirmation-only"
   },
   "observability": {
     "enabled": true

@@ -1,0 +1,53 @@
+ELDEHOF 3.9.2 – GERÄTE-KALIBRIERUNG
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=392
+
+ERWARTET
+version: 3.9.2-GERAETEKALIBRIERUNG-20260806
+deviceCalibration: manual-measurements-profile-suggestions
+calibrationMetrics: energy-duration-frequency
+calibrationApply: explicit-user-confirmation-only
+calibrationLog: estimated-and-actual-values-separated
+calibrationPrivacy: local-only-backup-included
+frontendBuildExpected: 3.9.2-GERAETEKALIBRIERUNG-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.9.2&cache=kalibrierung-neu
+
+Im Analysebereich muss „App 3.9.2“ stehen.
+
+ERSTE MESSUNG
+1. Analyse → Geräte-Kalibrierung öffnen.
+2. Gerät auswählen.
+3. „Messung hinzufügen“ antippen.
+4. Gemessene kWh, Laufzeit und Quelle eintragen.
+5. Messwert speichern.
+
+Geeignete Quellen:
+- Messsteckdose
+- Geräteanzeige
+- Unterzähler
+- manuell abgelesener Einzelmesswert
+
+PROFILVORSCHLAG
+Für einen Verbrauchsvorschlag sind mindestens zwei Messungen nötig.
+Ab drei Messungen wird die Tendenz belastbarer. Eine Nutzungshäufigkeit
+wird erst nach mindestens drei Einträgen über wenigstens 14 Tage
+vorgeschlagen.
+
+„Vorschlag ins Profil übernehmen“ verändert das Geräteprofil erst nach
+einer zusätzlichen Bestätigung. Alle Werte bleiben unter
+„Mehr → Geräteprofile“ weiterhin editierbar.
+
+DATENSCHUTZ
+Messungen und Notizen bleiben lokal, werden im privaten Backup
+mitgesichert und nicht an Ostrom oder Vaillant gesendet.

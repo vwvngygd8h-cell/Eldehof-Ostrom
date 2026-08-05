@@ -1,0 +1,17 @@
+ELDEHOF 3.9.2 – TESTCHECKLISTE
+
+□ App zeigt 3.9.2
+□ Analyse zeigt „Geräte-Kalibrierung“
+□ Geräteprofil lässt sich auswählen
+□ Messung lässt sich mit kWh, Laufzeit und Quelle speichern
+□ Schätzwert und Messwert bleiben getrennt sichtbar
+□ Vorhandener Protokolleintrag lässt sich bearbeiten
+□ Protokolleintrag lässt sich nach Bestätigung löschen
+□ Ab zwei Messungen erscheint ein Verbrauchsvorschlag
+□ Ab genügend Nutzungen erscheint eine Wochenhäufigkeit
+□ Profiländerung erfolgt erst nach Bestätigung
+□ Übernommener Messvorschlag setzt die Quelle auf „Messwert“
+□ Energie-Coach nutzt echte kWh, sofern vorhanden
+□ Kalibrierungs-CSV lässt sich exportieren
+□ Privates Backup enthält die erweiterten Protokolle
+□ Altes 3.9.1-Backup bleibt importierbar

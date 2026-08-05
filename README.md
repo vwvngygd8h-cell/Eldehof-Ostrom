@@ -1,28 +1,30 @@
-# Eldehof 3.9.1 – Energie-Coach & Monatsbericht
+# Eldehof 3.9.2 – Geräte-Kalibrierung
 
-Der Energie-Coach verbindet pro Monat:
+Geräteprofile können jetzt mit echten Einzelmessungen verbessert werden.
 
-- Ostrom-Gesamtverbrauch, Preis und Kosten
-- Vaillant-Strom, erzeugte Wärme und Arbeitszahlen
-- Altenteil und übriges Haus
-- Vorjahres- und Vormonatsvergleich
-- wetterähnlichen Heizstromvergleich
-- protokollierte Lastplaner-Nutzungen
+Pro Protokolleintrag bleiben getrennt erhalten:
 
-Jede Aussage erhält eine Vertrauensstufe:
+- ursprünglicher Profil-Schätzwert
+- gemessener Verbrauch
+- tatsächliche Laufzeit
+- Messquelle und optionale Notiz
 
-- Hohe Sicherheit: direkt gemessene und abgeschlossene Monatsdaten
-- Mittlere Sicherheit: abgeleitete Vergleiche
-- Schätzung: Geräteprofile und Lastplaner-Modellwerte
+Eldehof berechnet daraus:
 
-Berichte können als CSV oder über Safari als PDF/Druckansicht exportiert
-werden. Beim Monatsabschluss wird automatisch eine lokale Momentaufnahme
-archiviert. Änderungen an später importierten Daten machen die
-Archivfassung sichtbar als veraltet.
+- Median des Verbrauchs je Nutzung
+- typische Laufzeit
+- Abweichung zum aktuellen Profil
+- Nutzungshäufigkeit aus dem lokalen 8-Wochen-Protokoll
+- Vertrauensstufe nach Anzahl und Streuung der Messwerte
 
-Das Archiv enthält keine Rohdaten, Dateinamen oder Seriennummern und wird
-im privaten Eldehof-Backup mitgesichert.
+Ein Profil wird niemals automatisch verändert. Erst „Vorschlag ins
+Profil übernehmen“ aktualisiert Verbrauch, Laufzeit oder Häufigkeit.
+Bei echten Verbrauchsmessungen wird die Quelle anschließend als
+„Messwert“ gekennzeichnet.
+
+Alte Planerprotokolle bleiben kompatibel. Das private Backup enthält
+die erweiterten Messfelder automatisch.
 
 Aktive Version:
 
-`3.9.1-ENERGIE-COACH-MONATSBERICHT-20260806`
+`3.9.2-GERAETEKALIBRIERUNG-20260806`
