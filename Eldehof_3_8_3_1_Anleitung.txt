@@ -1,0 +1,33 @@
+ELDEHOF 3.8.3.1 – CSV-PRÄZISIONS-HOTFIX
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=3831
+
+ERWARTET
+version: 3.8.3.1-CSV-PRAEZISIONS-HOTFIX-20260806
+csvPrecision: three-decimal-kwh-editor
+monthEditorValidation: custom-validation-no-native-step-block
+safariFix: imported-decimals-save-without-field-jump
+frontendBuildExpected: 3.8.3.1-CSV-PRAEZISIONS-HOTFIX-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.8.3.1&cache=praezision-neu
+
+TEST
+1. Daten öffnen.
+2. Juli 2026 antippen.
+3. Ohne Änderung auf „Speichern“ tippen.
+4. Der Dialog muss schließen und „Monatswert gespeichert“ anzeigen.
+5. Safari darf nicht zum Feld „Erzeugte Wärme“ springen.
+
+Der CSV-Import speichert bereits beim Antippen von „Monate übernehmen“.
+Das einzelne Öffnen eines Monats ist nur zur Kontrolle oder Bearbeitung
+notwendig.

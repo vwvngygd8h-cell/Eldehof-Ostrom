@@ -1,0 +1,13 @@
+ELDEHOF 3.8.3.1 – TESTCHECKLISTE
+
+□ App zeigt 3.8.3.1
+□ myVAILLANT-CSV-Vorschau öffnet
+□ „Monate übernehmen“ speichert die Auswahl
+□ 128,216 kWh ist im Monatseditor zulässig
+□ 467,106 kWh ist im Monatseditor zulässig
+□ 690,515 kWh Gesamtverbrauch ist zulässig
+□ Speichern springt nicht mehr zum Wärmemengenfeld
+□ Monatsdialog schließt nach erfolgreichem Speichern
+□ Ostrom, Altenteil, Preis, Notiz und Abschlussstatus bleiben erhalten
+□ Monatsassistent funktioniert weiterhin
+□ Backup-Export zeigt Version 3.8.3.1

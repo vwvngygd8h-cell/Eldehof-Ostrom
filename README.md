@@ -1,24 +1,20 @@
-# Eldehof 3.8.3 – lokaler myVAILLANT-Importassistent
+# Eldehof 3.8.3.1 – CSV-Präzisions-Hotfix
 
-Neu unter **Daten → myVAILLANT CSV**:
+Der Hotfix behebt das Springen zum Feld „Erzeugte Wärme“, wenn ein
+importierter Monatswert erneut gespeichert wird.
 
-- mehrere CSV-Dateien gleichzeitig aus der Dateien-App wählen
-- aroTHERM plus und uniTOWER plus automatisch erkennen
-- Tageswerte nach Kalendermonat summieren
-- den zusätzlichen uniTOWER-Heizanteil korrekt ergänzen
-- vollständige Monate und Teilmonate unterscheiden
-- jeden Monat vor dem Speichern vergleichen
-- identische Doppelzeilen nicht doppelt summieren
-- widersprüchliche Doppelwerte blockieren
-- bestehende Ostrom-, Altenteil-, Preis-, Notiz- und Abschlussdaten bewahren
-- lokalen Importbericht erzeugen
+Ursache:
 
-Temperatur-, Raumzonen- und Warmwasserspeicherdateien werden erkannt und
-in der Vorschau genannt. Sie werden in 3.8.3 noch nicht dauerhaft
-gespeichert; das folgt mit der Wärmepumpen-Analyse.
+- myVAILLANT-CSV-Werte besitzen drei Nachkommastellen
+- das bisherige Monatsformular erlaubte nur 0,1- oder 1-kWh-Schritte
+- Safari blockierte den Submit vor Eldehofs eigener Validierung
 
-Dateien werden ausschließlich im Browser gelesen. Dateinamen,
-Kommentarzeilen und Seriennummern werden nicht gespeichert.
+Korrektur:
+
+- relevante Energie- und Wärmefelder akzeptieren 0,001 kWh
+- Monats- und Vaillant-Formulare verwenden Eldehofs eigene Prüfung
+- CSV-Import, Ostrom-Daten und bestehende Monatswerte bleiben erhalten
 
 Aktive Version:
-`3.8.3-MYVAILLANT-CSV-IMPORT-20260806`
+
+`3.8.3.1-CSV-PRAEZISIONS-HOTFIX-20260806`
