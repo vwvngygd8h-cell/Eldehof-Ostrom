@@ -1,12 +1,23 @@
-# Eldehof – Ostrom 404 Vertragsfix
+# Eldehof 3.6 – Langzeitanalyse & Monatsbericht
 
-Der Verbindungstest prüft jetzt nur noch die OAuth-Anmeldung. Die Vertragsnummer wird beim Laden eines Monats verwendet.
+Neu:
 
-Empfohlene Cloudflare-Secrets:
+- Ostrom-Smart-Meter-Langzeitanalyse für 30 bis 365 Tage
+- Grundlast-Erkennung über das 10. Perzentil der stündlichen Messwerte
+- Tages-, Wochen- und 30-Tage-Vergleich
+- teuerster, günstigster und verbrauchsstärkster Tag
+- typischer 24-Stunden-Verbrauchsverlauf
+- Wärmepumpen-Anteil aus den lokal gespeicherten Monatswerten
+- Lastplaner-Nutzungen lokal markieren und geschätzte Ersparnisse auswerten
+- Monatsbericht als CSV oder druckfertige Ansicht zum Sichern als PDF
+- lokale Langzeit-Zwischenspeicherung
 
-- OSTROM_CLIENT_ID
-- OSTROM_CLIENT_SECRET
-- ELDEHOF_APP_KEY
-- OSTROM_CONTRACT_ID
+## Aktive Version prüfen
 
-`OSTROM_CONTRACT_ID` ist deine Ostrom-Vertragsnummer. Sie verhindert den fehlerhaften automatischen Abruf der Vertragsliste.
+`https://DEINE-ADRESSE.workers.dev/api/version`
+
+Erwartet:
+
+`3.6-LANGZEITANALYSE-BERICHT-20260805`
+
+Die vorhandenen Cloudflare-Secrets bleiben unverändert. Private Monatswerte und Lastplaner-Protokolle bleiben im lokalen Safari-Speicher.
