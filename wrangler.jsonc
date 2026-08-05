@@ -10,14 +10,17 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.6.6-DIAGNOSE-DATENQUALITAET-20260805",
+    "ELDEHOF_BUILD_ID": "3.7-ENERGIE-WARNUNGEN-20260805",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
     "ELDEHOF_PREPARATION_FIX": "busy-render-early-return",
     "ELDEHOF_HISTORY_CACHE_SCHEMA": "v366",
     "ELDEHOF_DIAGNOSTICS": "chunk-status-retry-safe-export",
-    "ELDEHOF_DATA_QUALITY": "meter-price-recency-completeness"
+    "ELDEHOF_DATA_QUALITY": "meter-price-recency-completeness",
+    "ELDEHOF_WARNINGS": "local-in-app-rule-engine",
+    "ELDEHOF_WARNING_TYPES": "consumption-base-load-meter-budget-price-coverage",
+    "ELDEHOF_NOTIFICATIONS": "in-app-only"
   },
   "observability": {
     "enabled": true

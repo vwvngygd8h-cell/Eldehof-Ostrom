@@ -1,19 +1,32 @@
-# Eldehof 3.6.6 – Diagnose & Datenqualität
+# Eldehof 3.7 – Energie-Warnungen
 
-Neue Funktionen:
+Die neue Warnzentrale bewertet lokal auf dem iPhone:
 
-- Status für jeden 7-Tage-Abschnitt:
-  `Geladen`, `Gespeichert`, `Lädt`, `Fehlt`, `Wartet`
-- Fehlende Abschnitte gezielt nachladen
-- Messdaten-Abdeckung und Preisabdeckung getrennt anzeigen
-- Alter des jüngsten Smart-Meter-Wertes verständlich bewerten
-- Zeitpunkt der letzten vollständigen Analyse speichern
-- Diagnose als JSON exportieren
-- Der Diagnoseexport enthält keine App-Schlüssel, OAuth-Tokens oder
-  Client-Zugangsdaten
-- Bereits vorhandene 3.6.5-Analyse wird einmalig übernommen
-- Abschnittsstatus bleibt beim Wechsel zwischen Eldehof-Ansichten erhalten
+- ungewöhnlich hohen Tagesverbrauch
+- gestiegene Grundlast
+- verspätete Smart-Meter-Daten
+- drohende Überschreitung des Monatsbudgets
+- teure Stunden und günstige Verschiebefenster
+- unvollständige Mess- oder Preisdaten
+
+Funktionen:
+
+- Prioritäten: Dringend, Prüfen, Beobachten und Gelegenheit
+- Zähler an der Übersicht-Navigation
+- einzelne Hinweise bestätigen
+- alle aktuellen Hinweise bestätigen
+- ausgeblendete Hinweise zurücksetzen
+- frei einstellbare Warnschwellen unter „Mehr“
+- Warnungen werden bei neuen Ostrom- oder Analysedaten neu berechnet
+- Status wird nur lokal gespeichert
+
+Datenschutz:
+
+- keine zusätzliche Cloud-Übertragung
+- keine Push-Abonnements
+- keine Weitergabe von Verbrauchsdaten
+- diese Version zeigt Warnungen nur innerhalb von Eldehof
 
 Aktive Version:
 
-`3.6.6-DIAGNOSE-DATENQUALITAET-20260805`
+`3.7-ENERGIE-WARNUNGEN-20260805`
