@@ -1,3 +1,4 @@
+const ELDEHOF_BUILD = "3.3.1-NO-REDIRECT-20260805";
 function ostromEndpoints(env) {
   const mode = (clean(env.OSTROM_ENV) || "PRODUCTION").toUpperCase();
   if (mode === "SANDBOX") {
@@ -22,6 +23,15 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     try {
+      if (url.pathname === "/api/version") {
+        return json({
+          app: "Eldehof",
+          version: ELDEHOF_BUILD,
+          redirectOption: "none",
+          deployedAt: "2026-08-05"
+        });
+      }
+
       if (url.pathname.startsWith("/api/")) {
         if (request.method === "OPTIONS") return new Response(null, { status: 204 });
         requireKey(request, env);
@@ -301,77 +311,39 @@ async function getToken(env, forceRefresh = false) {
   const endpoints = ostromEndpoints(env);
   const basicPayload = base64Utf8(`${clientId}:${clientSecret}`);
   const authorization = `Basic ${basicPayload}`;
-  const formBody = "grant_type=client_credentials";
 
-  let target = endpoints.auth;
-  let response = null;
-  let authorizationBeforeFetch = authorization;
-  const headerFingerprint = await sha256Short(authorization);
+  const headers = new Headers();
+  headers.set("accept", "application/json");
+  headers.set("authorization", authorization);
+  headers.set("content-type", "application/x-www-form-urlencoded");
 
+  const authRequest = new Request(endpoints.auth, {
+    method: "POST",
+    headers,
+    body: "grant_type=client_credentials"
+  });
+
+  const authorizationBeforeFetch = authRequest.headers.get("authorization") || "";
+  const headerFingerprint = await sha256Short(authorizationBeforeFetch);
+
+  let response;
   try {
-    for (let redirectCount = 0; redirectCount <= 3; redirectCount++) {
-      const headers = new Headers();
-      headers.set("accept", "application/json");
-      headers.set("authorization", authorization);
-      headers.set("content-type", "application/x-www-form-urlencoded");
-
-      const authRequest = new Request(target, {
-        method: "POST",
-        headers,
-        body: formBody,
-        redirect: "manual"
-      });
-
-      authorizationBeforeFetch = authRequest.headers.get("authorization") || "";
-      response = await fetch(authRequest);
-
-      if (![301, 302, 303, 307, 308].includes(response.status)) {
-        break;
-      }
-
-      const location = response.headers.get("location");
-      if (!location) {
-        throw new Error(
-          `Ostrom antwortet mit Weiterleitung ${response.status}, aber ohne Zieladresse.`
-        );
-      }
-
-      const next = new URL(location, target);
-      const allowedHosts = new Set([
-        "auth.production.ostrom-api.io",
-        "auth.sandbox.ostrom-api.io"
-      ]);
-
-      if (next.protocol !== "https:" || !allowedHosts.has(next.hostname)) {
-        throw new Error(
-          `Unsichere Weiterleitung zu ${next.hostname}. Zugangsdaten wurden nicht weitergesendet.`
-        );
-      }
-
-      target = next.toString();
-
-      if (redirectCount === 3) {
-        throw new Error("Zu viele Weiterleitungen bei der Ostrom-Anmeldung.");
-      }
-    }
+    response = await fetch(authRequest);
   } catch (error) {
     throw httpError(
       502,
       [
         "Cloudflare konnte den Ostrom-Token-Endpunkt nicht aufrufen",
         safeText(error?.message || String(error)),
+        `Eldehof-Build: ${ELDEHOF_BUILD}`,
         `Header vor fetch: ${authorizationBeforeFetch.startsWith("Basic ") ? "vorhanden" : "fehlt"}`,
         `Client-ID-Länge: ${clientId.length}`,
         `Secret-Länge: ${clientSecret.length}`,
         `Basic-Länge: ${basicPayload.length}`,
         `Header-Fingerabdruck: ${headerFingerprint}`,
-        `Ziel: ${target}`
+        `Ziel: ${endpoints.auth}`
       ].join(" • ")
     );
-  }
-
-  if (!response) {
-    throw httpError(502, "Ostrom hat keine Antwort auf die Anmeldung geliefert.");
   }
 
   const raw = await response.text();
@@ -403,12 +375,13 @@ async function getToken(env, forceRefresh = false) {
     errorName,
     description,
     authChallenge ? `Serverhinweis: ${authChallenge}` : "",
+    `Eldehof-Build: ${ELDEHOF_BUILD}`,
     `Header vor fetch: ${authorizationBeforeFetch.startsWith("Basic ") ? "vorhanden" : "fehlt"}`,
     `Client-ID-Länge: ${clientId.length}`,
     `Secret-Länge: ${clientSecret.length}`,
     `Basic-Länge: ${basicPayload.length}`,
     `Header-Fingerabdruck: ${headerFingerprint}`,
-    `Antwort-URL: ${response.url || target}`,
+    `Antwort-URL: ${response.url || endpoints.auth}`,
     server ? `Server: ${server}` : "",
     cfRay ? `CF-Ray: ${cfRay}` : "",
     `Umgebung: ${endpoints.mode}`

@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.3.0",
-    "ELDEHOF_REDIRECT_FIX": "MANUAL_2026_08_05"
+    "ELDEHOF_BUILD_ID": "3.3.1-NO-REDIRECT-20260805"
   },
   "observability": {
     "enabled": true
