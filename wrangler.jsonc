@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "3.3.0",
-    "ELDEHOF_BUILD_ID": "3.3.1-NO-REDIRECT-20260805"
+    "ELDEHOF_VERSION": "3.4.0",
+    "ELDEHOF_BUILD_ID": "3.4-ENERGIE-ASSISTENT-20260805"
   },
   "observability": {
     "enabled": true
