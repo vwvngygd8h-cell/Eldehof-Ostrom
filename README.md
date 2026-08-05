@@ -1,22 +1,21 @@
-# Eldehof 3.6.4 – Abschnittsanalyse
+# Eldehof 3.6.5 – Vorbereitungs-Fix
 
-Die Langzeitanalyse wird nicht mehr in einem einzigen großen
-Cloudflare-/Ostrom-Aufruf berechnet.
+Behoben wird der Zustand:
 
-Stattdessen:
+`Abschnitt 0/5 • Vorbereitung • 0 geladen`
 
-- Der gewählte Zeitraum wird in feste 7-Tage-Abschnitte zerlegt.
-- Die App lädt einen Abschnitt nach dem anderen.
-- Fortschritt erscheint als `Abschnitt 2/5`.
-- Jeder erfolgreiche Abschnitt wird sofort lokal gespeichert.
-- Ein langsamer Abschnitt wird übersprungen; andere Ergebnisse bleiben.
-- Der Abbrechen-Button beendet den aktuellen Abschnitt und die Schleife.
-- 30 Tage benötigen ungefähr fünf kleine API-Aufrufe.
+Ursache:
+Der Fortschritts-Renderer aktualisierte zunächst die Anzeige, lief danach
+aber weiter und griff auf `historyData.summary` zu. Nach einer zuvor
+fehlgeschlagenen Analyse war `historyData` leer. Der JavaScript-Fehler
+entstand vor Beginn der Abschnittsschleife; nur der Sekundenzähler blieb
+aktiv.
 
-Neue API:
+Änderungen:
 
-`/api/history-chunk?startDate=...&endDate=...`
-
-Aktive Version:
-
-`3.6.4-ABSCHNITTSANALYSE-20260805`
+- Während einer laufenden Analyse beendet der Renderer seine Arbeit direkt
+  nach der Fortschrittsanzeige.
+- Die Anzeige startet unmittelbar mit `Abschnitt 1/5`.
+- Der alte, inkompatible Analyse-Ergebniscache wird nicht mehr geladen.
+- Zusätzliche Null-Prüfungen schützen die Diagramme.
+- Der Worker-Endpunkt der 7-Tage-Abschnittsanalyse bleibt unverändert.

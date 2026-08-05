@@ -10,10 +10,12 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.6.4-ABSCHNITTSANALYSE-20260805",
+    "ELDEHOF_BUILD_ID": "3.6.5-VORBEREITUNGS-FIX-20260805",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
-    "ELDEHOF_CHUNK_DAYS": "7"
+    "ELDEHOF_CHUNK_DAYS": "7",
+    "ELDEHOF_PREPARATION_FIX": "busy-render-early-return",
+    "ELDEHOF_HISTORY_CACHE_SCHEMA": "v365"
   },
   "observability": {
     "enabled": true
