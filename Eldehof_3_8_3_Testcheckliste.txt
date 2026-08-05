@@ -1,0 +1,18 @@
+ELDEHOF 3.8.3 – TESTCHECKLISTE
+
+□ App zeigt 3.8.3
+□ Daten zeigt „myVAILLANT CSV – Exporte direkt zuordnen“
+□ Mehrfachauswahl aus der Dateien-App funktioniert
+□ aroTHERM- und uniTOWER-Dateien werden getrennt erkannt
+□ Temperaturdateien werden als Zusatzdateien angezeigt
+□ 2024–2026 ergeben mit den Testexporten 30 Monate
+□ 28 Monate sind vollständig
+□ März 2024 ist historischer Teilmonat und nicht vorausgewählt
+□ August 2026 ist offener Teilmonat und vorausgewählt
+□ Juli 2026 zeigt 128,216 kWh Strom und 467,106 kWh Wärme
+□ Identische Doppeldatei erhöht den Verbrauch nicht
+□ Widersprüchliche Doppelwerte blockieren den Monat
+□ Bereits identische Monate sind nicht vorausgewählt
+□ Ostrom, Altenteil, Preis, Notiz und Abschlussstatus bleiben erhalten
+□ Importbericht lässt sich nach dem Import laden
+□ Dateinamen und Seriennummern erscheinen nicht im Bericht

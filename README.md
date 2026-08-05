@@ -1,34 +1,24 @@
-# Eldehof 3.8.2 – Hausgeräteprofile
+# Eldehof 3.8.3 – lokaler myVAILLANT-Importassistent
 
-Enthalten sind zehn persönliche Geräteprofile:
+Neu unter **Daten → myVAILLANT CSV**:
 
-1. Vaillant aroTHERM plus VWL 125/6 A
-2. GARDENA 6000/6E
-3. Samsung UE65KS9090
-4. NEFF S255HCX29E
-5. NEFF B27CS22G0
-6. NEFF T58PS21X0
-7. AEG LR7E75699
-8. AEG TR9W80699
-9. Samsung RF65A977FSR
-10. berbel BKH90ST-S-U
+- mehrere CSV-Dateien gleichzeitig aus der Dateien-App wählen
+- aroTHERM plus und uniTOWER plus automatisch erkennen
+- Tageswerte nach Kalendermonat summieren
+- den zusätzlichen uniTOWER-Heizanteil korrekt ergänzen
+- vollständige Monate und Teilmonate unterscheiden
+- jeden Monat vor dem Speichern vergleichen
+- identische Doppelzeilen nicht doppelt summieren
+- widersprüchliche Doppelwerte blockieren
+- bestehende Ostrom-, Altenteil-, Preis-, Notiz- und Abschlussdaten bewahren
+- lokalen Importbericht erzeugen
 
-Planungsrollen:
-- flexibel planbar
-- Hinweis / teilweise flexibel
-- nur Verbrauch beobachten
-- dauerhafte Grundlast
-- an andere Nutzung gekoppelt
-- gemessener Monatswert
+Temperatur-, Raumzonen- und Warmwasserspeicherdateien werden erkannt und
+in der Vorschau genannt. Sie werden in 3.8.3 noch nicht dauerhaft
+gespeichert; das folgt mit der Wärmepumpen-Analyse.
 
-Datenquellen:
-- Messwert
-- Herstellerwert
-- Eldehof-Schätzung
-
-Bestehende eigene Profile werden bei der Katalogmigration bewahrt. Bis zu
-20 Profile sind möglich. Die Wärmepumpe nutzt vorhandene myVAILLANT-
-Monatswerte; ihr Stundenprofil bleibt lediglich eine Empfehlung.
+Dateien werden ausschließlich im Browser gelesen. Dateinamen,
+Kommentarzeilen und Seriennummern werden nicht gespeichert.
 
 Aktive Version:
-`3.8.2-HAUSGERAETEPROFILE-20260805`
+`3.8.3-MYVAILLANT-CSV-IMPORT-20260806`

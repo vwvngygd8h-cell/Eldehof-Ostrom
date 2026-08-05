@@ -1,0 +1,56 @@
+ELDEHOF 3.8.3 – MYVAILLANT-IMPORTASSISTENT
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+WORKER PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=383
+
+ERWARTET
+version: 3.8.3-MYVAILLANT-CSV-IMPORT-20260806
+vaillantCsvImporter: local-multi-file-preview-merge
+vaillantCsvMerge: preserve-ostrom-annex-notes-close-state
+vaillantCsvPartialPolicy: current-open-historical-opt-in
+vaillantCsvPrivacy: browser-only-no-upload-no-serial-storage
+frontendBuildExpected: 3.8.3-MYVAILLANT-CSV-IMPORT-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=3.8.3&cache=myvaillant-import-neu
+
+Im Analysebereich muss „App 3.8.3“ stehen.
+
+IMPORT AUF IPHONE ODER IPAD
+1. Vorher unter Daten oder Mehr ein Eldehof-Backup erstellen.
+2. Daten → myVAILLANT CSV öffnen.
+3. „myVAILLANT-Dateien auswählen“ antippen.
+4. In der Dateien-App gemeinsam auswählen:
+   - aroTHERM-Energieexporte
+   - uniTOWER-Energieexporte
+5. Die Vorschau prüfen.
+6. Vollständige Monate und den aktuellen Teilmonat sind vorausgewählt.
+7. Historische Teilmonate bleiben zunächst deaktiviert, können aber
+   ausdrücklich gewählt werden.
+8. „Monate übernehmen“ antippen.
+9. Danach den Importbericht herunterladen.
+
+SICHERHEIT
+Nur die Vaillant-Felder werden aktualisiert. Erhalten bleiben:
+- Ostrom-Gesamtverbrauch
+- Altenteil
+- Preise und Fixkosten
+- Notizen
+- Geräteprofile
+- Abschlussstatus vollständiger Monate
+
+DOPPELTE DATEIEN
+Identische Tageszeilen werden nur einmal verwendet. Widersprüchliche
+Doppelwerte blockieren den betroffenen Monat, statt einen Wert zu raten.
+
+TEMPERATURDATEIEN
+System-, Raumzonen- und Warmwasserspeicherdateien werden erkannt, aber in
+3.8.3 noch nicht gespeichert.

@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.8.2-HAUSGERAETEPROFILE-20260805",
+    "ELDEHOF_BUILD_ID": "3.8.3-MYVAILLANT-CSV-IMPORT-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -30,7 +30,11 @@
     "ELDEHOF_ASSISTANT_PLAUSIBILITY": "source-sums-efficiency-period-comparison",
     "ELDEHOF_DEVICE_CATALOG": "eldehof-home-v1",
     "ELDEHOF_DEVICE_PROFILE_COUNT": "10",
-    "ELDEHOF_DEVICE_PROFILE_MODES": "flexible-suggest-monitor-base-load-coupled-measured"
+    "ELDEHOF_DEVICE_PROFILE_MODES": "flexible-suggest-monitor-base-load-coupled-measured",
+    "ELDEHOF_VAILLANT_CSV_IMPORTER": "local-multi-file-preview-merge",
+    "ELDEHOF_VAILLANT_CSV_MERGE": "preserve-ostrom-annex-notes-close-state",
+    "ELDEHOF_VAILLANT_CSV_PARTIAL_POLICY": "current-open-historical-opt-in",
+    "ELDEHOF_VAILLANT_CSV_PRIVACY": "browser-only-no-upload-no-serial-storage"
   },
   "observability": {
     "enabled": true
