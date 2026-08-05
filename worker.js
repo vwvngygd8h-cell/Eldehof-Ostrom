@@ -300,29 +300,60 @@ async function getToken(env, forceRefresh = false) {
 
   const endpoints = ostromEndpoints(env);
   const basicPayload = base64Utf8(`${clientId}:${clientSecret}`);
+  const authorization = `Basic ${basicPayload}`;
+  const formBody = "grant_type=client_credentials";
 
-  // Exakter Aufbau entsprechend dem funktionierenden Ostrom-cURL-Beispiel.
-  const headers = new Headers();
-  headers.set("accept", "application/json");
-  headers.set("authorization", `Basic ${basicPayload}`);
-  headers.set("content-type", "application/x-www-form-urlencoded");
+  let target = endpoints.auth;
+  let response = null;
+  let authorizationBeforeFetch = authorization;
+  const headerFingerprint = await sha256Short(authorization);
 
-  const body = new URLSearchParams();
-  body.set("grant_type", "client_credentials");
-
-  const authRequest = new Request(endpoints.auth, {
-    method: "POST",
-    headers,
-    body,
-    redirect: "error"
-  });
-
-  const authorizationBeforeFetch = authRequest.headers.get("authorization") || "";
-  const headerFingerprint = await sha256Short(authorizationBeforeFetch);
-
-  let response;
   try {
-    response = await fetch(authRequest);
+    for (let redirectCount = 0; redirectCount <= 3; redirectCount++) {
+      const headers = new Headers();
+      headers.set("accept", "application/json");
+      headers.set("authorization", authorization);
+      headers.set("content-type", "application/x-www-form-urlencoded");
+
+      const authRequest = new Request(target, {
+        method: "POST",
+        headers,
+        body: formBody,
+        redirect: "manual"
+      });
+
+      authorizationBeforeFetch = authRequest.headers.get("authorization") || "";
+      response = await fetch(authRequest);
+
+      if (![301, 302, 303, 307, 308].includes(response.status)) {
+        break;
+      }
+
+      const location = response.headers.get("location");
+      if (!location) {
+        throw new Error(
+          `Ostrom antwortet mit Weiterleitung ${response.status}, aber ohne Zieladresse.`
+        );
+      }
+
+      const next = new URL(location, target);
+      const allowedHosts = new Set([
+        "auth.production.ostrom-api.io",
+        "auth.sandbox.ostrom-api.io"
+      ]);
+
+      if (next.protocol !== "https:" || !allowedHosts.has(next.hostname)) {
+        throw new Error(
+          `Unsichere Weiterleitung zu ${next.hostname}. Zugangsdaten wurden nicht weitergesendet.`
+        );
+      }
+
+      target = next.toString();
+
+      if (redirectCount === 3) {
+        throw new Error("Zu viele Weiterleitungen bei der Ostrom-Anmeldung.");
+      }
+    }
   } catch (error) {
     throw httpError(
       502,
@@ -334,9 +365,13 @@ async function getToken(env, forceRefresh = false) {
         `Secret-Länge: ${clientSecret.length}`,
         `Basic-Länge: ${basicPayload.length}`,
         `Header-Fingerabdruck: ${headerFingerprint}`,
-        `Ziel: ${endpoints.auth}`
+        `Ziel: ${target}`
       ].join(" • ")
     );
+  }
+
+  if (!response) {
+    throw httpError(502, "Ostrom hat keine Antwort auf die Anmeldung geliefert.");
   }
 
   const raw = await response.text();
@@ -373,7 +408,7 @@ async function getToken(env, forceRefresh = false) {
     `Secret-Länge: ${clientSecret.length}`,
     `Basic-Länge: ${basicPayload.length}`,
     `Header-Fingerabdruck: ${headerFingerprint}`,
-    `Antwort-URL: ${response.url || endpoints.auth}`,
+    `Antwort-URL: ${response.url || target}`,
     server ? `Server: ${server}` : "",
     cfRay ? `CF-Ray: ${cfRay}` : "",
     `Umgebung: ${endpoints.mode}`
