@@ -1,23 +1,13 @@
-# Eldehof 3.6 – Langzeitanalyse & Monatsbericht
+# Eldehof 3.6.1 – Analyse stabil
 
-Neu:
+Behebt eine Langzeitanalyse, die dauerhaft bei „Analysiert …“ stehen bleiben konnte.
 
-- Ostrom-Smart-Meter-Langzeitanalyse für 30 bis 365 Tage
-- Grundlast-Erkennung über das 10. Perzentil der stündlichen Messwerte
-- Tages-, Wochen- und 30-Tage-Vergleich
-- teuerster, günstigster und verbrauchsstärkster Tag
-- typischer 24-Stunden-Verbrauchsverlauf
-- Wärmepumpen-Anteil aus den lokal gespeicherten Monatswerten
-- Lastplaner-Nutzungen lokal markieren und geschätzte Ersparnisse auswerten
-- Monatsbericht als CSV oder druckfertige Ansicht zum Sichern als PDF
-- lokale Langzeit-Zwischenspeicherung
-
-## Aktive Version prüfen
-
-`https://DEINE-ADRESSE.workers.dev/api/version`
-
-Erwartet:
-
-`3.6-LANGZEITANALYSE-BERICHT-20260805`
-
-Die vorhandenen Cloudflare-Secrets bleiben unverändert. Private Monatswerte und Lastplaner-Protokolle bleiben im lokalen Safari-Speicher.
+Änderungen:
+- jede Ostrom-Anfrage hat ein festes Zeitlimit und einen Wiederholungsversuch,
+- Monatsabschnitte werden stabil nacheinander verarbeitet,
+- fehlende Preisdaten blockieren die Verbrauchsanalyse nicht mehr,
+- echte Laufzeitanzeige mit Sekunden,
+- Abbrechen-Schaltfläche,
+- Fehlermeldungen bleiben sichtbar,
+- Diagnosewerte zu Dauer, Monatsabschnitten und Teilfehlern,
+- neuer Service-Worker-Cache gegen alte PWA-Dateien.
