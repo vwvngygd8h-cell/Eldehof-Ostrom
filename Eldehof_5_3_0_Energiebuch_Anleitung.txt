@@ -1,0 +1,57 @@
+ELDEHOF 5.3.0 – PERSÖNLICHES ENERGIEBUCH
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit ausführen und das Cloudflare-Deployment abwarten.
+
+SYNC-TRESOR
+Der vorhandene Tresor und alle gekoppelten Geräte bleiben bestehen.
+Der Migrationstag bleibt unverändert:
+
+v5-1-0-sync
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=530
+
+ERWARTET
+version: 5.3.0-ENERGIEBUCH-20260806
+energyJournal: automatic-derived-milestones-plus-manual-notes
+energyJournalEvidence: measured-documented-estimated-open-clearly-separated
+energyJournalReview: yearly-factual-summary-no-causal-overclaim
+energyJournalSync: full-scope-client-encrypted-household-excluded
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.3.0&cache=energiebuch-neu
+
+BEDIENUNG
+Mehr → Persönliches Energiebuch
+
+Automatisch erscheinen:
+- abgeschlossene Monate
+- Zielarchive
+- Optimierungsmaßnahmen
+- Saisonwechsel
+
+Eigene Einträge können Datum, Kategorie, Nachweis, Titel und Notiz enthalten.
+
+NACHWEIS
+Gemessen: tatsächliche Monats- oder geeignete Messdaten.
+Dokumentiert: eine Maßnahme oder ein Wechsel wurde festgehalten.
+Geschätzt: Prognose oder Simulation, nicht als Ist-Wert behandeln.
+Offen: Wirkung muss noch geprüft werden.
+
+JAHRESRÜCKBLICK
+Der Rückblick zählt abgeschlossene Monate, dokumentierten Verbrauch und Kosten, Zielarchive sowie Maßnahmen. Er stellt keine unbelegte Kausalität her.
+
+DATENSCHUTZ
+Eigene Notizen sind im privaten Backup enthalten. Im Gerätesync werden sie nur beim vollständigen Umfang und weiterhin clientseitig verschlüsselt übertragen. Haushaltsgeräte erhalten sie nicht. Die sichere Diagnose enthält nur Anzahlen.
+
+ZIP-INHALT
+- worker.js
+- wrangler.jsonc
+- README.md
+- Eldehof_5_3_0_Energiebuch_Anleitung.txt
+- Eldehof_5_3_0_Testcheckliste.txt

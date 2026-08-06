@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.2.2",
-    "ELDEHOF_BUILD_ID": "5.2.2-LERNENDER-ALLTAG-20260806",
+    "ELDEHOF_VERSION": "5.3.0",
+    "ELDEHOF_BUILD_ID": "5.3.0-ENERGIEBUCH-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -132,7 +132,12 @@
     "ELDEHOF_LEARNING_RULES": "minimum-three-observations-visible-toggle-reset",
     "ELDEHOF_LEARNING_EFFECT": "optional-preferred-time-and-low-value-proposal-reduction",
     "ELDEHOF_LEARNING_PRIVACY": "local-only-no-secrets-no-person-ranking",
-    "ELDEHOF_LEARNING_SAFETY": "no-device-control-no-fabrication-no-conflict-resolution"
+    "ELDEHOF_LEARNING_SAFETY": "no-device-control-no-fabrication-no-conflict-resolution",
+    "ELDEHOF_ENERGY_JOURNAL": "automatic-derived-milestones-plus-manual-notes",
+    "ELDEHOF_ENERGY_JOURNAL_SOURCES": "closed-months-goal-archives-seasons-interventions",
+    "ELDEHOF_ENERGY_JOURNAL_EVIDENCE": "measured-documented-estimated-open-separated",
+    "ELDEHOF_ENERGY_JOURNAL_REVIEW": "yearly-factual-summary-no-causal-overclaim",
+    "ELDEHOF_ENERGY_JOURNAL_SYNC": "full-scope-client-encrypted-household-excluded"
   },
   "observability": {
     "enabled": true

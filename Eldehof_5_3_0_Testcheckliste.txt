@@ -1,0 +1,26 @@
+ELDEHOF 5.3.0 – TESTCHECKLISTE
+
+□ Version zeigt 5.3.0-ENERGIEBUCH-20260806
+□ Mehr enthält „Persönliches Energiebuch“
+□ Energiebuch öffnet ohne vollständige Verwaltung einzublenden
+□ abgeschlossene Monate erscheinen automatisch als gemessen
+□ Zielarchive erscheinen automatisch und kennzeichnen Messung oder Schätzung
+□ Saisonwechsel erscheinen als dokumentiert
+□ Optimierungsmaßnahmen erscheinen mit nachvollziehbarem Nachweis
+□ eigene Notiz lässt sich speichern
+□ eigene Notiz lässt sich löschen und rückgängig machen
+□ Jahr und Kategorie lassen sich filtern
+□ automatische Meilensteine lassen sich ausblenden
+□ Jahresrückblick behauptet keine unbelegte Ursache-Wirkung
+□ CSV-Export enthält Datum, Kategorie, Nachweis, Titel, Notiz und Quelle
+□ Verlauf besitzt den Filter „Energiebuch“
+□ normale Verlaufssicht wird nicht mit doppelten Energiebuch-Einträgen überladen
+□ privates Backup enthält energyJournalState
+□ ältere Backups ohne Energiebuch bleiben importierbar
+□ vollständiger verschlüsselter Sync enthält energyJournalState
+□ Haushalts-Sync enthält keine Energiebuch-Notizen
+□ sichere Diagnose enthält nur Energiebuch-Anzahlen
+□ Durable-Object-Migration bleibt v5-1-0-sync
+□ ZIP enthält ausschließlich fünf aktuelle Dateien
+□ mobile Darstellung ohne horizontalen Überlauf
+□ keine JavaScript-Laufzeitfehler
