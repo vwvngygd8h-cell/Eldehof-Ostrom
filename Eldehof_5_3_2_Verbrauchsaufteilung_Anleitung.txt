@@ -1,0 +1,62 @@
+ELDEHOF 5.3.2 – DIREKTE VERBRAUCHSAUFTEILUNG
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit erstellen und Cloudflare-Deployment abwarten.
+
+SYNC-TRESOR
+Der bestehende Durable-Object-Migrationstag bleibt unverändert:
+v5-1-0-sync
+
+Tresor, gekoppelte Geräte und Wiederherstellungsschlüssel bleiben gültig.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=532
+
+ERWARTET
+version: 5.3.2-DIREKTE-VERBRAUCHSAUFTEILUNG-20260806
+consumptionAllocation: direct-first-heatpump-annex-schlee-klus
+allocationViews: monthly-stacked-yearly-donut-kwh-percent
+allocationDetails: month-tap-values-shares-edit-compare
+allocationChecks: missing-negative-residual-plausibility-visible
+allocationSeries: toggle-heatpump-annex-schlee-klus
+allocationFavorite: today-selected-year-share-summary
+
+FRONTEND FRISCH ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.3.2&cache=verbrauchsaufteilung-neu
+
+DIREKTER WEG
+Mehr → Auswertung → Verbrauchsaufteilung
+
+MONATLICHE AUFTEILUNG
+Das gestapelte Diagramm zeigt:
+- Wärmepumpe
+- Altenteil
+- Schlee/Klus
+
+Über kWh/Prozent wird die Darstellung umgeschaltet. Ein Tipp auf einen
+Monatsbalken öffnet die Einzelwerte und Anteile des Monats.
+
+JAHRESANTEILE
+Das Ringdiagramm verwendet das ausgewählte Jahr. Ein Vergleich mit dem
+Vorjahr oder einem anderen vorhandenen Jahr kann direkt gewählt werden.
+Bei laufenden Jahren werden ausschließlich vorhandene Monate verwendet.
+
+PLAUSIBILITÄT
+Schlee/Klus = Gesamtverbrauch − Wärmepumpe − Altenteil
+
+Fehlt einer der drei Werte, wird kein Anteil berechnet. Ist die Differenz
+negativ, markiert Eldehof den Monat als Plausibilitätsfehler und fordert zur
+Bearbeitung auf.
+
+SERIEN UND FAVORIT
+Wärmepumpe, Altenteil und Schlee/Klus können einzeln ausgeblendet werden;
+mindestens eine Reihe bleibt sichtbar. Die Aufteilung kann als eine von
+höchstens zwei Kennzahlen auf „Heute“ abgelegt werden.
+
+EXPORT
+CSV und kopierte Werte enthalten Gesamt, drei Teilbereiche, Prozentanteile,
+Datenstatus und Monatsstatus.

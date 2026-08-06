@@ -1,0 +1,27 @@
+ELDEHOF 5.3.2 – TESTCHECKLISTE
+
+□ App zeigt Version 5.3.2
+□ Mehr → Auswertung zeigt Verbrauchsaufteilung an erster Stelle
+□ direkter Einstieg scrollt sofort zur Verbrauchsaufteilung
+□ Aufteilung steht in der Verbrauchszentrale an erster Stelle
+□ monatliches Stapeldiagramm zeigt Wärmepumpe, Altenteil und Schlee/Klus
+□ Umschaltung kWh/Prozent funktioniert
+□ Jahresauswahl aktualisiert Monats- und Ringdiagramm
+□ Vorjahresvergleich verwendet nur vergleichbare vorhandene Monate
+□ Balken lassen sich antippen und zeigen Monatsdetails
+□ Monatsdetails zeigen kWh und Prozentanteile
+□ Monatswerte lassen sich direkt bearbeiten
+□ Wärmepumpe, Altenteil und Schlee/Klus lassen sich einzeln ausblenden
+□ mindestens eine Reihe bleibt immer sichtbar
+□ fehlende Werte erzeugen keinen erfundenen Schlee/Klus-Wert
+□ negative Differenz wird als Plausibilitätsfehler markiert
+□ offene und abgeschlossene Monate werden unterschieden
+□ Verbrauchsaufteilung kann als Heute-Favorit gespeichert werden
+□ CSV enthält kWh, Prozentwerte und Datenstatus
+□ kopierte Diagrammdaten enthalten die Monatswerte
+□ App-Suche findet Aufteilung, Altenteil und Schlee/Klus
+□ bestehender Sync-Tresor bleibt erreichbar
+□ Migrationstag bleibt v5-1-0-sync
+□ ZIP enthält exakt fünf Dateien der aktuellen Version
+□ mobile Darstellung hat keinen horizontalen Überlauf
+□ keine JavaScript-Laufzeitfehler

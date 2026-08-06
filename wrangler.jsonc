@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.3.1",
-    "ELDEHOF_BUILD_ID": "5.3.1-VERBRAUCHSZENTRALE-20260806",
+    "ELDEHOF_VERSION": "5.3.2",
+    "ELDEHOF_BUILD_ID": "5.3.2-DIREKTE-VERBRAUCHSAUFTEILUNG-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -144,7 +144,14 @@
     "ELDEHOF_CONSUMPTION_QUALITY": "measured-partial-derived-estimated-explicit",
     "ELDEHOF_CONSUMPTION_NAVIGATION": "more-direct-search-breadcrumb-return",
     "ELDEHOF_CONSUMPTION_FAVORITES": "up-to-two-today-summary-cards",
-    "ELDEHOF_CONSUMPTION_EXPORT": "chart-data-csv-and-copy"
+    "ELDEHOF_CONSUMPTION_EXPORT": "chart-data-csv-and-copy",
+    "ELDEHOF_CONSUMPTION_ALLOCATION": "direct-first-heatpump-annex-schlee-klus",
+    "ELDEHOF_ALLOCATION_VIEWS": "monthly-stacked-yearly-donut-kwh-percent",
+    "ELDEHOF_ALLOCATION_DETAILS": "month-tap-values-shares-edit-compare",
+    "ELDEHOF_ALLOCATION_CHECKS": "missing-negative-residual-plausibility-visible",
+    "ELDEHOF_ALLOCATION_SERIES": "toggle-heatpump-annex-schlee-klus",
+    "ELDEHOF_ALLOCATION_FAVORITE": "today-selected-year-share-summary",
+    "ELDEHOF_ALLOCATION_EXPORT": "csv-copy-values-percentages-status"
   },
   "observability": {
     "enabled": true

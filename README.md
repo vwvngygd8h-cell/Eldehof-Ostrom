@@ -1,23 +1,29 @@
-# Eldehof 5.3.1 – Verbrauchszentrale
+# Eldehof 5.3.2 – Direkte Verbrauchsaufteilung
 
 Direkter Zugang:
 
-`Mehr → Auswertung → Verbrauchsdiagramme`
+`Mehr → Auswertung → Verbrauchsaufteilung`
 
-Die Verbrauchszentrale bündelt:
+Die Aufteilung steht an erster Stelle und zeigt sofort:
 
-- Gesamtverbrauch
-- Wärmepumpenstrom
-- Stromkosten
-- typisches Smart-Meter-Tagesprofil
-- gemeinsame Zeitraum- und Vergleichswahl
-- sichtbare Datenqualität
-- Übersicht und Details
-- CSV-Export und Kopieren der Diagrammdaten
-- bis zu zwei Favoriten auf „Heute“
+- monatliche gestapelte Balken für Wärmepumpe, Altenteil und Schlee/Klus
+- Jahresanteile als Ringdiagramm
+- Umschaltung zwischen kWh und Prozent
+- Vorjahres- oder Jahresvergleich
+- Monatsdetails durch Antippen eines Balkens
+- sichtbare Plausibilitäts- und Vollständigkeitsprüfung
+- einzeln ein- und ausblendbare Reihen
+- Heute-Favorit
+- CSV-Export und kopierbare Werte
 
-Die bisherigen Fachanalysen bleiben erhalten und sind aus der Zentrale direkt
-aufrufbar. Der bestehende verschlüsselte Sync-Tresor und der Migrationstag
+Schlee/Klus wird weiterhin ausschließlich als Differenz berechnet:
+
+`Gesamtverbrauch − Wärmepumpe − Altenteil`
+
+Fehlende oder negative Differenzen werden nicht erfunden oder auf null gesetzt,
+sondern sichtbar zur Prüfung markiert.
+
+Der bestehende verschlüsselte Sync-Tresor und der Migrationstag
 `v5-1-0-sync` bleiben unverändert.
 
-Aktive Version: `5.3.1-VERBRAUCHSZENTRALE-20260806`
+Aktive Version: `5.3.2-DIREKTE-VERBRAUCHSAUFTEILUNG-20260806`
