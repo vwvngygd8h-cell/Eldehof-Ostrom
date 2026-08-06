@@ -88,11 +88,12 @@
     "ELDEHOF_GOAL_FORECAST": "actual-ostrom-projection-linear-components-confidence",
     "ELDEHOF_GOAL_SEASON": "suggestion-confirmation-only",
     "ELDEHOF_GOAL_ARCHIVE": "month-close-local-snapshots-csv-backup",
-    "ELDEHOF_ENERGY_FLOW": "pv-battery-wallbox-neutral-scenario-model",
-    "ELDEHOF_ENERGY_FLOW_SIMULATION": "synthetic-hourly-monthly-energy-balance",
-    "ELDEHOF_ENERGY_FLOW_SCENARIOS": "up-to-five-local-comparable-scenarios",
-    "ELDEHOF_ENERGY_FLOW_ACTUAL": "manual-neutral-month-values-and-csv-template",
-    "ELDEHOF_ENERGY_FLOW_CONTROL": "none-advisory-only"
+    "ELDEHOF_ENERGY_FLOW_CENTER": "pv-battery-ev-neutral-scenario-simulation",
+    "ELDEHOF_ENERGY_FLOW_MODEL": "monthly-balance-direct-self-use-storage-losses-grid-export",
+    "ELDEHOF_ENERGY_FLOW_SCENARIOS": "multiple-local-comparison-explicit-assumptions",
+    "ELDEHOF_ENERGY_FLOW_IMPORTS": "neutral-monthly-csv-grid-pv-storage-ev",
+    "ELDEHOF_ENERGY_FLOW_ECONOMICS": "optional-explicit-inputs-simple-first-year-view",
+    "ELDEHOF_ENERGY_FLOW_CONTROL": "advisory-only-no-control"
   },
   "observability": {
     "enabled": true

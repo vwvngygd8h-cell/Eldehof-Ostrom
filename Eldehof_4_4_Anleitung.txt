@@ -13,37 +13,46 @@ https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=440
 
 ERWARTET
 version: 4.4-ENERGIEFLUSS-PV-SPEICHER-WALLBOX-20260806
-energyFlow: pv-battery-wallbox-neutral-scenario-model
-energyFlowSimulation: synthetic-hourly-monthly-energy-balance
-energyFlowScenarios: up-to-five-local-comparable-scenarios
-energyFlowActualSlots: manual-neutral-month-values-and-csv-template
-energyFlowPlanning: solar-window-advisory-no-control
-energyFlowEconomics: explicit-assumptions-only-no-guaranteed-payback
+energyFlowCenter: pv-battery-ev-neutral-scenario-simulation
+energyFlowModel: monthly-balance-direct-self-use-storage-losses-grid-export
+energyFlowScenarios: multiple-local-comparison-explicit-assumptions
+energyFlowImports: neutral-monthly-csv-grid-pv-storage-ev
+energyFlowEconomics: optional-explicit-inputs-simple-first-year-view
+energyFlowPlanning: advisory-solar-window-no-control
+energyFlowPrivacy: browser-only-backup-included-no-vendor-lockin
 
 FRONTEND ÖFFNEN
 https://eldehof.6wdkh7ysv2.workers.dev/?v=4.4&cache=energiefluss-neu
 
-SZENARIO VERWENDEN
-1. Analyse → Energiefluss & Szenarien öffnen.
-2. Monat und Szenario auswählen.
-3. PV-Leistung und Jahresertrag prüfen.
-4. Optional Speicher und Fahrzeugladung eintragen.
-5. Szenario speichern.
-6. Jahresvergleich und Monatsfluss prüfen.
+ERSTER START
+Analyse → Energiefluss, PV, Speicher und Wallbox öffnen.
 
-BERECHNUNG
-Eldehof verteilt den vorhandenen oder prognostizierten Monatsverbrauch auf ein synthetisches 24-Stunden-Lastprofil. Die PV-Erzeugung wird aus PV-Leistung, eingetragenem Jahresertrag, Leistungsfaktor und einer monatlichen Verteilung erzeugt. Der Speicher wird stündlich mit Kapazität, Reserve, Leistung und Wirkungsgrad simuliert.
+Drei Beispielvarianten sind vorbereitet:
+- 8 kWp
+- 10 kWp
+- 10 kWp + 10 kWh Speicher
 
-Diese Werte sind Planungsschätzungen und keine Standort-, Dach- oder Ertragsgarantie.
+WICHTIG: Die Werte sind keine Standortberechnung. Vor dem Vergleich den spezifischen Jahresertrag, die Ausrichtung, Verschattung und den angenommenen Verbrauch in Sonnenstunden prüfen.
 
-FAHRZEUG
-Der Hausladebedarf wird aus Jahreskilometern, Fahrzeugverbrauch, Ladeverlusten und Zuhause-Anteil abgeleitet. Die Ladestrategie verändert nur das synthetische Lastprofil. Es werden keine Wallbox-Befehle gesendet.
+SPEICHER
+Das Speichermodell ist eine vereinfachte Monatsbilanz mit täglicher Durchsatzgrenze, Reserve und Rundlaufverlust. Es ersetzt keine Hersteller- oder Planungssoftware.
 
-REALE DATEN
-PV-Erzeugung, Netzbezug, Einspeisung, Speicherladung, Speicherentladung und Fahrzeugladung können getrennt als reale Monatswerte gespeichert werden. Die CSV-Vorlage ist herstellerneutral; ein automatischer Herstellerimport ist für eine spätere Stufe vorgesehen.
+WALLBOX
+Fahrleistung, Fahrzeugverbrauch, Ladeverluste und Anteil der Heimladung ergeben den zusätzlichen monatlichen Ladebedarf. Die Ladestrategie beeinflusst nur den geschätzten PV-Anteil. Es erfolgt keine Wallbox-Steuerung.
 
 WIRTSCHAFTLICHKEIT
-Ohne selbst eingetragenen Netzstrompreis und Einspeisevergütung berechnet Eldehof keine Geldwirkung. Eine erfasste Investition führt nicht zu einer scheinbar exakten Amortisationszusage.
+Die finanzielle Ansicht ist standardmäßig aus. Nach Aktivierung berechnet sie lediglich den Nutzen des ersten Modelljahres und eine einfache Rücklaufzeit. Finanzierung, Steuern, Preisentwicklung, Reparaturen, Ersatzinvestitionen und reale Alterung werden nicht vollständig modelliert.
+
+REALE DATEN IMPORTIEREN
+Über CSV-Vorlage können monatliche Werte vorbereitet werden:
+- PV-Erzeugung
+- Netzbezug
+- Netzeinspeisung
+- Speicherladung
+- Speicherentladung
+- Fahrzeugladung
+
+Importierte Werte erscheinen separat und überschreiben die Simulation nicht.
 
 DATENSCHUTZ
-Szenarien und reale Monatsfelder bleiben lokal und werden im privaten Backup mitgesichert.
+Szenarien und importierte Monatswerte bleiben lokal und werden im privaten Backup mitgesichert. Keine Herstellerbindung und keine Steuerbefehle.

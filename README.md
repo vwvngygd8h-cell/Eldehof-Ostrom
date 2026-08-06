@@ -1,13 +1,11 @@
 # Eldehof 4.4 – Energiefluss, PV, Speicher und Wallbox
 
-Eldehof 4.4 ergänzt eine herstellerneutrale Szenario-Simulation.
+Eldehof enthält jetzt eine herstellerneutrale Szenariozentrale für Photovoltaik, Batteriespeicher und Fahrzeugladung.
 
-Die Berechnung verwendet vorhandene Monatsverbräuche und ein synthetisches Stundenmodell. PV-Erzeugung, Direktverbrauch, Speicherladung, Speicherabgabe, Verluste, Netzbezug und Einspeisung werden getrennt ausgewiesen.
+Die Monatsbilanz trennt Hausverbrauch, Fahrzeugbedarf, PV-Erzeugung, direkten Eigenverbrauch, Speicherladung, Speicherentladung, Verluste, Netzbezug und Einspeisung.
 
-Bis zu fünf lokale Szenarien können verglichen werden. Optional lässt sich ein zusätzlicher Fahrzeugladebedarf aus Fahrleistung, Verbrauch, Ladeverlusten und Zuhause-Anteil modellieren.
+Alle Standardwerte sind editierbare Annahmen. Spezifischer Jahresertrag, Ausrichtung, Verschattung, Tagesanteil, Speicherdaten und Fahrzeugbedarf müssen vor einer realen Entscheidung geprüft werden.
 
-Reale PV-, Netz-, Speicher- oder Fahrzeugwerte werden in eigenen neutralen Monatsfeldern gespeichert und niemals mit der Simulation vermischt.
-
-Es gibt keine Anlagen-, Wallbox-, Geräte- oder Wärmepumpensteuerung. Geldwerte werden nur mit ausdrücklich eingetragenen Annahmen berechnet.
+Importierte Monatswerte bleiben von Simulationen getrennt. Die App sendet keine Steuerbefehle an Wechselrichter, Speicher, Wallbox, Wärmepumpe oder Haushaltsgeräte.
 
 Aktive Version: `4.4-ENERGIEFLUSS-PV-SPEICHER-WALLBOX-20260806`
