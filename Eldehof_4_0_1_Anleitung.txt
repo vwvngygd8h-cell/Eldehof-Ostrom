@@ -1,0 +1,63 @@
+ELDEHOF 4.0.1 – PLAN-IST-VERGLEICH & TAGESABSCHLUSS
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=401
+
+ERWARTET
+version: 4.0.1-PLAN-IST-TAGESABSCHLUSS-20260806
+dailyClose: plan-actual-cost-quality-archive
+dailyCloseStatuses: on-plan-shifted-skipped-open
+dailyActualCost: hourly-price-weighted-measured-first
+dailyRealizedSaving: only-measured-time-priced
+dailyCloseArchive: local-snapshots-csv-backup
+dailyBehaviorInsights: completion-delay-savings-28-days
+frontendBuildExpected: 4.0.1-PLAN-IST-TAGESABSCHLUSS-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.0.1&cache=plan-ist-neu
+
+Im Bereich Analyse muss „App 4.0.1“ stehen.
+
+TAGESERGEBNIS EINTRAGEN
+1. Tagesplan bestätigen.
+2. Beim Gerät „Ergebnis eintragen“ antippen.
+3. „Durchgeführt“ oder „Ausgelassen“ auswählen.
+4. Bei Durchführung tatsächlichen Start und tatsächliches Ende eintragen.
+5. Einen echten kWh-Wert nur dann ergänzen, wenn er abgelesen wurde.
+6. Messquelle wählen und speichern.
+
+TAGESABSCHLUSS
+Der Bereich „Plan-Ist-Vergleich“ zeigt anschließend:
+- Planerfüllung
+- durchgeführte, ausgelassene und offene Einträge
+- zeitlich verschobene Energie
+- gemessene Energie
+- tatsächliche Kosten
+- belastbare Tarifdifferenz
+
+„Tag abschließen“ archiviert eine lokale Momentaufnahme. Offene Einträge sind
+zulässig, werden aber im Abschluss deutlich ausgewiesen. Nach späteren
+Änderungen erscheint die Archivfassung als veraltet und kann aktualisiert
+werden.
+
+WICHTIG ZUR TARIFDIFFERENZ
+Als realisiert gilt eine Tarifdifferenz ausschließlich, wenn alle drei Punkte
+vorliegen:
+- echter kWh-Messwert
+- tatsächlicher Start und tatsächliches Ende
+- vollständige Stundenpreisabdeckung
+
+Fehlt einer dieser Punkte, zeigt Eldehof das Ergebnis nur als Schätzung.
+
+DATENSCHUTZ
+Alle Ergebnisse und Abschlüsse bleiben lokal und werden im privaten Backup
+mitgesichert. Keine automatische Gerätesteuerung und keine automatische
+Änderung von Geräteprofilen.

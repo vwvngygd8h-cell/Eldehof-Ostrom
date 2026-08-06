@@ -1,0 +1,19 @@
+ELDEHOF 4.0.1 – TESTCHECKLISTE
+
+□ App zeigt 4.0.1
+□ Bestehende 4.0-Tagespläne bleiben erhalten
+□ Bestätigter Plan zeigt „Ergebnis eintragen“
+□ Durchgeführt lässt Ist-Start und Ist-Ende speichern
+□ Ausgelassen entfernt einen zugehörigen Tagesplan-Logeintrag
+□ Ein Ergebnis lässt sich wieder auf offen setzen
+□ Wie geplant wird bei kleinen Zeitabweichungen erkannt
+□ Größere Zeitabweichungen erscheinen als verschoben
+□ Gemessene und geschätzte Energie bleiben getrennt
+□ Istkosten verwenden den tatsächlichen Laufzeitraum
+□ Realisierte Tarifdifferenz erscheint nur mit echter Messung und Preisen
+□ Tagesabschluss zeigt offene, ausgelassene und durchgeführte Einträge
+□ Tagesabschluss lässt sich archivieren und aktualisieren
+□ Archiv-CSV lässt sich exportieren
+□ Alltagsmuster erscheinen nach mindestens drei Abschlüssen
+□ Privates Backup enthält das Tagesabschlussarchiv
+□ Wärmepumpe bleibt Hinweis ohne Steuerung
