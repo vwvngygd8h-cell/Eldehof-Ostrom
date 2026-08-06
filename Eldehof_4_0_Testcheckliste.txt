@@ -1,0 +1,21 @@
+ELDEHOF 4.0 – TESTCHECKLISTE
+
+□ App zeigt 4.0
+□ Tägliche Energiezentrale erscheint oben auf der Übersicht
+□ Heute, morgen und übermorgen sind auswählbar
+□ Ostrom-Stundenpreise werden im Tagesplan angezeigt
+□ Wetter wird angezeigt oder sauber als optional fehlend behandelt
+□ Gerät lässt sich nur für den gewählten Tag auslassen
+□ Fertigzeit lässt sich nur für den gewählten Tag ändern
+□ Waschmaschine wird vor dem Trockner geplant
+□ Trockner startet mindestens 15 Minuten nach der Waschmaschine
+□ Wärmepumpe ist klar als Hinweis ohne Steuerung gekennzeichnet
+□ Frühester Betrieb, Tagesplankosten und Ersparnis werden angezeigt
+□ Datenbasis zeigt gemessen / kalibriert / Profilwert
+□ Tagesplan lässt sich bestätigen
+□ Geänderte Preise oder Vorgaben markieren den Plan als veraltet
+□ Bestätigte flexible Nutzung lässt sich als genutzt markieren
+□ Danach lässt sich ein echter Messwert ergänzen
+□ Tagesplan-CSV lässt sich exportieren
+□ Privates Backup enthält dailyCenterState
+□ Altes 3.9.2-Backup bleibt importierbar

@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "3.9.2-GERAETEKALIBRIERUNG-20260806",
+    "ELDEHOF_BUILD_ID": "4.0-TAEGLICHE-ENERGIEZENTRALE-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -47,7 +47,13 @@
     "ELDEHOF_COACH_AUTO_ARCHIVE": "on-month-close",
     "ELDEHOF_DEVICE_CALIBRATION": "manual-measurements-profile-suggestions",
     "ELDEHOF_CALIBRATION_METRICS": "energy-duration-frequency",
-    "ELDEHOF_CALIBRATION_APPLY": "explicit-user-confirmation-only"
+    "ELDEHOF_CALIBRATION_APPLY": "explicit-user-confirmation-only",
+    "ELDEHOF_DAILY_ENERGY_CENTER": "prices-weather-profiles-chains",
+    "ELDEHOF_DAILY_PLAN_STORAGE": "local-confirmed-date-plans",
+    "ELDEHOF_DAILY_PLAN_CONTROLS": "skip-deadline-confirm-used-measure",
+    "ELDEHOF_DAILY_PLAN_CHAINS": "washer-dryer-cooking-coupling",
+    "ELDEHOF_WEATHER_PROVIDER": "open-meteo-hourly-daily",
+    "ELDEHOF_HEATPUMP_DAILY_MODE": "advisory-only-no-control"
   },
   "observability": {
     "enabled": true

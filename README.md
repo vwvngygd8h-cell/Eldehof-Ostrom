@@ -1,30 +1,26 @@
-# Eldehof 3.9.2 – Geräte-Kalibrierung
+# Eldehof 4.0 – Tägliche Energiezentrale
 
-Geräteprofile können jetzt mit echten Einzelmessungen verbessert werden.
+Die Startseite verbindet jetzt Ostrom-Stundenpreise, Wetter, Geräteprofile,
+Fertigzeiten, Geräteketten und tatsächliche Nutzungsprotokolle zu einem
+bestätigbaren Tagesplan.
 
-Pro Protokolleintrag bleiben getrennt erhalten:
+Kernfunktionen:
 
-- ursprünglicher Profil-Schätzwert
-- gemessener Verbrauch
-- tatsächliche Laufzeit
-- Messquelle und optionale Notiz
+- Planung für heute, morgen oder übermorgen
+- tägliches Ein-/Ausschalten einzelner flexibler Geräte
+- tägliche Fertigzeit ohne Änderung des dauerhaften Geräteprofils
+- Wäschekette Waschmaschine → 15 Minuten Pause → Trockner
+- Kochfeld und Dunstabzug als feste gekoppelte Gruppe
+- Kostenvergleich frühester Betrieb vs. günstigster Tagesplan
+- Kennzeichnung gemessen / kalibriert / Profil-Schätzung
+- lokaler bestätigter Plan mit Veraltet-Erkennung
+- Nutzung markieren und danach echten Messwert ergänzen
+- Wärmepumpe nur als Preisfenster-Hinweis, niemals als Steuerbefehl
+- Wetterkontext über Open-Meteo anhand der hinterlegten Postleitzahl
 
-Eldehof berechnet daraus:
-
-- Median des Verbrauchs je Nutzung
-- typische Laufzeit
-- Abweichung zum aktuellen Profil
-- Nutzungshäufigkeit aus dem lokalen 8-Wochen-Protokoll
-- Vertrauensstufe nach Anzahl und Streuung der Messwerte
-
-Ein Profil wird niemals automatisch verändert. Erst „Vorschlag ins
-Profil übernehmen“ aktualisiert Verbrauch, Laufzeit oder Häufigkeit.
-Bei echten Verbrauchsmessungen wird die Quelle anschließend als
-„Messwert“ gekennzeichnet.
-
-Alte Planerprotokolle bleiben kompatibel. Das private Backup enthält
-die erweiterten Messfelder automatisch.
+Der bestätigte Tagesplan wird im privaten Backup gespeichert. Wetterdaten
+werden nur als kurzfristiger lokaler Cache gehalten.
 
 Aktive Version:
 
-`3.9.2-GERAETEKALIBRIERUNG-20260806`
+`4.0-TAEGLICHE-ENERGIEZENTRALE-20260806`

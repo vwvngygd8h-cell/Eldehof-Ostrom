@@ -1,0 +1,53 @@
+ELDEHOF 4.0 – TÄGLICHE ENERGIEZENTRALE
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=400
+
+ERWARTET
+version: 4.0-TAEGLICHE-ENERGIEZENTRALE-20260806
+dailyEnergyCenter: prices-weather-profiles-chains
+dailyPlanStorage: local-confirmed-date-plans
+dailyPlanControls: skip-deadline-confirm-used-measure
+dailyPlanChains: washer-dryer-cooking-coupling
+heatPumpDailyMode: advisory-only-no-control
+weatherProvider: open-meteo-hourly-daily
+frontendBuildExpected: 4.0-TAEGLICHE-ENERGIEZENTRALE-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.0&cache=tageszentrale-neu
+
+ERSTER TAGESPLAN
+1. Übersicht → Tägliche Energiezentrale öffnen.
+2. Planungstag wählen.
+3. Geräte für diesen Tag ein- oder ausschalten.
+4. Fertigzeiten prüfen oder ändern.
+5. Tagesplan bestätigen.
+6. Nach der Nutzung „Als genutzt markieren“ antippen.
+7. Optional danach einen echten Messwert ergänzen.
+
+WÄSCHEKETTE
+Sind Waschmaschine und Trockner aktiv, plant Eldehof zuerst die
+Waschmaschine und frühestens 15 Minuten danach den Trockner. Die
+Trockner-Fertigzeit begrenzt automatisch das Waschmaschinenfenster.
+
+WÄRMEPUMPE
+Der Vaillant-Eintrag ist ausschließlich ein Preisfenster-Hinweis. Eldehof
+sendet keine Schalt-, Temperatur- oder Zeitprogramm-Befehle an die Anlage.
+Wärmebedarf, Warmwasserhygiene und Komfort haben Vorrang.
+
+WETTER
+Wetterdaten werden anhand der in Cloudflare hinterlegten Postleitzahl über
+Open-Meteo geladen. Fällt der Wetterdienst aus, funktioniert die
+Preisplanung weiterhin ohne Wetterhinweise.
+
+DATENSCHUTZ
+Tagesvorgaben, bestätigte Pläne und Nutzungsstatus bleiben lokal und sind
+im privaten Backup enthalten. Nicht in ein öffentliches Repository laden.
