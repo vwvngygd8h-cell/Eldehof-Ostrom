@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.0.1",
-    "ELDEHOF_BUILD_ID": "5.0.1-FAMILIENMODUS-FEINSCHLIFF-20260806",
+    "ELDEHOF_VERSION": "5.1.0",
+    "ELDEHOF_BUILD_ID": "5.1.0-SYNC-FUNDAMENT-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -108,9 +108,30 @@
     "ELDEHOF_FAMILY_TASK_STATES": "planned-started-likely-finished-done-skipped-open",
     "ELDEHOF_FAMILY_DAILY_REVIEW": "done-skipped-open-favorable-measured-summary",
     "ELDEHOF_FAMILY_CONFLICT": "local-revision-storage-event-stale-action-guard",
-    "ELDEHOF_FAMILY_ACCESSIBILITY": "large-touch-high-contrast-reduced-motion-live-feedback"
+    "ELDEHOF_FAMILY_ACCESSIBILITY": "large-touch-high-contrast-reduced-motion-live-feedback",
+    "ELDEHOF_SYNC_FOUNDATION": "manual-encrypted-durable-object-vault",
+    "ELDEHOF_SYNC_ENCRYPTION": "client-side-aes-gcm-hkdf-sha256",
+    "ELDEHOF_SYNC_PAIRING": "one-time-ten-minute-code-plus-recovery-key",
+    "ELDEHOF_SYNC_CONFLICT": "revision-detection-no-silent-overwrite",
+    "ELDEHOF_SYNC_SCOPE": "full-or-household-secrets-excluded"
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "SYNC_VAULT",
+        "class_name": "EldehofSyncVault"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v5-1-0-sync",
+      "new_sqlite_classes": [
+        "EldehofSyncVault"
+      ]
+    }
+  ]
 }

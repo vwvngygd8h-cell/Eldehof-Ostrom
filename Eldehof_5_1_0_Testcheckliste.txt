@@ -1,0 +1,24 @@
+ELDEHOF 5.1.0 – TESTCHECKLISTE
+
+□ App zeigt 5.1.0
+□ /api/sync/health meldet configured: true
+□ erster Tresor lässt sich erstellen
+□ Wiederherstellungsschlüssel wird nur im Browser erzeugt
+□ Sicherungsblatt lässt sich exportieren
+□ verschlüsseltes Serverpaket enthält keine Klartext-Monatsdaten
+□ Wiederherstellungsschlüssel wird nicht an /api/sync übertragen
+□ manuelles Hochladen erhöht die Tresor-Version
+□ manuelles Herunterladen entschlüsselt mit dem richtigen Schlüssel
+□ falscher Wiederherstellungsschlüssel wird abgelehnt
+□ 10-Minuten-Kopplungscode wird erstellt
+□ Kopplungscode kann nur einmal verwendet werden
+□ Haushaltsgerät erhält nur Haushaltsumfang
+□ Geräte können vom Verwaltungsgerät widerrufen werden
+□ widerrufenes Gerät kann nicht mehr lesen oder schreiben
+□ veraltete Basisversion erzeugt einen Konflikt
+□ Konflikt überschreibt keine Daten automatisch
+□ Ostrom-/API-Schlüssel sind nicht im Sync-Paket
+□ Familien-PIN, Hash und Salt sind nicht im Sync-Paket
+□ privates Backup enthält keine Geräte-Tokens oder Wiederherstellungsschlüssel
+□ App bleibt ohne Sync-Verbindung vollständig lokal nutzbar
+□ mobile Darstellung hat keinen horizontalen Überlauf

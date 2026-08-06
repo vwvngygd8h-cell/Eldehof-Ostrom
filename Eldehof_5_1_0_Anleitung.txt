@@ -1,0 +1,73 @@
+ELDEHOF 5.1.0 – PRIVATES SYNC-FUNDAMENT
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das Cloudflare-Deployment abwarten.
+
+WICHTIG BEIM ERSTEN 5.1-DEPLOYMENT
+wrangler.jsonc legt einen SQLite-basierten Durable Object namens SYNC_VAULT
+an. Die Migration "v5-1-0-sync" darf nicht entfernt oder umbenannt werden,
+nachdem sie erfolgreich eingesetzt wurde.
+
+SYNC-BACKEND PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/sync/health
+
+ERWARTET
+configured: true
+backend: sqlite-durable-object
+encryption: client-side-aes-gcm-hkdf-sha256
+plaintextOnServer: false
+automaticBackgroundSync: false
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=510
+
+ERWARTET
+version: 5.1.0-SYNC-FUNDAMENT-20260806
+syncFoundation: manual-encrypted-durable-object-vault
+syncEncryption: client-side-aes-gcm-hkdf-sha256
+syncPairing: one-time-ten-minute-code-plus-recovery-key
+syncScopes: full-or-household-secrets-excluded
+syncConflict: revision-detection-no-silent-overwrite
+syncBackend: sqlite-durable-object-opaque-ciphertext
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.1.0&cache=sync-fundament-neu
+
+ERSTES VERWALTUNGSGERÄT
+1. Mehr → Private Gerätesynchronisierung öffnen.
+2. Gerätenamen eingeben.
+3. Tresor erstellen.
+4. Wiederherstellungsschlüssel sofort offline sichern.
+5. „Jetzt sicher abgleichen“ verwenden, wenn lokale Änderungen vorliegen.
+
+WEITERES GERÄT KOPPELN
+1. Auf dem Verwaltungsgerät einen 10-Minuten-Code erstellen.
+2. Umfang auswählen: Haushalt oder vollständig.
+3. Auf dem neuen Gerät Tresor-ID, Code und Wiederherstellungsschlüssel eingeben.
+4. Der Kopplungscode wird einmalig verbraucht.
+
+SCHLÜSSEL
+Der Wiederherstellungsschlüssel bleibt standardmäßig nur für die aktuelle
+App-Sitzung entsperrt. Nach einem vollständigen Schließen kann er erneut
+eingegeben werden. Die Familien-PIN ist kein Ersatz für diesen Schlüssel.
+
+KONFLIKTE
+Wenn lokaler und entfernter Stand geändert wurden, überschreibt Eldehof nichts.
+Es stehen zwei bewusste Entscheidungen bereit:
+- entfernten Stand übernehmen
+- lokalen Stand als neue Tresor-Version hochladen
+
+NICHT SYNCHRONISIERT
+Ostrom- und API-Schlüssel, PIN-Daten, Backup-Dateien, Roh-CSV-Dateien,
+Seriennummern und ausführliche Monatsnotizen.
+
+DATENSCHUTZGRENZE
+Der Cloudflare-Tresor speichert verschlüsselte Pakete und technische
+Geräte-Metadaten. Wer den Worker-Code kontrolliert, könnte zukünftige
+App-Versionen verändern. Wiederherstellungsschlüssel daher nur in einer
+vertrauenswürdigen, selbst kontrollierten Eldehof-Bereitstellung eingeben.
