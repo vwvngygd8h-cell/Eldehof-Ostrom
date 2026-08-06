@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.3.2",
-    "ELDEHOF_BUILD_ID": "5.3.2-DIREKTE-VERBRAUCHSAUFTEILUNG-20260806",
+    "ELDEHOF_VERSION": "5.3.2.1",
+    "ELDEHOF_BUILD_ID": "5.3.2.1-FAVORITEN-HOTFIX-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -151,7 +151,8 @@
     "ELDEHOF_ALLOCATION_CHECKS": "missing-negative-residual-plausibility-visible",
     "ELDEHOF_ALLOCATION_SERIES": "toggle-heatpump-annex-schlee-klus",
     "ELDEHOF_ALLOCATION_FAVORITE": "today-selected-year-share-summary",
-    "ELDEHOF_ALLOCATION_EXPORT": "csv-copy-values-percentages-status"
+    "ELDEHOF_ALLOCATION_EXPORT": "csv-copy-values-percentages-status",
+    "ELDEHOF_FAVORITE_HOTFIX": "today-rerender-on-toggle-navigation-and-load"
   },
   "observability": {
     "enabled": true

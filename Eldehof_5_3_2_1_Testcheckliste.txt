@@ -1,0 +1,14 @@
+ELDEHOF 5.3.2.1 – TESTCHECKLISTE
+
+□ Stern setzt Favorit sofort
+□ Stern wechselt zu „★ Auf Heute“
+□ Favorit erscheint sofort im Abschnitt „Favoriten für Heute“
+□ Wechsel zu „Heute“ baut Favoriten aus LocalStorage neu auf
+□ App-Neustart erhält Favorit
+□ Favoritenkarte öffnet das richtige Diagramm
+□ Entfernen des Sterns entfernt die Heute-Karte
+□ maximal zwei Favoriten bleiben unverändert
+□ Verbrauchsaufteilung bleibt unverändert
+□ Sync-Tresor bleibt erhalten
+□ Migrationstag bleibt v5-1-0-sync
+□ keine alten Anleitungen im ZIP

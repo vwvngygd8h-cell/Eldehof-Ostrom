@@ -1,0 +1,27 @@
+ELDEHOF 5.3.2.1 – FAVORITEN-HOTFIX
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub worker.js und wrangler.jsonc ersetzen.
+3. Deployment abwarten.
+
+VERSION
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=5321
+
+Erwartet:
+version: 5.3.2.1-FAVORITEN-HOTFIX-20260806
+favoriteHotfix: today-rerender-on-toggle-navigation-and-load
+
+FRONTEND
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.3.2.1&cache=favoriten-hotfix-neu
+
+TEST
+1. Mehr → Auswertung → Verbrauchsaufteilung öffnen.
+2. „☆ Auf Heute“ antippen.
+3. Stern muss zu „★ Auf Heute“ wechseln.
+4. Zur unteren Navigation „Heute“ wechseln.
+5. Abschnitt „Favoriten für Heute“ muss sichtbar sein.
+6. Favoritenkarte antippen: das zugehörige Diagramm muss sich öffnen.
+7. Stern erneut entfernen: Karte muss aus „Heute“ verschwinden.
+
+Der Sync-Tresor und der Wiederherstellungsschlüssel bleiben unverändert.
