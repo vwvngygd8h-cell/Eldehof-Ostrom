@@ -1,0 +1,24 @@
+ELDEHOF 5.2.1 – TESTCHECKLISTE
+
+□ ZIP enthält genau fünf aktuelle Dateien
+□ keine Anleitung oder Testcheckliste einer früheren Version im ZIP
+□ /api/version zeigt 5.2.1-SICHERER-AUTOPILOT-20260806
+□ /api/sync/health zeigt configured:true
+□ bestehender Durable-Object-Migrationstag bleibt v5-1-0-sync
+□ Mehr zeigt den Bereich „Sicherer Autopilot 5.2.1“
+□ Automatikstufen Aus, Vorschlagen und Alltag automatisch auswählbar
+□ Aktivierung von „Alltag automatisch“ erklärt die Sicherheitsgrenzen
+□ „Jetzt prüfen“ führt eine gebündelte Routine aus
+□ Routine prüft Sync nur bei entsperrtem Schlüssel
+□ Sync-Konflikt wird angezeigt und niemals automatisch entschieden
+□ Preise und Wetter werden nur bei eingerichteter Ostrom-Verbindung aktualisiert
+□ Fehler eines Schritts verhindern nicht die übrigen Prüfungen
+□ Vorschlag besitzt „Übernehmen“ und „Heute ignorieren“
+□ „Alltag automatisch“ übernimmt nur einen bestätigten Wochenplan
+□ bereits bestätigter Tagesplan wird niemals still überschrieben
+□ kein Gerät wird gestartet oder gesteuert
+□ keine Verbrauchs- oder Messwerte werden erfunden
+□ Autopilot-Schritte erscheinen im lokalen Verlauf
+□ privates Backup enthält autopilotState
+□ ältere Backups bleiben importierbar
+□ mobile Darstellung besitzt keinen horizontalen Überlauf

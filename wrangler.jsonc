@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.2.0",
-    "ELDEHOF_BUILD_ID": "5.2.0-FOKUSMODUS-20260806",
+    "ELDEHOF_VERSION": "5.2.1",
+    "ELDEHOF_BUILD_ID": "5.2.1-SICHERER-AUTOPILOT-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -122,7 +122,11 @@
     "ELDEHOF_FOCUS_TODAY": "next-action-price-issues-sync",
     "ELDEHOF_FOCUS_DECISIONS": "prioritized-bundled-explicit-actions",
     "ELDEHOF_FOCUS_TIMELINE": "local-derived-chronological-event-stream",
-    "ELDEHOF_FOCUS_EXPERT_ACCESS": "existing-features-grouped-under-more"
+    "ELDEHOF_FOCUS_EXPERT_ACCESS": "existing-features-grouped-under-more",
+    "ELDEHOF_AUTOPILOT_MODES": "off-suggest-safe-everyday-auto",
+    "ELDEHOF_AUTOPILOT_ROUTINE": "active-app-sync-prices-weather-reminders-plan",
+    "ELDEHOF_AUTOPILOT_PLAN_POLICY": "confirmed-weekly-auto-handoff-no-confirmed-plan-overwrite",
+    "ELDEHOF_AUTOPILOT_SAFETY": "no-device-control-no-fabrication-no-conflict-resolution"
   },
   "observability": {
     "enabled": true

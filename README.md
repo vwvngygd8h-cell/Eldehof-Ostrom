@@ -1,34 +1,29 @@
-# Eldehof 5.2.0 – Fokusmodus
+# Eldehof 5.2.1 – Sicherer Autopilot
 
-Eldehof besitzt jetzt drei tägliche Hauptbereiche:
+Drei Automatikstufen:
 
-- Heute
-- Verlauf
-- Mehr
+- Aus
+- Vorschlagen
+- Alltag automatisch
 
-Die Heute-Zentrale bündelt:
+Die aktive App prüft verschlüsselten Sync, Strompreise, Wetter,
+Erinnerungen und den Tagesplan als gebündelte Routine.
 
-- nächste konkrete Aufgabe
-- Strompreisstatus
-- offene Entscheidungen
-- Sync-Zustand
-- letzte automatische Prüfung
+„Alltag automatisch“ darf ausschließlich Aufgaben aus einem bereits
+bestätigten Wochenplan in einen noch unbestätigten Tagesplan übernehmen.
+Ein bestehender bestätigter Tagesplan wird niemals still überschrieben.
 
-Normale Preis-, Wetter-, Erinnerungs- und Sync-Aktualisierungen laufen
-weiterhin beim aktiven Öffnen der App. Nur relevante Entscheidungen
-erscheinen auf der Startseite.
+Feste Grenzen:
 
-Der Verlauf wird lokal aus vorhandenen Planungen, Abschlüssen,
-Zielarchiven, Optimierungsmaßnahmen, Sync-Ereignissen und Backups
-abgeleitet.
+- keine Geräte- oder Wärmepumpensteuerung
+- keine erfundenen Messwerte
+- keine automatische Sync-Konfliktlösung
+- keine Datenlöschung oder Importautomatik
+- keine Hintergrundgarantie bei geschlossener PWA
 
-Alle bisherigen Fachfunktionen bleiben vollständig erhalten. Sie werden
-unter Mehr in Planung, Auswertung sowie Daten & Sicherheit geordnet.
-Monats- und Analyseansichten sind als Expertenansichten erreichbar.
+Der vorhandene Sync-Tresor und die Durable-Object-Migration
+`v5-1-0-sync` bleiben unverändert.
 
-Der Fokusmodus steuert keine Geräte oder die Wärmepumpe, erfindet keine
-Messwerte und entscheidet keine Sync-Konflikte.
+Aktiver Build:
 
-Aktive Version:
-
-`5.2.0-FOKUSMODUS-20260806`
+`5.2.1-SICHERER-AUTOPILOT-20260806`

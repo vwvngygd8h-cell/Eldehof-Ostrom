@@ -1,0 +1,63 @@
+ELDEHOF 5.2.1 – SICHERER AUTOPILOT
+
+ZIP-INHALT
+- worker.js
+- wrangler.jsonc
+- README.md
+- Eldehof_5_2_1_Autopilot_Anleitung.txt
+- Eldehof_5_2_1_Testcheckliste.txt
+
+Veraltete Anleitungen früherer Versionen sind nicht mehr enthalten.
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub nur worker.js und wrangler.jsonc ersetzen.
+3. Commit erstellen und das aktive Cloudflare-Deployment abwarten.
+
+SYNC-TRESOR
+Die vorhandene Migration bleibt unverändert:
+v5-1-0-sync
+
+Tresor, gekoppelte Geräte und Wiederherstellungsschlüssel bleiben gültig.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=521
+
+ERWARTET
+version: 5.2.1-SICHERER-AUTOPILOT-20260806
+autopilotModes: off-suggest-safe-everyday-auto
+autopilotRoutine: active-app-sync-prices-weather-reminders-plan
+autopilotPlanPolicy: confirmed-weekly-auto-handoff-no-confirmed-plan-overwrite
+autopilotSafety: no-device-control-no-fabrication-no-conflict-resolution
+
+SYNC PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/sync/health
+
+configured:true muss erhalten bleiben.
+autopilotRequiresActiveApp:true zeigt die bewusste Browsergrenze.
+
+FRONTEND FRISCH ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.2.1&cache=sicherer-autopilot-neu
+
+AUTOMATIKSTUFEN
+AUS
+Keine automatische Routine. „Jetzt prüfen“ funktioniert weiterhin manuell.
+
+VORSCHLAGEN
+Preise, Wetter, Erinnerungen und Sync werden bei aktiver App geprüft.
+Ein Tagesplan erscheint als Vorschlag mit „Übernehmen“ und „Heute ignorieren“.
+
+ALLTAG AUTOMATISCH
+Eldehof darf einen noch unbestätigten Tagesplan automatisch vorbereiten,
+aber nur aus einem bereits bestätigten Wochenplan. Ein bestätigter Tagesplan
+wird bei neuen Preisen nicht still geändert, sondern als Entscheidung gezeigt.
+
+PROTOKOLL
+Unter Mehr → Sicherer Autopilot → Letzte automatische Schritte stehen
+Grund, Ergebnis und Zeitpunkt jedes Schritts. Dieselben Ereignisse erscheinen
+im Verlauf unter Planung.
+
+SICHERHEIT
+Der Autopilot startet keine Geräte, steuert keine Wärmepumpe, erfindet keine
+Messwerte, entscheidet keine Sync-Konflikte und garantiert keinen Lauf bei
+vollständig geschlossener PWA.
