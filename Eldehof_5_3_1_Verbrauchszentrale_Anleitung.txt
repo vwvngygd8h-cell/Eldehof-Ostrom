@@ -1,0 +1,71 @@
+ELDEHOF 5.3.1 – VERBRAUCHSZENTRALE
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit ausführen und Cloudflare-Deployment abwarten.
+
+SYNC-TRESOR
+Der vorhandene Tresor, gekoppelte Geräte und Wiederherstellungsschlüssel
+bleiben erhalten. Der Durable-Object-Migrationstag bleibt unverändert:
+
+v5-1-0-sync
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=531
+
+ERWARTET
+version: 5.3.1-VERBRAUCHSZENTRALE-20260806
+consumptionCenter: direct-consumption-cost-heatpump-day-profile-dashboard
+consumptionPeriod: shared-latest-three-twelve-current-previous-custom
+consumptionCompare: none-previous-year-previous-period-energy-goal
+consumptionQuality: measured-partial-derived-estimated-explicit
+consumptionNavigation: more-direct-search-breadcrumb-return
+consumptionFavorites: up-to-two-today-summary-cards
+
+FRONTEND FRISCH ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.3.1&cache=verbrauchszentrale-neu
+
+VERBRAUCHSDIAGRAMME FINDEN
+Mehr → Auswertung → Verbrauchsdiagramme
+
+ZEITRAUM
+- Dieser Monat
+- Letzte 3 Monate
+- Letzte 12 Monate
+- Dieses Jahr
+- Vorjahr
+- Eigener Zeitraum
+
+VERGLEICH
+- kein Vergleich
+- Vorjahr
+- vorheriger Zeitraum
+- Energieziel
+
+ÜBERSICHT UND DETAILS
+„Übersicht“ zeigt Diagramm und Kernaussage.
+„Details“ ergänzt Monatswerte, Status, Quelle und Datenqualität.
+
+FAVORITEN AUF HEUTE
+Mit „☆ Auf Heute“ können höchstens zwei Auswertungen als kompakte
+Kennzahl auf der Heute-Seite angezeigt werden.
+
+SMART-METER-TAGESPROFIL
+Fehlen Tageswerte, zeigt Eldehof keine leere Diagrammfläche. Über
+„Smart-Meter-Analyse öffnen“ kann der gewünschte Zeitraum geladen werden.
+
+EXPORT
+Jede Auswertung besitzt:
+- CSV exportieren
+- Diagrammdaten kopieren
+
+DATENQUALITÄT
+● vollständig gemessen
+◐ teilweise gemessen
+○ aus Monatswerten abgeleitet
+△ Schätzung
+
+Messungen, Ableitungen und Schätzungen werden nicht vermischt.

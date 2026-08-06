@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.3.0",
-    "ELDEHOF_BUILD_ID": "5.3.0-ENERGIEBUCH-20260806",
+    "ELDEHOF_VERSION": "5.3.1",
+    "ELDEHOF_BUILD_ID": "5.3.1-VERBRAUCHSZENTRALE-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -137,7 +137,14 @@
     "ELDEHOF_ENERGY_JOURNAL_SOURCES": "closed-months-goal-archives-seasons-interventions",
     "ELDEHOF_ENERGY_JOURNAL_EVIDENCE": "measured-documented-estimated-open-separated",
     "ELDEHOF_ENERGY_JOURNAL_REVIEW": "yearly-factual-summary-no-causal-overclaim",
-    "ELDEHOF_ENERGY_JOURNAL_SYNC": "full-scope-client-encrypted-household-excluded"
+    "ELDEHOF_ENERGY_JOURNAL_SYNC": "full-scope-client-encrypted-household-excluded",
+    "ELDEHOF_CONSUMPTION_CENTER": "direct-consumption-cost-heatpump-day-profile-dashboard",
+    "ELDEHOF_CONSUMPTION_PERIOD": "shared-latest-three-twelve-current-previous-custom",
+    "ELDEHOF_CONSUMPTION_COMPARE": "none-previous-year-previous-period-energy-goal",
+    "ELDEHOF_CONSUMPTION_QUALITY": "measured-partial-derived-estimated-explicit",
+    "ELDEHOF_CONSUMPTION_NAVIGATION": "more-direct-search-breadcrumb-return",
+    "ELDEHOF_CONSUMPTION_FAVORITES": "up-to-two-today-summary-cards",
+    "ELDEHOF_CONSUMPTION_EXPORT": "chart-data-csv-and-copy"
   },
   "observability": {
     "enabled": true

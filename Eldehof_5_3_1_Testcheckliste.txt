@@ -1,0 +1,36 @@
+ELDEHOF 5.3.1 – TESTCHECKLISTE
+
+□ Version zeigt 5.3.1-VERBRAUCHSZENTRALE-20260806
+□ Mehr → Auswertung beginnt mit „Verbrauchsdiagramme“
+□ Suche findet Diagramme, Verbrauch, Stromkosten und Tagesverlauf
+□ Verbrauchszentrale öffnet direkt ohne Umweg über Wärmepumpenanalyse
+□ Brotkrumen und „Zurück zu Mehr“ funktionieren
+□ Zeitraum Dieser Monat funktioniert
+□ Zeitraum Letzte 3 Monate funktioniert
+□ Zeitraum Letzte 12 Monate funktioniert
+□ Dieses Jahr und Vorjahr funktionieren
+□ eigener Von-/Bis-Zeitraum funktioniert
+□ Vergleich Vorjahr funktioniert
+□ Vergleich vorheriger Zeitraum funktioniert
+□ Energieziel wird nur bei vorhandenem Ziel angezeigt
+□ Übersicht zeigt Kernaussagen
+□ Details zeigt Werte, Status, Quelle und Datenqualität
+□ Gesamtverbrauchsdiagramm erscheint
+□ Wärmepumpendiagramm erscheint
+□ Kostendiagramm erscheint
+□ Tagesprofil erscheint bei vorhandenen Smart-Meter-Daten
+□ fehlendes Tagesprofil zeigt verständlichen Hinweis statt leerer Fläche
+□ vollständige Wärmepumpenanalyse bleibt erreichbar
+□ Smart-Meter-Langzeitanalyse bleibt erreichbar
+□ höchstens zwei Favoriten können auf Heute erscheinen
+□ Favoriten bleiben nach Neustart gespeichert
+□ CSV-Export enthält die sichtbaren Diagrammdaten
+□ Kopieren enthält keine PIN, Schlüssel oder Zugangsdaten
+□ privates Backup enthält consumptionCenterState
+□ vollständiger verschlüsselter Sync enthält consumptionCenterState
+□ Haushalts-Sync enthält keine Verwaltungs-/Diagrammeinstellungen
+□ bestehender Sync-Tresor bleibt erhalten
+□ Migrationstag bleibt v5-1-0-sync
+□ ZIP enthält exakt fünf aktuelle Dateien
+□ mobile Darstellung hat keinen horizontalen Überlauf
+□ keine JavaScript-Laufzeitfehler

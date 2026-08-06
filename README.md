@@ -1,22 +1,23 @@
-# Eldehof 5.3.0 – Persönliches Energiebuch
+# Eldehof 5.3.1 – Verbrauchszentrale
 
-Das Energiebuch erzeugt eine verständliche Langzeitchronik aus bereits vorhandenen Eldehof-Daten:
+Direkter Zugang:
 
-- abgeschlossene Monate
-- archivierte Energieziele
-- gestartete und ausgewertete Optimierungsmaßnahmen
-- aktivierte und beendete Saisonprofile
-- eigene Notizen und Erkenntnisse
+`Mehr → Auswertung → Verbrauchsdiagramme`
 
-Nachweisarten bleiben sichtbar getrennt:
+Die Verbrauchszentrale bündelt:
 
-- gemessen
-- dokumentiert
-- geschätzt
-- offen
+- Gesamtverbrauch
+- Wärmepumpenstrom
+- Stromkosten
+- typisches Smart-Meter-Tagesprofil
+- gemeinsame Zeitraum- und Vergleichswahl
+- sichtbare Datenqualität
+- Übersicht und Details
+- CSV-Export und Kopieren der Diagrammdaten
+- bis zu zwei Favoriten auf „Heute“
 
-Der Jahresrückblick fasst ausschließlich vorhandene Daten zusammen und behauptet ohne geeigneten Vergleich keine Ursache-Wirkung.
+Die bisherigen Fachanalysen bleiben erhalten und sind aus der Zentrale direkt
+aufrufbar. Der bestehende verschlüsselte Sync-Tresor und der Migrationstag
+`v5-1-0-sync` bleiben unverändert.
 
-Eigene Energiebuch-Notizen werden im privaten Backup gespeichert und nur im vollständigen, clientseitig verschlüsselten Sync übertragen. Der Haushaltsumfang enthält sie nicht.
-
-Aktive Version: `5.3.0-ENERGIEBUCH-20260806`
+Aktive Version: `5.3.1-VERBRAUCHSZENTRALE-20260806`
