@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "4.2",
-    "ELDEHOF_BUILD_ID": "4.2-SAISONPROFILE-20260806",
+    "ELDEHOF_VERSION": "4.3",
+    "ELDEHOF_BUILD_ID": "4.3-ENERGIEZIELE-BUDGETS-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -82,7 +82,12 @@
     "ELDEHOF_SEASON_PROFILES": "standard-heating-summer-garden-vacation-away-visitors",
     "ELDEHOF_SEASON_ACTIVATION": "manual-confirmed-date-range",
     "ELDEHOF_SEASON_PLANNING": "temporary-defaults-no-device-control",
-    "ELDEHOF_SEASON_HEATPUMP": "advisory-only-context-aware"
+    "ELDEHOF_SEASON_HEATPUMP": "advisory-only-context-aware",
+    "ELDEHOF_ENERGY_GOALS": "monthly-targets-budgets-forecast-corridors",
+    "ELDEHOF_GOAL_METRICS": "total-cost-heatpump-annex-rest-cop-saving-measured-share",
+    "ELDEHOF_GOAL_FORECAST": "actual-ostrom-projection-linear-components-confidence",
+    "ELDEHOF_GOAL_SEASON": "suggestion-confirmation-only",
+    "ELDEHOF_GOAL_ARCHIVE": "month-close-local-snapshots-csv-backup"
   },
   "observability": {
     "enabled": true

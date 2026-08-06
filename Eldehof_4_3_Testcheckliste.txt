@@ -1,0 +1,21 @@
+ELDEHOF 4.3 – TESTCHECKLISTE
+
+□ App zeigt 4.3
+□ Monat zeigt Energieziele & Budgets
+□ Gesamtverbrauch und Kostenbudget lassen sich speichern
+□ Wärmepumpe, Altenteil und übriges Haus sind getrennt
+□ Arbeitszahl und Messquote unterstützen Mindestziele
+□ Monatsvorgabe überschreibt Standardziel
+□ Monatsvorgabe lässt sich entfernen
+□ Ostrom-Prognose wird für den laufenden Monat verwendet
+□ Teilwerte werden als Hochrechnung gekennzeichnet
+□ Vertrauensstufe wird angezeigt
+□ verbleibendes Tagesbudget wird berechnet
+□ Ursachenanalyse zeigt den betroffenen Bereich
+□ Saisonvorschlag wird nicht automatisch angewendet
+□ Zielarchiv lässt sich manuell speichern
+□ Monatsabschluss archiviert Ziele automatisch
+□ Ziel-CSV lässt sich exportieren
+□ privates Backup enthält energyGoalState
+□ 4.2-Backups bleiben importierbar
+□ Rückgängig schützt Zieländerungen

@@ -1,0 +1,38 @@
+ELDEHOF 4.3 – ENERGIEZIELE & BUDGETS
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub worker.js und wrangler.jsonc ersetzen.
+3. Commit changes wählen.
+4. Das aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=430
+
+ERWARTET
+version: 4.3-ENERGIEZIELE-BUDGETS-20260806
+energyGoals: monthly-targets-budgets-forecast-corridors
+energyGoalMetrics: total-cost-heatpump-annex-rest-cop-saving-measured-share
+energyGoalForecast: actual-ostrom-projection-linear-components-confidence
+energyGoalSeasonMode: suggestion-confirmation-only
+energyGoalArchive: month-close-local-snapshots-csv-backup
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.3&cache=energieziele-neu
+
+ZIELE FESTLEGEN
+1. Monat öffnen.
+2. Energieziele & Budgets öffnen.
+3. Ziele bearbeiten.
+4. Werte für diesen Monat oder als Standard speichern.
+
+Standardziele gelten nur für Monate ohne eigene Vorgabe. Monatsvorgaben können zurückgesetzt werden. Das bisherige Monatsbudget wird einmalig als Kosten-Standardziel übernommen.
+
+PROGNOSE
+Abgeschlossene Monate verwenden Istwerte. Im laufenden Monat nutzt Eldehof nach Möglichkeit die Ostrom-Prognose für Gesamtverbrauch und Kosten. Wärmepumpe, Altenteil und übriges Haus werden aus vorhandenen Teilwerten hochgerechnet. Jede Prognose erhält eine Vertrauensstufe.
+
+SAISONPROFILE
+Ein aktives Saisonprofil kann eine Anpassung nur vorschlagen. Übernahme gilt ausschließlich für den gewählten Monat und verlangt eine Bestätigung.
+
+ARCHIV
+Beim Monatsabschluss archiviert Eldehof das Zielergebnis automatisch, sofern Ziele gesetzt sind. Zielarchive werden im privaten Backup gesichert.
