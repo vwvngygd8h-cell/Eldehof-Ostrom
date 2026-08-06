@@ -1,0 +1,65 @@
+ELDEHOF 4.2 – SAISONPROFILE
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=420
+
+ERWARTET
+version: 4.2-SAISONPROFILE-20260806
+seasonProfiles: standard-heating-summer-garden-vacation-away-visitors
+seasonActivation: manual-confirmed-date-range
+seasonPlanning: temporary-defaults-no-device-control
+seasonReminders: profile-aware-fallback-rules
+seasonHeatPumpMode: advisory-only-context-aware
+seasonSuggestions: calendar-weather-confirmation-only
+seasonPrivacy: browser-only-backup-included
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.2&cache=saisonprofile-neu
+
+PROFIL AKTIVIEREN
+1. Heute → Saisonprofile öffnen.
+2. Profil auswählen.
+3. Startdatum und optionales Enddatum festlegen.
+4. Wirkungsvorschau lesen.
+5. „Profil aktivieren“ antippen und bestätigen.
+
+WIRKUNG
+Heizperiode:
+Gartenpumpe wird in neuen Plänen zunächst pausiert. Wärmepumpenhinweise
+stellen Komfort und Effizienz vor den Strompreis.
+
+Sommerbetrieb:
+Wärmepumpenhinweise beziehen sich hauptsächlich auf Warmwasser.
+
+Gartensaison:
+Neue, noch nicht manuell konfigurierte Wochen erhalten mehr
+Gartenpumpenläufe und Wetterprüfung.
+
+Urlaub:
+Waschen, Trocknen und Spülen werden in neuen Tagesvorschlägen zunächst
+pausiert. Die Gartenpumpe bleibt wetterabhängig möglich.
+
+Abwesenheit:
+Flexible Geräte werden standardmäßig pausiert. Grundlast und
+Datenaktualität stehen im Mittelpunkt.
+
+Besuch / hoher Bedarf:
+Neue Wochenvorschläge erhöhen Küche und Wäsche moderat.
+
+WICHTIG
+Bereits gespeicherte Wochenvorgaben und bestätigte Pläne haben Vorrang.
+Ein Saisonprofil ändert keine dauerhaften Geräteprofile. Jede einzelne
+Tagesvorgabe kann weiterhin manuell überschrieben werden.
+
+DATENSCHUTZ
+Profil, Laufzeit und Historie bleiben lokal und werden im privaten
+Backup gespeichert. Eldehof sendet keine Steuerbefehle an Vaillant oder
+andere Geräte.

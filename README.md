@@ -1,19 +1,37 @@
-# Eldehof 4.1.1 – Erinnerungen & Routinen
+# Eldehof 4.2 – Saisonprofile
 
-Die Erinnerungszentrale ergänzt bestätigte Tages- und Wochenpläne um lokale Hinweise:
+Eldehof unterscheidet jetzt sieben Betriebsprofile:
 
-- Start-Hinweis je Gerät
-- geplantes Ende
-- noch offenes Tagesergebnis
-- Tagesabschluss
-- Übergabe eines bestätigten Wochenplans in den Tagesplan
+- Standard
+- Heizperiode
+- Sommerbetrieb
+- Gartensaison
+- Urlaub
+- Abwesenheit
+- Besuch / hoher Bedarf
 
-In-App-Erinnerungen bleiben bestehen, bis sie erledigt, geöffnet oder verschoben werden. Ruhezeit, maximale Systemhinweise und Gerätere­geln sind lokal konfigurierbar.
+Saisonprofile werden ausschließlich manuell und nach Bestätigung
+aktiviert. Optional kann eine Laufzeit mit Start- und Enddatum festgelegt
+werden.
 
-Optionale Systemhinweise werden erst nach einem erfolgreichen Test freigeschaltet. Ohne Push-Anbieter und Server-Scheduling kann eine PWA Benachrichtigungen bei vollständig geschlossener App nicht garantieren. Deshalb bleibt die In-App-Liste die verlässliche Quelle.
+Sie verändern nur neue Standardvorschläge:
 
-Aus mindestens drei Tagesabschlüssen kann Eldehof die typische Abweichung zwischen geplantem und tatsächlichem Start erkennen. Eine Routine wird nur als Vorschlag angezeigt und erst nach Bestätigung auf Erinnerungen angewendet. Tagespläne und Geräteprofile bleiben unverändert.
+- welche flexiblen Geräte im Tagesplan zunächst aktiviert sind
+- unveränderte Wochen ohne eigene Vorgaben
+- wetterabhängige Gartenpumpen-Vorschläge
+- Standardverhalten der Erinnerungen
+- Text und Schwerpunkt der Wärmepumpenhinweise
+
+Nicht verändert werden:
+
+- dauerhafte Geräteprofile und Kalibrierungen
+- bereits bestätigte Tages- und Wochenpläne
+- Vaillant-Zeitprogramme, Temperaturen oder Betriebsarten
+- Ostrom-Zugangsdaten und Messwerte
+
+Bestätigte Pläne können nach einem Profilwechsel als veraltet erscheinen
+und werden anschließend bewusst neu geprüft.
 
 Aktive Version:
 
-`4.1.1-ERINNERUNGEN-ROUTINEN-20260806`
+`4.2-SAISONPROFILE-20260806`

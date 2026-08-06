@@ -1,0 +1,23 @@
+ELDEHOF 4.2 – TESTCHECKLISTE
+
+□ App zeigt 4.2
+□ Heute zeigt „Betriebsprofil“
+□ Saisonprofile lassen sich ein- und ausklappen
+□ alle sieben Profile werden angezeigt
+□ Startdatum ist auswählbar
+□ optionales Enddatum ist auswählbar
+□ Enddatum vor Startdatum wird abgelehnt
+□ Profilwechsel verlangt eine Bestätigung
+□ Rückgängig stellt das vorherige Profil wieder her
+□ Urlaub pausiert neue Haushaltsgeräte-Vorschläge
+□ Abwesenheit pausiert flexible Geräte
+□ Gartensaison erhöht neue Gartenpumpen-Vorgaben
+□ Besuch erhöht neue Küche-/Wäsche-Vorgaben
+□ vorhandene manuelle Wochenvorgaben bleiben erhalten
+□ Tagesvorgaben lassen sich weiterhin einzeln überschreiben
+□ Wärmepumpe bleibt nur Hinweis ohne Steuerung
+□ Saisonvorschläge werden nicht automatisch aktiviert
+□ Datenprüfung erkennt eine beendete Saisonlaufzeit
+□ privates Backup enthält seasonCenterState
+□ Backup-Import stellt Saisonprofil und Historie wieder her
+□ 4.1.1-Backups bleiben importierbar
