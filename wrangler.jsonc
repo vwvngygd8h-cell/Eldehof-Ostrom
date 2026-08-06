@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.1.1",
-    "ELDEHOF_BUILD_ID": "5.1.1-KONFLIKTZENTRALE-20260806",
+    "ELDEHOF_VERSION": "5.2.0",
+    "ELDEHOF_BUILD_ID": "5.2.0-FOKUSMODUS-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -117,7 +117,12 @@
     "ELDEHOF_SYNC_MERGE": "client-side-three-way-record-level",
     "ELDEHOF_SYNC_QUEUE": "derived-local-idempotent-operation-queue",
     "ELDEHOF_SYNC_AUTO_CHECK": "active-app-key-required",
-    "ELDEHOF_SYNC_DEVICE_STATUS": "last-seen-pull-push-revision-staleness"
+    "ELDEHOF_SYNC_DEVICE_STATUS": "last-seen-pull-push-revision-staleness",
+    "ELDEHOF_FOCUS_MODE": "today-history-more-three-area-navigation",
+    "ELDEHOF_FOCUS_TODAY": "next-action-price-issues-sync",
+    "ELDEHOF_FOCUS_DECISIONS": "prioritized-bundled-explicit-actions",
+    "ELDEHOF_FOCUS_TIMELINE": "local-derived-chronological-event-stream",
+    "ELDEHOF_FOCUS_EXPERT_ACCESS": "existing-features-grouped-under-more"
   },
   "observability": {
     "enabled": true

@@ -1,0 +1,70 @@
+ELDEHOF 5.2.0 – FOKUSMODUS
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das aktive Cloudflare-Deployment abwarten.
+
+WICHTIG FÜR DEN SYNC-TRESOR
+Die bestehende Durable-Object-Migration bleibt unverändert:
+v5-1-0-sync
+
+Den Migrationstag nicht umbenennen und den bestehenden Tresor nicht
+löschen. Wiederherstellungsschlüssel und gekoppelte Geräte bleiben gültig.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=520
+
+ERWARTET
+version: 5.2.0-FOKUSMODUS-20260806
+focusMode: today-history-more-three-area-navigation
+focusToday: next-action-price-issues-sync
+focusDecisions: prioritized-bundled-explicit-actions
+focusTimeline: local-derived-chronological-event-stream
+focusExpertAccess: existing-features-grouped-under-more
+focusAutomationBoundary: automatic-checks-no-device-control
+
+SYNC PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/sync/health
+
+Der bestehende verschlüsselte Tresor muss weiterhin configured:true
+anzeigen.
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.2.0&cache=fokusmodus-neu
+
+HEUTE
+Die Startseite zeigt nur:
+- nächste Aufgabe
+- Preisstatus
+- offene Entscheidungen
+- Sync-Zustand
+
+„Weitere Tagesdetails“ öffnet die bisherigen Saison-, Erinnerungs-,
+Wochen-, Tagesplan- und Tagesabschlussbereiche.
+
+VERLAUF
+Die Chronik kann gefiltert werden:
+- Aufgaben
+- Planung
+- Verbrauch
+- Sync
+- Sicherheit
+
+MEHR
+Alle bisherigen Funktionen sind geordnet:
+- Planung
+- Auswertung
+- Daten & Sicherheit
+
+„Alle Verwaltungsbereiche“ zeigt die vollständigen technischen
+Einstellungsgruppen.
+
+AUTOMATISCHE PRÜFUNGEN
+Beim aktiven Öffnen prüft Eldehof weiterhin Preise, Wetter,
+Erinnerungen und verschlüsselten Sync. 5.2.0 steuert keine Geräte,
+bestätigt keine Nutzung und löst keine widersprüchlichen Sync-Konflikte
+selbstständig.

@@ -1,0 +1,22 @@
+ELDEHOF 5.2.0 – TESTCHECKLISTE
+
+□ App zeigt 5.2.0
+□ Hauptnavigation enthält nur Heute, Verlauf und Mehr
+□ Heute zeigt nächste Aufgabe, Strom, Entscheidungen und Sync
+□ normale technische Karten sind zunächst ausgeblendet
+□ „Weitere Tagesdetails“ öffnet die bisherigen Tagesbereiche
+□ Entscheidungen öffnen den passenden Fachbereich
+□ ein vorbereiteter Tagesplan kann bewusst übernommen werden
+□ Sync-Konflikte werden niemals automatisch entschieden
+□ Verlauf zeigt lokale Ereignisse chronologisch
+□ Verlauf lässt sich nach Aufgaben, Planung, Verbrauch, Sync und Sicherheit filtern
+□ Mehr zeigt Planung, Auswertung sowie Daten & Sicherheit
+□ Monatsdaten bleiben als Expertenansicht erreichbar
+□ Analysen bleiben als Expertenansicht erreichbar
+□ vollständige Verwaltung lässt sich gezielt einblenden
+□ vorhandener Sync-Tresor und gekoppelte Geräte bleiben erhalten
+□ Durable-Object-Migration bleibt v5-1-0-sync
+□ privates Backup enthält focusModeState
+□ ältere Backups bleiben importierbar
+□ keine Geräte- oder Wärmepumpensteuerung
+□ mobile Darstellung ohne horizontalen Überlauf
