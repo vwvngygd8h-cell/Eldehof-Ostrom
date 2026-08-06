@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "4.0.2-KLARHEIT-NAVIGATION-20260806",
+    "ELDEHOF_VERSION": "4.0.3",
+    "ELDEHOF_BUILD_ID": "4.0.3-SICHERHEITSNETZ-FEINSCHLIFF-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -65,7 +65,11 @@
     "ELDEHOF_CLARITY_GROUPS": "tap-to-open-feature-sections",
     "ELDEHOF_CLARITY_QUICK_ACTIONS": "central-plus-menu",
     "ELDEHOF_CLARITY_LAST_VIEW": "local-remembered",
-    "ELDEHOF_CLARITY_MONTH_SYNC": "central-month-selector"
+    "ELDEHOF_CLARITY_MONTH_SYNC": "central-month-selector",
+    "ELDEHOF_SAFETY_NET": "undo-audit-backup-update-diagnosis",
+    "ELDEHOF_SAFETY_UNDO": "single-local-snapshot-five-minutes",
+    "ELDEHOF_SAFETY_AUDIT": "read-only-plausibility-and-completeness",
+    "ELDEHOF_SAFETY_UPDATE": "worker-version-cache-refresh"
   },
   "observability": {
     "enabled": true

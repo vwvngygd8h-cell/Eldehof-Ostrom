@@ -1,0 +1,15 @@
+ELDEHOF 4.0.3 – TESTCHECKLISTE
+
+□ App zeigt 4.0.3
+□ Lupe öffnet die zentrale Funktionssuche
+□ Suche nach „Vaillant“ zeigt passende Ziele
+□ Heute zeigt Backup- und Datenprüfstatus
+□ Datenprüfung verändert keine gespeicherten Werte
+□ Prüfbericht lässt sich als Textdatei exportieren
+□ Backup setzt den lokalen Sicherungsstatus auf heute
+□ Monatswert speichern zeigt „Rückgängig“
+□ Rückgängig stellt den vorherigen Datenstand wieder her
+□ Gerätemessung und Tagesergebnis unterstützen Rückgängig
+□ Update-Assistent vergleicht Worker- und Frontend-Version
+□ Sichere Diagnose enthält keine Schlüssel, Tokens oder Verbrauchswerte
+□ Bestehende Daten und Navigation bleiben erhalten

@@ -1,0 +1,32 @@
+ELDEHOF 4.0.3 – SICHERHEITSNETZ & FEINSCHLIFF
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub worker.js und wrangler.jsonc ersetzen.
+3. Änderungen committen.
+4. Das grüne Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=403
+
+ERWARTET
+version: 4.0.3-SICHERHEITSNETZ-FEINSCHLIFF-20260806
+safetyNet: undo-audit-backup-update-diagnosis
+safetyUndo: single-local-snapshot-five-minutes
+safetyAudit: read-only-plausibility-and-completeness
+safetyUpdateAssistant: worker-version-cache-refresh
+safetySearch: central-function-finder
+safetyDiagnosis: redacted-counts-no-secrets-no-values
+
+FRONTEND
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.0.3&cache=sicherheitsnetz-neu
+
+NEU
+- Lupe oben: Funktionen direkt finden.
+- Heute: dezenter Backup- und Prüfstatus.
+- Mehr → Daten, Datenschutz und Installation: Datenprüfung.
+- Mehr → Systemdiagnose: Update-Assistent und sichere Diagnose.
+- Nach wichtigen Speicheraktionen erscheint „Rückgängig“ für fünf Minuten.
+
+Die Datenprüfung verändert keine Daten. Das private Backup weiterhin niemals
+in ein öffentliches GitHub-Repository hochladen.
