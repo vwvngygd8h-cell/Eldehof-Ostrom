@@ -1,0 +1,42 @@
+ELDEHOF 4.1.1 – ERINNERUNGEN & ROUTINEN
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=411
+
+ERWARTET
+version: 4.1.1-ERINNERUNGEN-ROUTINEN-20260806
+reminderCenter: persistent-in-app-due-list-and-routines
+reminderTypes: start-finish-open-result-daily-close-weekly-handoff
+reminderSystemMode: optional-tested-while-app-active-no-background-guarantee
+reminderQuietHours: local-global-device-rules
+reminderRoutineLearning: median-start-delay-suggestion-confirmation-only
+reminderPrivacy: browser-only-backup-included-no-push-provider
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.1.1&cache=erinnerungen-neu
+
+ERSTE EINRICHTUNG
+1. Mehr → Grenzwerte und Kosten → Erinnerungen & Routinen öffnen.
+2. Ruhezeit und Tagesabschlusszeit prüfen.
+3. Start-, Fertig- und Ergebnisregeln je Gerät einstellen.
+4. Erinnerungen speichern.
+
+SYSTEMHINWEISE
+„Systemhinweis testen“ löst eine sichtbare Testmeldung aus. Erst nach erfolgreichem Test lässt Eldehof die Option aktivieren.
+
+WICHTIG
+Ohne Push-Dienst kann Safari beziehungsweise eine PWA Hinweise bei vollständig geschlossener App nicht zuverlässig zeitgesteuert auslösen. Systemhinweise funktionieren daher nur, solange die PWA aktiv ist oder vom System noch ausgeführt wird. Offene Erinnerungen bleiben immer in Eldehof sichtbar.
+
+ROUTINEN
+Nach mindestens drei Tagesergebnissen kann Eldehof eine typische Startverschiebung vorschlagen. Die Übernahme ändert nur den Erinnerungszeitpunkt – nicht Tagesplan, Fertigzeit oder Geräteprofil.
+
+BACKUP
+Erinnerungseinstellungen, Routinen und erledigte Hinweise werden im privaten Backup mitgesichert.

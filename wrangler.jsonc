@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "4.1",
-    "ELDEHOF_BUILD_ID": "4.1-WOCHENZENTRALE-20260806",
+    "ELDEHOF_VERSION": "4.1.1",
+    "ELDEHOF_BUILD_ID": "4.1.1-ERINNERUNGEN-ROUTINEN-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -74,7 +74,11 @@
     "ELDEHOF_WEEKLY_REQUIREMENTS": "count-deadline-preferred-days-weather",
     "ELDEHOF_WEEKLY_PRICE_QUALITY": "published-partial-forecast-separated",
     "ELDEHOF_WEEKLY_PLAN_CHAINS": "washer-dryer-paired-days",
-    "ELDEHOF_WEEKLY_CLOSE": "daily-results-aggregated-local-archive"
+    "ELDEHOF_WEEKLY_CLOSE": "daily-results-aggregated-local-archive",
+    "ELDEHOF_REMINDER_CENTER": "persistent-in-app-due-list-and-routines",
+    "ELDEHOF_REMINDER_TYPES": "start-finish-open-result-daily-close-weekly-handoff",
+    "ELDEHOF_REMINDER_SYSTEM_MODE": "optional-tested-while-app-active-no-background-guarantee",
+    "ELDEHOF_REMINDER_ROUTINE_LEARNING": "median-start-delay-suggestion-confirmation-only"
   },
   "observability": {
     "enabled": true

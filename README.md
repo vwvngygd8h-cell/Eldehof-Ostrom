@@ -1,28 +1,19 @@
-# Eldehof 4.1 – Wochenzentrale
+# Eldehof 4.1.1 – Erinnerungen & Routinen
 
-Die Wochenzentrale plant flexible Geräte von Montag bis Sonntag.
+Die Erinnerungszentrale ergänzt bestätigte Tages- und Wochenpläne um lokale Hinweise:
 
-Sie berücksichtigt:
+- Start-Hinweis je Gerät
+- geplantes Ende
+- noch offenes Tagesergebnis
+- Tagesabschluss
+- Übergabe eines bestätigten Wochenplans in den Tagesplan
 
-- veröffentlichte Ostrom-Stundenpreise
-- teilweise bekannte Tage
-- klar gekennzeichnete Preisprognosen
-- kalibrierte und geschätzte Geräteverbräuche
-- gewünschte Nutzungshäufigkeit und Fertigzeit
-- bevorzugte Wochentage
-- Regenwahrscheinlichkeit für die Gartenpumpe
-- Tagesabschlüsse und bisherige Alltagstauglichkeit
-- Waschmaschine und Trockner als Wäschekette
+In-App-Erinnerungen bleiben bestehen, bis sie erledigt, geöffnet oder verschoben werden. Ruhezeit, maximale Systemhinweise und Gerätere­geln sind lokal konfigurierbar.
 
-Ein bestätigter Wochenplan verändert keine dauerhaften Geräteprofile und
-bestätigt auch nicht automatisch Tagespläne. Über „Tagesplan öffnen“
-werden die Geräte des gewählten Tages als vorübergehende Tagesvorgaben
-übernommen und anschließend wie gewohnt geprüft und bestätigt.
+Optionale Systemhinweise werden erst nach einem erfolgreichen Test freigeschaltet. Ohne Push-Anbieter und Server-Scheduling kann eine PWA Benachrichtigungen bei vollständig geschlossener App nicht garantieren. Deshalb bleibt die In-App-Liste die verlässliche Quelle.
 
-Der Wochenabschluss fasst die vorhandenen Tagesergebnisse zusammen.
-Realisierte Ersparnisse stammen weiterhin ausschließlich aus belastbaren
-Tagesmessungen. Prognosen und Profilwerte bleiben als Schätzung markiert.
+Aus mindestens drei Tagesabschlüssen kann Eldehof die typische Abweichung zwischen geplantem und tatsächlichem Start erkennen. Eine Routine wird nur als Vorschlag angezeigt und erst nach Bestätigung auf Erinnerungen angewendet. Tagespläne und Geräteprofile bleiben unverändert.
 
 Aktive Version:
 
-`4.1-WOCHENZENTRALE-20260806`
+`4.1.1-ERINNERUNGEN-ROUTINEN-20260806`

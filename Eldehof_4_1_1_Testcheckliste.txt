@@ -1,0 +1,23 @@
+ELDEHOF 4.1.1 – TESTCHECKLISTE
+
+□ App zeigt 4.1.1
+□ Heute zeigt „Nächster Schritt“
+□ Erinnerungszentrale lässt sich ein- und ausklappen
+□ bestätigter Tagesplan erzeugt Start-Hinweise
+□ geplantes Ende kann erinnert werden
+□ offenes Ergebnis bleibt sichtbar
+□ Tagesabschluss wird zur eingestellten Uhrzeit angeboten
+□ bestätigter Wochenplan ohne Tagesplan erzeugt Übergabe-Hinweis
+□ Erinnerung lässt sich 15 Minuten verschieben
+□ Erinnerung lässt sich erledigen
+□ Ruhezeit wird bei Systemhinweisen berücksichtigt
+□ maximale Systemhinweise pro Tag sind einstellbar
+□ Systemhinweise sind erst nach Test aktivierbar
+□ Gerätere­geln lassen sich einzeln ändern
+□ Routinevorschlag erscheint erst nach mindestens drei Tagesergebnissen
+□ Routine wird erst nach Bestätigung übernommen
+□ Tagesplan und Geräteprofil bleiben bei Routineübernahme unverändert
+□ In-App-Erinnerungen funktionieren ohne Notification-Berechtigung
+□ privates Backup enthält reminderCenterState
+□ 4.1-Backups bleiben importierbar
+□ sichere Diagnose enthält nur Anzahlen, keine Erinnerungsinhalte
