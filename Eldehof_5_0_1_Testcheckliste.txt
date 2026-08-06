@@ -1,0 +1,23 @@
+ELDEHOF 5.0.1 – TESTCHECKLISTE
+
+□ App zeigt 5.0.1
+□ Geführte Einrichtung umfasst vier Schritte
+□ PIN verlangt genau sechs Ziffern
+□ Rückkehrmodus und Sperrzeit sind auswählbar
+□ Großansicht, Kontrast und reduzierte Bewegung sind einstellbar
+□ Haushaltsmodus blendet technische Bereiche aus
+□ Nur-Ansehen erlaubt keine Aufgabenänderung
+□ Aufgaben zeigen Status als Text und Symbol
+□ Gestartet speichert die tatsächliche Startzeit
+□ Erledigt erfindet keinen Verbrauchswert
+□ Heute nicht nötig verlangt Bestätigung
+□ Rückgängig ist weiterhin verfügbar
+□ Tagesrückblick zählt erledigt, ausgelassen und offen
+□ Große Küchenansicht besitzt größere Schaltflächen
+□ veraltete Aufgabenaktion öffnet Konflikthinweis
+□ Storage-Änderung einer zweiten Ansicht wird übernommen
+□ Schutzprüfung kontrolliert PIN, Sperre, Diagnose und Backup
+□ sichere Diagnose enthält keinen PIN-Hash und Salt
+□ privates Backup enthält familyModeState
+□ 5.0-Backups bleiben importierbar
+□ mobile Ansicht hat keinen horizontalen Überlauf

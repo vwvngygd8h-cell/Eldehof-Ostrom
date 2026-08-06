@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.0",
-    "ELDEHOF_BUILD_ID": "5.0-FAMILIENMODUS-20260806",
+    "ELDEHOF_VERSION": "5.0.1",
+    "ELDEHOF_BUILD_ID": "5.0.1-FAMILIENMODUS-FEINSCHLIFF-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -103,7 +103,12 @@
     "ELDEHOF_FAMILY_MODE": "local-admin-household-viewer-interface",
     "ELDEHOF_FAMILY_PIN": "local-salted-sha256-ui-lock-not-encryption",
     "ELDEHOF_FAMILY_ACTIONS": "start-finish-skip-snooze-daily-plan-linked",
-    "ELDEHOF_FAMILY_AUTO_LOCK": "local-inactivity-return-to-household"
+    "ELDEHOF_FAMILY_AUTO_LOCK": "local-inactivity-return-to-household",
+    "ELDEHOF_FAMILY_SETUP": "guided-pin-role-lock-assignments-protection-check",
+    "ELDEHOF_FAMILY_TASK_STATES": "planned-started-likely-finished-done-skipped-open",
+    "ELDEHOF_FAMILY_DAILY_REVIEW": "done-skipped-open-favorable-measured-summary",
+    "ELDEHOF_FAMILY_CONFLICT": "local-revision-storage-event-stale-action-guard",
+    "ELDEHOF_FAMILY_ACCESSIBILITY": "large-touch-high-contrast-reduced-motion-live-feedback"
   },
   "observability": {
     "enabled": true

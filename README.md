@@ -1,25 +1,7 @@
-# Eldehof 5.0 – Familienmodus
+# Eldehof 5.0.1 – Familienmodus-Feinschliff
 
-Eldehof besitzt jetzt drei lokale Bedienebenen:
+Neu sind eine geführte Einrichtung, klare Aufgabenstatus, eine große Küchen-/Tabletansicht, ein Tagesrückblick, lokale Konflikterkennung zwischen geöffneten Ansichten und eine Schutzprüfung.
 
-- Verwaltung: vollständige App
-- Haushalt: einfache Tagesaufgaben mit großen Aktionen
-- Nur ansehen: Tagesplan und Status ohne Änderungen
+Die Verwaltungs-PIN bleibt eine lokale Oberflächensperre und keine Verschlüsselung. Es entstehen keine Konten und keine Synchronisierung.
 
-Der Verwaltungsbereich kann mit einer sechsstelligen lokalen PIN geschützt
-werden. Die PIN wird nicht im Klartext gespeichert, sondern lokal mit
-zufälligem Salt und SHA-256 geprüft.
-
-Wichtig: Dies ist eine Oberflächensperre und keine Verschlüsselung. Personen
-mit vollständigem Zugriff auf das Gerät, den Browser-Speicher oder
-Entwicklerwerkzeuge können lokale Daten technisch weiterhin erreichen.
-
-Im Alltagsmodus können bestätigte Tagesaufgaben gestartet, erledigt,
-15 Minuten verschoben oder ausgelassen werden. „Erledigt“ wird ohne
-Messwert gespeichert und zählt deshalb nicht als belastbar gemessene
-Einsparung.
-
-Es gibt keine Online-Konten, keine Cloud-Synchronisierung und keine Geräte-,
-Wärmepumpen-, Speicher- oder Wallbox-Steuerung.
-
-Aktive Version: `5.0-FAMILIENMODUS-20260806`
+Aktive Version: `5.0.1-FAMILIENMODUS-FEINSCHLIFF-20260806`

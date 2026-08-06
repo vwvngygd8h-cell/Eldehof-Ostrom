@@ -1,0 +1,35 @@
+ELDEHOF 5.0.1 – FAMILIENMODUS-FEINSCHLIFF
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub worker.js und wrangler.jsonc ersetzen.
+3. Commit durchführen und das aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=501
+
+ERWARTET
+version: 5.0.1-FAMILIENMODUS-FEINSCHLIFF-20260806
+familySetup: guided-pin-role-lock-assignments-protection-check
+familyTaskStates: planned-started-likely-finished-done-skipped-open
+familyDailyReview: done-skipped-open-favorable-measured-summary
+familyConflictProtection: local-revision-storage-event-stale-action-guard
+familyAccessibility: large-touch-high-contrast-reduced-motion-live-feedback
+familyLargeScreen: kitchen-tablet-focused-display
+familyProtectionCheck: pin-autolock-restricted-ui-diagnosis-backup
+
+FRONTEND
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.0.1&cache=familien-feinschliff-neu
+
+ERSTE EINRICHTUNG
+Mehr → Familienmodus → Geführte Einrichtung.
+PIN, Rückkehrmodus, Sperrzeit, Großansicht und Schutzprüfung werden in vier Schritten eingerichtet.
+
+AUFGABENSTATUS
+Geplant, Gestartet, Vermutlich fertig, Erledigt, Ausgelassen und Ergebnis offen werden mit Text und Symbol angezeigt.
+
+KONFLIKTSCHUTZ
+Ändert eine zweite geöffnete Eldehof-Ansicht eine Aufgabe, übernimmt die App den aktuellen lokalen Stand. Eine veraltete Aktion wird nicht ungefragt ausgeführt.
+
+DATENSCHUTZ
+Keine Konten, keine Cloud-Synchronisierung, keine Personenauswertung. PIN-Hash und Salt erscheinen nicht in der sicheren Diagnose.
