@@ -1,0 +1,54 @@
+ELDEHOF 5.2.2 – LERNENDER ALLTAG
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit erstellen und das Cloudflare-Deployment abwarten.
+
+SYNC-TRESOR
+Der bestehende Migrationstag bleibt unverändert:
+v5-1-0-sync
+
+Tresor, gekoppelte Geräte und Wiederherstellungsschlüssel bleiben gültig.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=522
+
+ERWARTET
+version: 5.2.2-LERNENDER-ALLTAG-20260806
+learningMode: local-transparent-observation-rules
+learningSignals: proposal-decisions-and-actual-task-times
+learningRules: minimum-three-observations-visible-toggle-reset
+learningPlanEffect: optional-preferred-time-and-low-value-proposal-reduction
+learningPrivacy: local-only-no-secrets-no-person-ranking
+learningSafety: no-device-control-no-fabrication-no-conflict-resolution
+
+FRONTEND
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.2.2&cache=lernender-alltag-neu
+
+BEDIENUNG
+Mehr → Sicherer Autopilot → Lernender Alltag
+
+Dort können:
+- lokales Lernen vollständig pausiert werden,
+- erkannte Regeln einzeln ein- oder ausgeschaltet werden,
+- Muster neu ausgewertet werden,
+- sämtliche Lerndaten zurückgesetzt werden.
+
+WIRKUNG
+Bevorzugte Startzeiten verändern ausschließlich neue Planvorschläge. Eine
+explizit manuell gesetzte Tagesvorgabe bleibt vorrangig.
+
+Die optionale Regel „Freie Tagesvorschläge seltener zeigen“ wird nicht
+automatisch aktiviert. Sie kann nach wiederholtem Ignorieren bewusst
+freigeschaltet werden.
+
+DATENSCHUTZ
+Lerndaten bleiben lokal auf dem jeweiligen Gerät. Sie enthalten keine PIN,
+Schlüssel, Zugangsdaten, Seriennummern oder Personenranglisten.
+
+SICHERHEIT
+Eldehof steuert keine Geräte, erfindet keine Messwerte, aktiviert keine
+Automatikstufe selbst und entscheidet keine Sync-Konflikte.

@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.2.1",
-    "ELDEHOF_BUILD_ID": "5.2.1-SICHERER-AUTOPILOT-20260806",
+    "ELDEHOF_VERSION": "5.2.2",
+    "ELDEHOF_BUILD_ID": "5.2.2-LERNENDER-ALLTAG-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -126,7 +126,13 @@
     "ELDEHOF_AUTOPILOT_MODES": "off-suggest-safe-everyday-auto",
     "ELDEHOF_AUTOPILOT_ROUTINE": "active-app-sync-prices-weather-reminders-plan",
     "ELDEHOF_AUTOPILOT_PLAN_POLICY": "confirmed-weekly-auto-handoff-no-confirmed-plan-overwrite",
-    "ELDEHOF_AUTOPILOT_SAFETY": "no-device-control-no-fabrication-no-conflict-resolution"
+    "ELDEHOF_AUTOPILOT_SAFETY": "no-device-control-no-fabrication-no-conflict-resolution",
+    "ELDEHOF_LEARNING_MODE": "local-transparent-observation-rules",
+    "ELDEHOF_LEARNING_SIGNALS": "proposal-decisions-and-actual-task-times",
+    "ELDEHOF_LEARNING_RULES": "minimum-three-observations-visible-toggle-reset",
+    "ELDEHOF_LEARNING_EFFECT": "optional-preferred-time-and-low-value-proposal-reduction",
+    "ELDEHOF_LEARNING_PRIVACY": "local-only-no-secrets-no-person-ranking",
+    "ELDEHOF_LEARNING_SAFETY": "no-device-control-no-fabrication-no-conflict-resolution"
   },
   "observability": {
     "enabled": true

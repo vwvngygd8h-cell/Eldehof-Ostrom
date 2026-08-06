@@ -1,0 +1,24 @@
+ELDEHOF 5.2.2 – TESTCHECKLISTE
+
+□ Version 5.2.2 wird angezeigt
+□ Hauptnavigation bleibt Heute, Verlauf und Mehr
+□ Mehr → Sicherer Autopilot zeigt „Lernender Alltag 5.2.2“
+□ lokales Lernen kann pausiert und wieder aktiviert werden
+□ weniger als drei Beobachtungen erzeugen keine Regel
+□ drei ähnliche tatsächliche Startzeiten erzeugen eine bevorzugte Zeitregel
+□ bevorzugte Zeitregel ist sichtbar und einzeln abschaltbar
+□ manuelle Tagesvorgaben bleiben vorrangig
+□ wiederholt ignorierte freie Tagesvorschläge können als optionale Reduktionsregel erscheinen
+□ Reduktionsregel wird nicht ungefragt aktiviert
+□ häufig bestätigte Wochenübergaben erzeugen nur eine Empfehlung, keine automatische Aktivierung
+□ alle Lerndaten lassen sich getrennt von Plänen und Verbrauchsdaten zurücksetzen
+□ Backup enthält learningState
+□ älteres Backup ohne learningState bleibt importierbar
+□ bestehender Sync-Tresor bleibt funktionsfähig
+□ Migrationstag bleibt v5-1-0-sync
+□ keine PIN, Schlüssel oder Zugangsdaten in Lerndaten
+□ keine Geräte- oder Wärmepumpensteuerung
+□ keine automatische Sync-Konfliktentscheidung
+□ mobile Darstellung ohne horizontalen Überlauf
+□ JavaScript ohne Laufzeitfehler
+□ ZIP enthält nur worker.js, wrangler.jsonc, README.md, aktuelle Anleitung und aktuelle Testcheckliste
