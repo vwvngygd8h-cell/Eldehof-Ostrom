@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "4.3",
-    "ELDEHOF_BUILD_ID": "4.3-ENERGIEZIELE-BUDGETS-20260806",
+    "ELDEHOF_VERSION": "4.4",
+    "ELDEHOF_BUILD_ID": "4.4-ENERGIEFLUSS-PV-SPEICHER-WALLBOX-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -87,7 +87,12 @@
     "ELDEHOF_GOAL_METRICS": "total-cost-heatpump-annex-rest-cop-saving-measured-share",
     "ELDEHOF_GOAL_FORECAST": "actual-ostrom-projection-linear-components-confidence",
     "ELDEHOF_GOAL_SEASON": "suggestion-confirmation-only",
-    "ELDEHOF_GOAL_ARCHIVE": "month-close-local-snapshots-csv-backup"
+    "ELDEHOF_GOAL_ARCHIVE": "month-close-local-snapshots-csv-backup",
+    "ELDEHOF_ENERGY_FLOW": "pv-battery-wallbox-neutral-scenario-model",
+    "ELDEHOF_ENERGY_FLOW_SIMULATION": "synthetic-hourly-monthly-energy-balance",
+    "ELDEHOF_ENERGY_FLOW_SCENARIOS": "up-to-five-local-comparable-scenarios",
+    "ELDEHOF_ENERGY_FLOW_ACTUAL": "manual-neutral-month-values-and-csv-template",
+    "ELDEHOF_ENERGY_FLOW_CONTROL": "none-advisory-only"
   },
   "observability": {
     "enabled": true

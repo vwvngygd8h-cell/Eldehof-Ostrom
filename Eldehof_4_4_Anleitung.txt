@@ -1,0 +1,49 @@
+ELDEHOF 4.4 – ENERGIEFLUSS, PV, SPEICHER UND WALLBOX
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=440
+
+ERWARTET
+version: 4.4-ENERGIEFLUSS-PV-SPEICHER-WALLBOX-20260806
+energyFlow: pv-battery-wallbox-neutral-scenario-model
+energyFlowSimulation: synthetic-hourly-monthly-energy-balance
+energyFlowScenarios: up-to-five-local-comparable-scenarios
+energyFlowActualSlots: manual-neutral-month-values-and-csv-template
+energyFlowPlanning: solar-window-advisory-no-control
+energyFlowEconomics: explicit-assumptions-only-no-guaranteed-payback
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.4&cache=energiefluss-neu
+
+SZENARIO VERWENDEN
+1. Analyse → Energiefluss & Szenarien öffnen.
+2. Monat und Szenario auswählen.
+3. PV-Leistung und Jahresertrag prüfen.
+4. Optional Speicher und Fahrzeugladung eintragen.
+5. Szenario speichern.
+6. Jahresvergleich und Monatsfluss prüfen.
+
+BERECHNUNG
+Eldehof verteilt den vorhandenen oder prognostizierten Monatsverbrauch auf ein synthetisches 24-Stunden-Lastprofil. Die PV-Erzeugung wird aus PV-Leistung, eingetragenem Jahresertrag, Leistungsfaktor und einer monatlichen Verteilung erzeugt. Der Speicher wird stündlich mit Kapazität, Reserve, Leistung und Wirkungsgrad simuliert.
+
+Diese Werte sind Planungsschätzungen und keine Standort-, Dach- oder Ertragsgarantie.
+
+FAHRZEUG
+Der Hausladebedarf wird aus Jahreskilometern, Fahrzeugverbrauch, Ladeverlusten und Zuhause-Anteil abgeleitet. Die Ladestrategie verändert nur das synthetische Lastprofil. Es werden keine Wallbox-Befehle gesendet.
+
+REALE DATEN
+PV-Erzeugung, Netzbezug, Einspeisung, Speicherladung, Speicherentladung und Fahrzeugladung können getrennt als reale Monatswerte gespeichert werden. Die CSV-Vorlage ist herstellerneutral; ein automatischer Herstellerimport ist für eine spätere Stufe vorgesehen.
+
+WIRTSCHAFTLICHKEIT
+Ohne selbst eingetragenen Netzstrompreis und Einspeisevergütung berechnet Eldehof keine Geldwirkung. Eine erfasste Investition führt nicht zu einer scheinbar exakten Amortisationszusage.
+
+DATENSCHUTZ
+Szenarien und reale Monatsfelder bleiben lokal und werden im privaten Backup mitgesichert.

@@ -1,0 +1,23 @@
+ELDEHOF 4.4 – TESTCHECKLISTE
+
+□ App zeigt 4.4
+□ Analyse enthält Energiefluss & Szenarien
+□ drei Start-Szenarien sind vorhanden
+□ bis zu fünf Szenarien können lokal gespeichert werden
+□ PV-Erzeugung wird als Simulation gekennzeichnet
+□ Monatsverbrauch und Fahrzeugladung bleiben getrennt
+□ Direktverbrauch, Speicherladung und Speicherabgabe sind getrennt
+□ Speicherverluste werden ausgewiesen
+□ Netzbezug und Einspeisung werden getrennt ausgewiesen
+□ Eigenverbrauch und Autarkie sind nachvollziehbar
+□ Fahrzeugladung kann aktiviert und deaktiviert werden
+□ Ladestrategie verändert nur die Simulation
+□ finanzielle Wirkung erscheint nur mit eigenen Annahmen
+□ keine Amortisationsgarantie wird angezeigt
+□ reale Monatsfelder werden getrennt gespeichert
+□ CSV-Vorlage ist herstellerneutral
+□ Wochenansicht zeigt nur einen PV-Planungshinweis
+□ Energieziele können Netzbezug und Autarkie aufnehmen
+□ privates Backup enthält energyFlowState
+□ 4.3-Backups bleiben importierbar
+□ keine redirect-Option im Worker
