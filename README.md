@@ -1,11 +1,25 @@
-# Eldehof 4.5 – Langfristige Optimierung
+# Eldehof 5.0 – Familienmodus
 
-Die Optimierungszentrale trennt geplante, durchgeführte, gemessene und belastbar realisierte Ergebnisse über 4, 8, 12 oder 52 Wochen.
+Eldehof besitzt jetzt drei lokale Bedienebenen:
 
-Geräte werden nach Umsetzungsquote, Planeinhaltung, Messquote, Startabweichung und Tarifdifferenz bewertet. Empfehlungen sind lokale Hinweise und ändern keine Geräteprofile. Eine Empfehlung kann stattdessen als zeitlich begrenzte Optimierungsmaßnahme protokolliert werden.
+- Verwaltung: vollständige App
+- Haushalt: einfache Tagesaufgaben mit großen Aktionen
+- Nur ansehen: Tagesplan und Status ohne Änderungen
 
-Monatsvergleiche verwenden abgeschlossene Monate derselben Saisonklasse. Wärmepumpenvergleiche bevorzugen ähnliche Außentemperaturen und kennzeichnen unvollständige Wetterdaten. Zielarchive werden über bis zu zwölf Monate zusammengefasst.
+Der Verwaltungsbereich kann mit einer sechsstelligen lokalen PIN geschützt
+werden. Die PIN wird nicht im Klartext gespeichert, sondern lokal mit
+zufälligem Salt und SHA-256 geprüft.
 
-Alle Daten bleiben lokal. Es erfolgt keine Geräte-, Wärmepumpen-, Speicher- oder Wallbox-Steuerung.
+Wichtig: Dies ist eine Oberflächensperre und keine Verschlüsselung. Personen
+mit vollständigem Zugriff auf das Gerät, den Browser-Speicher oder
+Entwicklerwerkzeuge können lokale Daten technisch weiterhin erreichen.
 
-Aktive Version: `4.5-LANGFRISTIGE-OPTIMIERUNG-20260806`
+Im Alltagsmodus können bestätigte Tagesaufgaben gestartet, erledigt,
+15 Minuten verschoben oder ausgelassen werden. „Erledigt“ wird ohne
+Messwert gespeichert und zählt deshalb nicht als belastbar gemessene
+Einsparung.
+
+Es gibt keine Online-Konten, keine Cloud-Synchronisierung und keine Geräte-,
+Wärmepumpen-, Speicher- oder Wallbox-Steuerung.
+
+Aktive Version: `5.0-FAMILIENMODUS-20260806`

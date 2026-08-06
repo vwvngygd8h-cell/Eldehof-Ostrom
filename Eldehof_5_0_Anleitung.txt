@@ -1,0 +1,65 @@
+ELDEHOF 5.0 – FAMILIENMODUS
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=500
+
+ERWARTET
+version: 5.0-FAMILIENMODUS-20260806
+familyMode: local-admin-household-viewer-interface
+familyEverydayView: today-tasks-large-actions-simple-language
+familyRoles: administration-household-view-only-no-accounts
+familyPin: local-salted-sha256-ui-lock-not-encryption
+familyActions: start-finish-skip-snooze-daily-plan-linked
+familyAssignments: administration-household-anyone-optional
+familyAutoLock: local-inactivity-return-to-household
+familyPrivacy: browser-only-backup-included-no-cloud-sync
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.0&cache=familienmodus-neu
+
+EINRICHTEN
+1. Mehr → Familienmodus öffnen.
+2. Familienmodus aktivieren.
+3. Sechsstellige Verwaltungs-PIN zweimal eingeben.
+4. Standard nach Sperre wählen:
+   - Haushalt
+   - Nur ansehen
+5. Automatische Sperrzeit wählen.
+6. Optional Zuständigkeiten je Gerät zuordnen.
+7. Familienmodus speichern.
+
+BEDIENEBENEN
+Verwaltung:
+vollständige App mit Daten, Importen, Sicherung und Einstellungen.
+
+Haushalt:
+zeigt heute geplante Geräte, einfache Strompreis-Angabe, Saisonprofil und
+offene Aufgaben. Möglich sind Gestartet, Erledigt, 15 Minuten später und
+Heute auslassen.
+
+Nur ansehen:
+zeigt dieselben Tagesinformationen, lässt aber keine Änderungen zu.
+
+DATENQUALITÄT
+„Erledigt“ verwendet eine vorhandene Startmarke oder eine vorsichtige
+Zeitannahme und speichert keinen erfundenen Messwert. Die Nutzung zählt als
+durchgeführt, aber nicht als belastbar gemessen. Präzise Verbrauchswerte
+werden weiterhin in der Verwaltung erfasst.
+
+SICHERHEIT
+Die PIN schützt die Bedienoberfläche lokal. Sie verschlüsselt weder das Gerät
+noch den Browser-Speicher. Die Funktion ersetzt keine Gerätesperre und kein
+eigenes Benutzerkonto.
+
+DATENSCHUTZ
+Es entstehen keine Namen, E-Mail-Adressen oder Online-Konten. Familienmodus,
+Zuständigkeiten und Aktionen bleiben lokal und werden im privaten Backup
+mitgesichert.

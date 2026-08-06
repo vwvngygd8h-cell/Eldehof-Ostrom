@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "4.5",
-    "ELDEHOF_BUILD_ID": "4.5-LANGFRISTIGE-OPTIMIERUNG-20260806",
+    "ELDEHOF_VERSION": "5.0",
+    "ELDEHOF_BUILD_ID": "5.0-FAMILIENMODUS-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -99,7 +99,11 @@
     "ELDEHOF_OPTIMIZATION_DEVICES": "completion-adherence-delay-saving-quality",
     "ELDEHOF_OPTIMIZATION_BASELINES": "comparable-months-season-and-weather-aware",
     "ELDEHOF_OPTIMIZATION_GOALS": "twelve-month-target-history-forecast-error",
-    "ELDEHOF_OPTIMIZATION_INTERVENTIONS": "local-observation-log-confirmation-only"
+    "ELDEHOF_OPTIMIZATION_INTERVENTIONS": "local-observation-log-confirmation-only",
+    "ELDEHOF_FAMILY_MODE": "local-admin-household-viewer-interface",
+    "ELDEHOF_FAMILY_PIN": "local-salted-sha256-ui-lock-not-encryption",
+    "ELDEHOF_FAMILY_ACTIONS": "start-finish-skip-snooze-daily-plan-linked",
+    "ELDEHOF_FAMILY_AUTO_LOCK": "local-inactivity-return-to-household"
   },
   "observability": {
     "enabled": true

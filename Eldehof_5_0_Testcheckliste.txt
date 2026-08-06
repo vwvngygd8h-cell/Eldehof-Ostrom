@@ -1,0 +1,22 @@
+ELDEHOF 5.0 – TESTCHECKLISTE
+
+□ App zeigt 5.0
+□ Familienmodus ist unter Mehr erreichbar
+□ Aktivierung verlangt beim ersten Mal eine sechsstellige PIN
+□ falsche PIN entsperrt die Verwaltung nicht
+□ Alltagsmodus blendet technische Navigation und Importe aus
+□ Nur-Ansehen-Modus besitzt keine Aktionsschaltflächen
+□ Verwaltung zeigt alle bisherigen Bereiche
+□ automatische Sperre kehrt zur gewählten Standardrolle zurück
+□ heutige bestätigte Tagesaufgaben erscheinen
+□ „Gestartet“ speichert eine lokale Startmarke
+□ „Erledigt“ aktualisiert das Tagesergebnis ohne erfundenen Messwert
+□ „Heute auslassen“ setzt das Tagesergebnis auf ausgelassen
+□ „15 Minuten später“ verschiebt nur die lokale Aufgabe
+□ Tagesabschluss- und Wochenübergabe-Hinweise erscheinen
+□ Zuständigkeiten je Gerät sind optional wählbar
+□ PIN wird nicht im Klartext gespeichert
+□ privates Backup enthält familyModeState
+□ 4.5-Backups bleiben importierbar
+□ sichere Diagnose enthält keine PIN, keinen Hash und keinen Salt
+□ mobile Ansicht hat keinen horizontalen Überlauf
