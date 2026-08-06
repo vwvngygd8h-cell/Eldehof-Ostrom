@@ -1,0 +1,61 @@
+ELDEHOF 4.1 – WOCHENZENTRALE
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=410
+
+ERWARTET
+version: 4.1-WOCHENZENTRALE-20260806
+weeklyEnergyCenter: seven-day-price-weather-behavior-planning
+weeklyRequirements: count-deadline-preferred-days-weather
+weeklyPriceQuality: published-partial-forecast-separated
+weeklyPlanChains: washer-dryer-paired-days
+weeklyPlanHandoff: open-day-with-temporary-overrides
+weeklyClose: daily-results-aggregated-local-archive
+weeklyPrivacy: browser-only-backup-included-no-control
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.1&cache=wochenzentrale-neu
+
+WOCHENPLAN ERSTELLEN
+1. Heute → Wochenzentrale öffnen.
+2. Woche auswählen.
+3. „Anforderungen und bevorzugte Tage“ öffnen.
+4. Nutzungsanzahl, Fertigzeit und bevorzugte Tage prüfen.
+5. Wochenvorschlag kontrollieren.
+6. „Wochenplan bestätigen“ antippen.
+
+PREISQUALITÄT
+Veröffentlicht:
+für den Tag liegen weitgehend Stundenpreise vor.
+
+Teilweise bekannt:
+ein Teil der Stundenpreise liegt vor; fehlende Stunden werden vorsichtig
+aus dem vorhandenen Preisverlauf geschätzt.
+
+Prognose:
+für diesen Tag sind noch keine Stundenpreise vorhanden. Der Plan ist
+ausschließlich eine Orientierung und wird später als veraltet erkannt.
+
+TAGESPLAN ÜBERNEHMEN
+In einer Tageszeile „Tagesplan öffnen“ antippen. Eldehof übernimmt nur
+die Geräte und Fertigzeiten dieses Tages als vorübergehende Vorgabe.
+Danach den normalen Tagesplan mit den aktuell verfügbaren Preisen prüfen
+und bestätigen.
+
+WOCHENABSCHLUSS
+Die Wochenzentrale fasst abgeschlossene Tagesergebnisse zusammen:
+durchgeführt, ausgelassen, offen, gemessen, Planeinhaltung sowie
+realisierte und geschätzte Tarifdifferenz.
+
+DATENSCHUTZ
+Anforderungen, Wochenpläne und Wochenabschlüsse bleiben lokal, werden im
+privaten Backup mitgesichert und lösen keine Geräte- oder
+Wärmepumpensteuerung aus.

@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "4.0.3",
-    "ELDEHOF_BUILD_ID": "4.0.3-SICHERHEITSNETZ-FEINSCHLIFF-20260806",
+    "ELDEHOF_VERSION": "4.1",
+    "ELDEHOF_BUILD_ID": "4.1-WOCHENZENTRALE-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -69,7 +69,12 @@
     "ELDEHOF_SAFETY_NET": "undo-audit-backup-update-diagnosis",
     "ELDEHOF_SAFETY_UNDO": "single-local-snapshot-five-minutes",
     "ELDEHOF_SAFETY_AUDIT": "read-only-plausibility-and-completeness",
-    "ELDEHOF_SAFETY_UPDATE": "worker-version-cache-refresh"
+    "ELDEHOF_SAFETY_UPDATE": "worker-version-cache-refresh",
+    "ELDEHOF_WEEKLY_ENERGY_CENTER": "seven-day-price-weather-behavior-planning",
+    "ELDEHOF_WEEKLY_REQUIREMENTS": "count-deadline-preferred-days-weather",
+    "ELDEHOF_WEEKLY_PRICE_QUALITY": "published-partial-forecast-separated",
+    "ELDEHOF_WEEKLY_PLAN_CHAINS": "washer-dryer-paired-days",
+    "ELDEHOF_WEEKLY_CLOSE": "daily-results-aggregated-local-archive"
   },
   "observability": {
     "enabled": true

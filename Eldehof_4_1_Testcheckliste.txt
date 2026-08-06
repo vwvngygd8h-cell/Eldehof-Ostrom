@@ -1,0 +1,22 @@
+ELDEHOF 4.1 – TESTCHECKLISTE
+
+□ App zeigt 4.1
+□ Heute zeigt die Karte „Diese Woche“
+□ Wochenzentrale lässt sich ein- und ausklappen
+□ Woche wird auf Montag bis Sonntag normalisiert
+□ Nutzungsanzahl je flexiblem Gerät ist editierbar
+□ Fertigzeit je Gerät ist editierbar
+□ bevorzugte Wochentage sind auswählbar
+□ Gartenpumpe kann Regenwahrscheinlichkeit berücksichtigen
+□ Waschmaschine und Trockner werden als Kette geplant
+□ veröffentlichte, teilweise bekannte und prognostizierte Preise sind getrennt
+□ Wärmepumpe erscheint nur als Hinweis ohne Steuerung
+□ Wochenplan lässt sich lokal bestätigen
+□ „Tagesplan öffnen“ übernimmt nur Tagesvorgaben
+□ Tagesplan muss weiterhin separat bestätigt werden
+□ Wochenabschluss fasst Tagesergebnisse zusammen
+□ realisierte Ersparnis stammt nur aus Tagesmessungen
+□ Wochenplan und Abschluss lassen sich als CSV exportieren
+□ privates Backup enthält weeklyCenterState
+□ 4.0.3-Backups bleiben importierbar
+□ Datenprüfung meldet vergangene Wochen ohne Abschluss
