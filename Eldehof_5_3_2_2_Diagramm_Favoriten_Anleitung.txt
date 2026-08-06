@@ -1,0 +1,30 @@
+ELDEHOF 5.3.2.2 – DIAGRAMM-FAVORITEN-HOTFIX
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=5322
+
+ERWARTET
+version: 5.3.2.2-DIAGRAMM-FAVORITEN-HOTFIX-20260806
+favoriteChartHotfix: favorites-render-as-real-live-canvases-on-today
+consumptionFavorites: up-to-two-live-today-charts
+
+FRONTEND FRISCH ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.3.2.2&cache=diagramm-favoriten-neu
+
+VERHALTEN
+- In Verbrauchsdiagrammen „☆ Auf Heute“ wählen.
+- Auf „Heute“ erscheint das echte Diagramm inklusive Achsen und Verlauf/Balken.
+- Bis zu zwei Diagramme können gleichzeitig sichtbar sein.
+- „Öffnen“ springt in die vollständige Diagrammansicht.
+- Tagesprofil zeigt bei fehlenden Smart-Meter-Werten statt eines leeren Canvas einen verständlichen Hinweis.
+- Entfernen des Sterns entfernt das Diagramm wieder von Heute.
+
+SYNC
+Bestehender Tresor, Geräte, Wiederherstellungsschlüssel und Migration `v5-1-0-sync` bleiben unverändert.

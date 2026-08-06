@@ -1,11 +1,16 @@
-# Eldehof 5.3.2.1 – Favoriten-Hotfix
+# Eldehof 5.3.2.2 – Diagramm-Favoriten-Hotfix
 
-Hotfix für die Verbrauchsdiagramm-Favoriten auf „Heute“.
+Favorisierte Verbrauchsauswertungen erscheinen jetzt als echte Canvas-Diagramme direkt auf der Heute-Seite.
 
-Behoben:
-- Favoriten werden sofort nach dem Stern-Klick neu gerendert.
-- Favoriten werden bei jedem Wechsel zu „Heute“ aus dem gespeicherten Zustand neu aufgebaut.
-- Favoriten werden beim normalen Heute-Render ebenfalls aufgebaut.
-- Ein sichtbarer Abschnitt „Favoriten für Heute“ macht die Karten leichter auffindbar.
+Unterstützt werden bis zu zwei Favoriten:
+- Verbrauchsaufteilung
+- Gesamtverbrauch
+- Wärmepumpenstrom
+- Stromkosten
+- Tagesprofil
 
-Keine Datenmigration. Der bestehende Sync-Tresor und der Migrationstag `v5-1-0-sync` bleiben unverändert.
+Die Favoritenauswahl und alle bestehenden Verbrauchsdaten bleiben unverändert. Ein Tipp auf „Öffnen“ springt in die vollständige Auswertung.
+
+Der bestehende Sync-Tresor und die Durable-Object-Migration `v5-1-0-sync` bleiben unverändert.
+
+Build: `5.3.2.2-DIAGRAMM-FAVORITEN-HOTFIX-20260806`

@@ -1,0 +1,16 @@
+ELDEHOF 5.3.2.2 – TESTCHECKLISTE
+
+□ Favorit „Verbrauchsaufteilung“ wählen
+□ Zur Heute-Seite wechseln
+□ Echtes gestapeltes Diagramm ist sichtbar
+□ Favorit „Gesamtverbrauch“ wählen
+□ Zweites echtes Diagramm ist sichtbar
+□ Diagramme besitzen Achsen bzw. gezeichnete Daten
+□ „Öffnen“ springt zur vollständigen Auswertung
+□ Favorit entfernen und prüfen, dass das Diagramm verschwindet
+□ Tagesprofil ohne Smart-Meter-Daten zeigt einen Hinweis statt leerem Diagramm
+□ Favoriten bleiben nach App-Neustart erhalten
+□ Maximal zwei Favoriten bleiben erlaubt
+□ Sync-Tresor bleibt erreichbar
+□ Migration bleibt v5-1-0-sync
+□ Mobile Ansicht hat keinen horizontalen Überlauf
