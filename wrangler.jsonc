@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "4.4",
-    "ELDEHOF_BUILD_ID": "4.4-ENERGIEFLUSS-PV-SPEICHER-WALLBOX-20260806",
+    "ELDEHOF_VERSION": "4.5",
+    "ELDEHOF_BUILD_ID": "4.5-LANGFRISTIGE-OPTIMIERUNG-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -93,7 +93,13 @@
     "ELDEHOF_ENERGY_FLOW_SCENARIOS": "multiple-local-comparison-explicit-assumptions",
     "ELDEHOF_ENERGY_FLOW_IMPORTS": "neutral-monthly-csv-grid-pv-storage-ev",
     "ELDEHOF_ENERGY_FLOW_ECONOMICS": "optional-explicit-inputs-simple-first-year-view",
-    "ELDEHOF_ENERGY_FLOW_CONTROL": "advisory-only-no-control"
+    "ELDEHOF_ENERGY_FLOW_CONTROL": "advisory-only-no-control",
+    "ELDEHOF_OPTIMIZATION_CENTER": "planned-done-measured-realized-separated",
+    "ELDEHOF_OPTIMIZATION_WINDOWS": "four-eight-twelve-fiftytwo-weeks",
+    "ELDEHOF_OPTIMIZATION_DEVICES": "completion-adherence-delay-saving-quality",
+    "ELDEHOF_OPTIMIZATION_BASELINES": "comparable-months-season-and-weather-aware",
+    "ELDEHOF_OPTIMIZATION_GOALS": "twelve-month-target-history-forecast-error",
+    "ELDEHOF_OPTIMIZATION_INTERVENTIONS": "local-observation-log-confirmation-only"
   },
   "observability": {
     "enabled": true

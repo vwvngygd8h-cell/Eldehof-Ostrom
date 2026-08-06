@@ -1,11 +1,11 @@
-# Eldehof 4.4 – Energiefluss, PV, Speicher und Wallbox
+# Eldehof 4.5 – Langfristige Optimierung
 
-Eldehof enthält jetzt eine herstellerneutrale Szenariozentrale für Photovoltaik, Batteriespeicher und Fahrzeugladung.
+Die Optimierungszentrale trennt geplante, durchgeführte, gemessene und belastbar realisierte Ergebnisse über 4, 8, 12 oder 52 Wochen.
 
-Die Monatsbilanz trennt Hausverbrauch, Fahrzeugbedarf, PV-Erzeugung, direkten Eigenverbrauch, Speicherladung, Speicherentladung, Verluste, Netzbezug und Einspeisung.
+Geräte werden nach Umsetzungsquote, Planeinhaltung, Messquote, Startabweichung und Tarifdifferenz bewertet. Empfehlungen sind lokale Hinweise und ändern keine Geräteprofile. Eine Empfehlung kann stattdessen als zeitlich begrenzte Optimierungsmaßnahme protokolliert werden.
 
-Alle Standardwerte sind editierbare Annahmen. Spezifischer Jahresertrag, Ausrichtung, Verschattung, Tagesanteil, Speicherdaten und Fahrzeugbedarf müssen vor einer realen Entscheidung geprüft werden.
+Monatsvergleiche verwenden abgeschlossene Monate derselben Saisonklasse. Wärmepumpenvergleiche bevorzugen ähnliche Außentemperaturen und kennzeichnen unvollständige Wetterdaten. Zielarchive werden über bis zu zwölf Monate zusammengefasst.
 
-Importierte Monatswerte bleiben von Simulationen getrennt. Die App sendet keine Steuerbefehle an Wechselrichter, Speicher, Wallbox, Wärmepumpe oder Haushaltsgeräte.
+Alle Daten bleiben lokal. Es erfolgt keine Geräte-, Wärmepumpen-, Speicher- oder Wallbox-Steuerung.
 
-Aktive Version: `4.4-ENERGIEFLUSS-PV-SPEICHER-WALLBOX-20260806`
+Aktive Version: `4.5-LANGFRISTIGE-OPTIMIERUNG-20260806`

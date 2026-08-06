@@ -1,0 +1,38 @@
+ELDEHOF 4.5 – LANGFRISTIGE OPTIMIERUNG
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub worker.js und wrangler.jsonc ersetzen.
+3. Commit changes wählen.
+4. Aktives Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=450
+
+ERWARTET
+version: 4.5-LANGFRISTIGE-OPTIMIERUNG-20260806
+optimizationCenter: planned-done-measured-realized-separated
+optimizationWindows: four-eight-twelve-fiftytwo-weeks
+optimizationDevices: completion-adherence-delay-saving-quality
+optimizationBaselines: comparable-months-season-and-weather-aware
+optimizationGoals: twelve-month-target-history-forecast-error
+optimizationInterventions: local-observation-log-confirmation-only
+optimizationPrivacy: browser-only-backup-included-no-control
+
+FRONTEND
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.5&cache=optimierung-neu
+
+BEDIENUNG
+Analyse → Langfristige Optimierung öffnen. Zeitraum 4, 8, 12 oder 52 Wochen wählen.
+
+BELASTBAR REALISIERT
+Nur Tagesabschlüsse mit echter kWh-Messung, tatsächlicher Zeit und bepreistem Verlauf zählen als realisierte Tarifersparnis. Nicht gemessene Ergebnisse bleiben als Schätzung getrennt.
+
+OPTIMIERUNGSPROTOKOLL
+Eine klar abgegrenzte Maßnahme mit Beobachtungsdauer anlegen. Eldehof speichert die Ausgangslage. Nach Ablauf wird die Maßnahme manuell abgeschlossen und mit dem dann gewählten Zeitraum verglichen. Das Ergebnis beweist keine alleinige Ursache; Wetter, Nutzung und Saison können mitwirken.
+
+WÄRMEPUMPE
+Vergleiche nutzen abgeschlossene Monate derselben Saisonklasse und bevorzugen ähnliche Außentemperaturen. Eldehof verändert keine Einstellung.
+
+DATENSCHUTZ
+Analysen und Maßnahmen bleiben lokal und sind im privaten Backup enthalten.

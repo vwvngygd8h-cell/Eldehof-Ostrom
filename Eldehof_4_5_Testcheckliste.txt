@@ -1,0 +1,22 @@
+ELDEHOF 4.5 – TESTCHECKLISTE
+
+□ App zeigt 4.5
+□ Analyse enthält „Langfristige Optimierung“
+□ Zeiträume 4, 8, 12 und 52 Wochen funktionieren
+□ geplant, durchgeführt, gemessen und realisiert sind getrennt
+□ realisierte Ersparnis nutzt nur gemessene Ergebnisse
+□ geschätzte Ersparnis bleibt separat
+□ Geräteauswertung zeigt Umsetzung, Planeinhaltung und Messquote
+□ Empfehlungen verändern kein Geräteprofil
+□ Empfehlung lässt sich als Maßnahme protokollieren
+□ Maßnahme speichert Ausgangslage und Beobachtungsdauer
+□ Maßnahme lässt sich manuell abschließen und auswerten
+□ Monatsvergleich nutzt dieselbe Saisonklasse
+□ Wärmepumpenvergleich kennzeichnet Wetterähnlichkeit
+□ Zielhistorie wertet bis zu zwölf Archive aus
+□ Optimierungs-CSV funktioniert
+□ privates Backup enthält optimizationState
+□ 4.4-Backups bleiben importierbar
+□ Rückgängig schützt Maßnahmenänderungen
+□ Datenprüfung erkennt auswertbare Maßnahmen
+□ keine Geräte- oder Wärmepumpensteuerung
