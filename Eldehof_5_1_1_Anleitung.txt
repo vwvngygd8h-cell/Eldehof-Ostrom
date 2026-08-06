@@ -1,0 +1,63 @@
+ELDEHOF 5.1.1 – KONFLIKTZENTRALE
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Cloudflare-Deployment abwarten.
+
+WICHTIG ZUR MIGRATION
+Der vorhandene Migrationstag v5-1-0-sync bleibt unverändert. Kein neues
+Durable Object und kein neuer Tresor werden benötigt.
+
+BACKEND PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/sync/health
+
+ERWARTET
+configured: true
+mergeMode: client-side-three-way-record-level
+conflictCenter: true
+localRetryQueue: true
+autoCheckWhenAppActive: true
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=511
+
+ERWARTET
+version: 5.1.1-KONFLIKTZENTRALE-20260806
+syncMerge: client-side-three-way-record-level
+syncConflict: field-level-conflict-center-explicit-resolution
+syncQueue: derived-local-idempotent-operation-queue
+syncAutoCheck: when-app-opens-or-becomes-visible-key-required
+syncDeviceStatus: last-seen-pull-push-revision-staleness
+
+FRONTEND
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.1.1&cache=konfliktzentrale-neu
+
+ERSTER ABGLEICH NACH DEM UPDATE
+1. Mehr → Private Gerätesynchronisierung öffnen.
+2. Wiederherstellungsschlüssel für die Sitzung entsperren.
+3. „Jetzt sicher abgleichen“ antippen.
+4. Eldehof übernimmt den letzten 5.1.0-Tresorstand als gemeinsame Basis.
+
+KONFLIKTE
+Unabhängige Änderungen werden automatisch verbunden. Nur widersprüchliche
+Felder erscheinen. Pro Eintrag kann der lokale oder entfernte Wert gewählt
+werden. Danach „Zusammenführen & hochladen“ antippen.
+
+OFFLINE-WARTESCHLANGE
+Die Liste wird aus der Differenz zum letzten gemeinsamen Stand erzeugt. Ein
+erneuter Versuch dupliziert keine Tagesaufgabe, weil weiterhin ein kompletter,
+versionierter und verschlüsselter Zustand gespeichert wird.
+
+AUTO-CHECK
+Die Prüfung beim Öffnen funktioniert nur bei aktiver App, Internetverbindung
+und für die Sitzung entsperrtem Wiederherstellungsschlüssel. Bei vollständig
+geschlossener PWA gibt es weiterhin keine Hintergrundgarantie.
+
+DATENSCHUTZ
+Serverseitig bleiben ausschließlich verschlüsselte Pakete, Gerätefreigaben,
+Revisionen und Zeitpunkte. Wiederherstellungsschlüssel, PIN-Daten und
+entschlüsselte Inhalte werden nicht übertragen.

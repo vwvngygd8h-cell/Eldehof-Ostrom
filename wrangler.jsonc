@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.1.0",
-    "ELDEHOF_BUILD_ID": "5.1.0-SYNC-FUNDAMENT-20260806",
+    "ELDEHOF_VERSION": "5.1.1",
+    "ELDEHOF_BUILD_ID": "5.1.1-KONFLIKTZENTRALE-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -112,8 +112,12 @@
     "ELDEHOF_SYNC_FOUNDATION": "manual-encrypted-durable-object-vault",
     "ELDEHOF_SYNC_ENCRYPTION": "client-side-aes-gcm-hkdf-sha256",
     "ELDEHOF_SYNC_PAIRING": "one-time-ten-minute-code-plus-recovery-key",
-    "ELDEHOF_SYNC_CONFLICT": "revision-detection-no-silent-overwrite",
-    "ELDEHOF_SYNC_SCOPE": "full-or-household-secrets-excluded"
+    "ELDEHOF_SYNC_CONFLICT": "field-level-conflict-center-explicit-resolution",
+    "ELDEHOF_SYNC_SCOPE": "full-or-household-secrets-excluded",
+    "ELDEHOF_SYNC_MERGE": "client-side-three-way-record-level",
+    "ELDEHOF_SYNC_QUEUE": "derived-local-idempotent-operation-queue",
+    "ELDEHOF_SYNC_AUTO_CHECK": "active-app-key-required",
+    "ELDEHOF_SYNC_DEVICE_STATUS": "last-seen-pull-push-revision-staleness"
   },
   "observability": {
     "enabled": true

@@ -1,0 +1,23 @@
+ELDEHOF 5.1.1 – TESTCHECKLISTE
+
+□ /api/sync/health zeigt mergeMode und conflictCenter
+□ Version ist 5.1.1-KONFLIKTZENTRALE-20260806
+□ bestehender 5.1.0-Tresor bleibt erreichbar
+□ Migrationstag v5-1-0-sync wurde nicht verändert
+□ unabhängige Änderungen werden automatisch zusammengeführt
+□ gleiche Felder mit verschiedenen Werten erzeugen einen Konflikt
+□ Konflikt zeigt verständliche lokale und entfernte Werte
+□ lokale Einzelentscheidung funktioniert
+□ entfernte Einzelentscheidung funktioniert
+□ „Später entscheiden“ behält den Konflikt nach Neustart
+□ abgeschlossene Konfliktauflösung wird als neue Revision hochgeladen
+□ Offline-Warteschlange zeigt lokale Änderungen
+□ wiederholter Upload erzeugt keine doppelte Tagesaktion
+□ Gerätezentrale zeigt letzte Aktivität und Revision
+□ Gerät ab sieben Tagen wird als veraltet gekennzeichnet
+□ widerrufenes Gerät bleibt gesperrt
+□ Auto-Check läuft nur bei aktiver App und entsperrtem Schlüssel
+□ Wiederherstellungsschlüssel und PIN-Daten fehlen in Diagnose
+□ Serverinhalt bleibt ausschließlich verschlüsselt
+□ mobile Darstellung hat keinen horizontalen Überlauf
+□ JavaScript-Ausführung bleibt fehlerfrei

@@ -1,20 +1,19 @@
-# Eldehof 5.1.0 – Privates Synchronisierungsfundament
+# Eldehof 5.1.1 – Konfliktzentrale & zuverlässige Synchronisierung
 
-Neu ist ein manueller Geräteabgleich über einen SQLite-basierten Cloudflare
-Durable Object. Eldehof verschlüsselt das Datenpaket bereits im Browser mit
-AES-GCM. Der Schlüssel wird mit HKDF-SHA-256 aus einem separaten
-Wiederherstellungsschlüssel abgeleitet.
+5.1.1 erweitert das verschlüsselte 5.1.0-Sync-Fundament um einen lokalen
+Drei-Wege-Abgleich. Eldehof vergleicht den letzten gemeinsamen Stand mit dem
+aktuellen lokalen und dem aktuellen entfernten Datenpaket.
 
-Der Server erhält nicht:
+- Änderungen an unterschiedlichen Datensätzen werden automatisch verbunden.
+- Widersprüchliche Änderungen am selben Feld bleiben in der Konfliktzentrale.
+- Jede Einzelentscheidung kann lokal oder entfernt gewählt werden.
+- Eine abgeleitete Offline-Warteschlange vermeidet doppelte Paketwirkungen.
+- Ein begrenztes lokales Protokoll und technische Serverrevisionen zeigen den
+  Ablauf, ohne Schlüssel oder Klartext an Cloudflare zu übertragen.
+- Beim Öffnen kann Eldehof prüfen, wenn die App aktiv und der Schlüssel für die
+  Sitzung entsperrt ist.
 
-- Wiederherstellungsschlüssel oder Klartextdaten
-- Ostrom- und API-Schlüssel
-- Familien-PIN, PIN-Hash oder Salt
-- private Backup- oder Roh-CSV-Dateien
-- Seriennummern und ausführliche Monatsnotizen
+Die bestehende Durable-Object-Migration `v5-1-0-sync` bleibt unverändert.
+Eine permanente Hintergrundsynchronisierung wird weiterhin nicht versprochen.
 
-5.1.0 synchronisiert bewusst nur manuell. Bei voneinander abweichenden lokalen
-und entfernten Änderungen stoppt Eldehof und verlangt eine Entscheidung. Eine
-automatische Zusammenführung auf Datensatzebene folgt erst mit 5.1.1.
-
-Aktive Version: `5.1.0-SYNC-FUNDAMENT-20260806`
+Aktive Version: `5.1.1-KONFLIKTZENTRALE-20260806`
