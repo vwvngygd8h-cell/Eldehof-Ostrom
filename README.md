@@ -1,23 +1,37 @@
-# Eldehof 4.0.1 – Plan-Ist-Vergleich & Tagesabschluss
+# Eldehof 4.0.2 – Klarheit & Navigation
 
-Die tägliche Energiezentrale kann bestätigte Pläne jetzt mit dem tatsächlichen
-Ablauf vergleichen und als lokalen Tagesabschluss archivieren.
+Die App ist jetzt in vier eindeutige Hauptbereiche gegliedert:
 
-Neu:
+- Heute
+- Monat
+- Analyse
+- Mehr
 
-- tatsächlicher Start und tatsächliches Ende je Gerät
-- Status: wie geplant, verschoben, ausgelassen oder offen
-- optionaler echter kWh-Messwert mit Messquelle
-- stündlich gewichtete Istkosten für den tatsächlichen Laufzeitraum
-- realisierte Tarifdifferenz nur bei Messwert, Istzeit und vollständiger Preisabdeckung
-- getrennte geschätzte Tarifdifferenz bei Profil- oder Kalibrierwerten
-- Tageskennzahlen für Planerfüllung, verschobene Energie und Datenqualität
-- lokales Tagesarchiv mit CSV-Export
-- Alltagsmuster aus bis zu 28 Abschlüssen
-- Backup enthält Pläne, Ergebnisse und Tagesabschlüsse
+Die Kompaktansicht ist Standard. Sie zeigt auf der Startseite nur:
 
-Wärmepumpenfenster bleiben reine Hinweise ohne Steuerung.
+- günstiges Preisfenster
+- Status des Tagesplans
+- offene Tagesaufgaben
+- aktuellen Monatsverbrauch
+
+Bestehende Funktionen bleiben erhalten, werden aber in antippbaren Gruppen
+gebündelt. Die vollständige Ansicht öffnet alle Gruppen automatisch.
+
+Der Plus-Button öffnet zentrale Schnellaktionen für Tagesplan, Monatswert,
+myVAILLANT-Import, Gerätemessung und privates Backup.
+
+Weitere Verbesserungen:
+
+- zuletzt verwendeter Hauptbereich wird lokal gemerkt
+- zentraler Monatswähler synchronisiert Monatsfunktionen
+- technische Versionsangaben liegen im Bereich Systemdiagnose
+- Energie-Coach und Vaillant-Monatsfunktionen befinden sich unter Monat
+- Wärmepumpen-, Geräte- und Langzeitanalysen sind gruppiert
+- Verbindungen, Geräteprofile, Grenzwerte und Backup sind unter Mehr gebündelt
+
+Alle bestehenden lokalen Daten, Tagespläne, Tagesabschlüsse, Kalibrierungen
+und Berichtsarchive bleiben kompatibel.
 
 Aktive Version:
 
-`4.0.1-PLAN-IST-TAGESABSCHLUSS-20260806`
+`4.0.2-KLARHEIT-NAVIGATION-20260806`

@@ -1,0 +1,19 @@
+ELDEHOF 4.0.2 – TESTCHECKLISTE
+
+□ App zeigt die Navigation Heute, Monat, Analyse und Mehr
+□ Kompaktansicht ist nach dem ersten Start aktiv
+□ Heute zeigt vier kurze Ergebnisfelder
+□ Tagesplan bleibt direkt erreichbar
+□ Tagesabschluss ist als antippbare Gruppe gebündelt
+□ Weitere Tageswerkzeuge sind eingeklappt
+□ Monat enthält Monatsassistent, Import und Energie-Coach
+□ Zentraler Monatswähler synchronisiert Monatsfunktionen
+□ Analyse zeigt drei übersichtliche Funktionsgruppen
+□ Mehr bündelt Verbindungen, Geräte, Grenzwerte und Daten
+□ Vollständige Ansicht öffnet alle Gruppen
+□ Plus-Button zeigt fünf Schnellaktionen
+□ Schnellaktion „Monatswert“ öffnet den Monatsdialog
+□ Schnellaktion „Gerätemessung“ öffnet die Kalibrierung
+□ Zuletzt verwendeter Hauptbereich wird nach Neuladen wiederhergestellt
+□ Bestehende Monats- und Tagesdaten bleiben erhalten
+□ Privates Backup enthält weiterhin alle vorhandenen Datenbereiche

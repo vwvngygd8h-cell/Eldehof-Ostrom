@@ -10,7 +10,7 @@
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
     "ELDEHOF_VERSION": "3.4.0",
-    "ELDEHOF_BUILD_ID": "4.0.1-PLAN-IST-TAGESABSCHLUSS-20260806",
+    "ELDEHOF_BUILD_ID": "4.0.2-KLARHEIT-NAVIGATION-20260806",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -59,7 +59,13 @@
     "ELDEHOF_DAILY_ACTUAL_COST": "hourly-price-weighted-measured-first",
     "ELDEHOF_DAILY_REALIZED_SAVING": "only-measured-time-priced",
     "ELDEHOF_DAILY_CLOSE_ARCHIVE": "local-snapshots-csv-backup",
-    "ELDEHOF_DAILY_BEHAVIOR_INSIGHTS": "completion-delay-savings-28-days"
+    "ELDEHOF_DAILY_BEHAVIOR_INSIGHTS": "completion-delay-savings-28-days",
+    "ELDEHOF_CLARITY_NAVIGATION": "today-month-analysis-more",
+    "ELDEHOF_CLARITY_MODE": "compact-default-full-optional",
+    "ELDEHOF_CLARITY_GROUPS": "tap-to-open-feature-sections",
+    "ELDEHOF_CLARITY_QUICK_ACTIONS": "central-plus-menu",
+    "ELDEHOF_CLARITY_LAST_VIEW": "local-remembered",
+    "ELDEHOF_CLARITY_MONTH_SYNC": "central-month-selector"
   },
   "observability": {
     "enabled": true

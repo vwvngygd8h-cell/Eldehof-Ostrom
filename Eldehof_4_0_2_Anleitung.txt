@@ -1,0 +1,61 @@
+ELDEHOF 4.0.2 – KLARHEIT & NAVIGATION
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Commit changes wählen.
+4. Das grüne aktive Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=402
+
+ERWARTET
+version: 4.0.2-KLARHEIT-NAVIGATION-20260806
+clarityNavigation: today-month-analysis-more
+clarityMode: compact-default-full-optional
+clarityGroups: tap-to-open-feature-sections
+clarityQuickActions: central-plus-menu
+clarityLastView: local-remembered
+clarityMonthSync: central-month-selector
+frontendBuildExpected: 4.0.2-KLARHEIT-NAVIGATION-20260806
+
+FRONTEND ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=4.0.2&cache=klarheit-neu
+
+NEUE HAUPTBEREICHE
+Heute:
+Preisfenster, Tagesplan, offene Aufgaben und Tagesabschluss.
+
+Monat:
+Monatswerte, myVAILLANT-Import, Monatsabschluss und Energie-Coach.
+
+Analyse:
+Wärmepumpe, Wetter, Geräte-Kalibrierung und Langzeitentwicklung.
+
+Mehr:
+Verbindungen, Geräteprofile, Grenzwerte, Backup und Systemdiagnose.
+
+DARSTELLUNG
+Unter Mehr → Darstellung:
+
+Kompakt
+Die tägliche Standardansicht. Funktionsgruppen bleiben zunächst geschlossen.
+
+Vollständig
+Alle Gruppen werden automatisch geöffnet.
+
+SCHNELLAKTIONEN
+Der Plus-Button öffnet:
+
+- Tagesplan öffnen
+- Monatswert eintragen
+- myVAILLANT importieren
+- Gerätemessung hinzufügen
+- Backup sichern
+
+DATEN
+Das Update verändert keine Monatswerte, Geräteprofile, Kalibrierungen,
+Tagespläne oder Archive. Darstellungsmodus und letzter Hauptbereich werden
+nur lokal in den bestehenden Einstellungen gespeichert.
