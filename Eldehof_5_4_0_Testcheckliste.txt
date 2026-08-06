@@ -1,0 +1,24 @@
+ELDEHOF 5.4.0 – TESTCHECKLISTE
+
+□ /api/version meldet 5.4.0-ENERGIE-COCKPIT-20260806
+□ /api/sync/health meldet cockpitMaxWidgets: 4
+□ Migration bleibt exakt v5-1-0-sync
+□ Bestehender Sync-Tresor ist weiterhin erreichbar
+□ Heute zeigt nur vier kompakte Statuskarten
+□ Energie-Cockpit zeigt automatische Erkenntnisse
+□ „Warum sehe ich das?“ lässt sich öffnen
+□ „Nur Wichtiges“ lässt sich ein-/ausschalten und bleibt nach Neustart erhalten
+□ Bis zu vier Diagramme lassen sich favorisieren
+□ Vier favorisierte Diagramme werden auf Heute tatsächlich gezeichnet
+□ Fünftes Diagramm wird nicht zusätzlich angeheftet
+□ „Cockpit anpassen“ zeigt Sortier- und Entfernen-Aktionen
+□ Reihenfolge der Widgets bleibt nach Neustart erhalten
+□ Datenqualität zeigt unvollständige/unplausible Monatswerte sichtbar
+□ Datenqualität öffnet die bestehende Datenprüfung
+□ Mehr zeigt Schnellzugriffe
+□ Autopilot & Lernen sind standardmäßig eingeklappt
+□ Weitere Werkzeuge sind standardmäßig eingeklappt
+□ Direkter Aufruf eines eingeklappten Ziels öffnet den Bereich automatisch
+□ Privates Backup trägt Version 5.4.0 und enthält Fokus-/Cockpit- sowie Verbrauchszustand
+□ Mobile 390-px-Ansicht hat keinen horizontalen Überlauf
+□ Keine JavaScript-Seitenfehler

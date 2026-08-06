@@ -1,0 +1,45 @@
+ELDEHOF 5.4.0 – ENERGIE-COCKPIT
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ausschließlich ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=540
+
+ERWARTET
+version: 5.4.0-ENERGIE-COCKPIT-20260806
+energyCockpit: today-live-widgets-prioritized-insights-quality
+cockpitWidgets: up-to-four-live-reorderable-consumption-charts
+cockpitInsights: local-factual-comparable-period-deltas-no-causal-claims
+cockpitQuality: central-month-completeness-plausibility-plus-safety-audit
+cockpitQuietMode: important-only-insights-critical-decisions-always-visible
+
+FRONTEND FRISCH ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.4.0&cache=energie-cockpit-neu
+
+HEUTE / ENERGIE-COCKPIT
+- Bis zu vier Diagramme können mit „☆ Auf Heute“ angeheftet werden.
+- „Cockpit anpassen“ zeigt Pfeile zum Sortieren und „Entfernen“.
+- Die Diagramme selbst bleiben auf Heute vollständig sichtbar.
+- „Nur Wichtiges“ ist standardmäßig aktiv. Es reduziert nur kleine Erkenntnisse; Sync-Konflikte, Datenfehler und notwendige Entscheidungen werden nie verborgen.
+- Automatische Erkenntnisse vergleichen ausschließlich identische Kalendermonate zweier Jahre. Mindestens zwei vergleichbare Monate sind erforderlich.
+- „Warum sehe ich das?“ nennt Vergleich, Schwelle und Datenbasis. Eldehof behauptet daraus keine Ursache-Wirkung.
+- Datenqualität zeigt vollständige, unvollständige oder rechnerisch unplausible Monatsaufteilungen und verlinkt zur bestehenden Datenprüfung.
+
+MEHR
+- Oben stehen Schnellzugriffe zu Verbrauch, Datenqualität, Sync sowie Monat & Ziele.
+- Autopilot/Lernen und weitere Werkzeuge sind standardmäßig eingeklappt und öffnen sich bei direktem Aufruf automatisch.
+- Technische Bereiche können weiterhin vollständig eingeblendet werden.
+
+DATENSCHUTZ / SICHERHEIT
+- Cockpit-Einstellungen bleiben lokal und sind im privaten Backup enthalten.
+- Keine Geräte- oder Wärmepumpensteuerung.
+- Keine erfundenen Messwerte.
+- Keine automatische Konfliktlösung.
+- Keine Geheimnisse, PINs oder Personenranglisten in den Cockpit-Erkenntnissen.
+- Sync-Tresor und Wiederherstellungsschlüssel bleiben gültig.
+- Migration bleibt exakt `v5-1-0-sync`.
