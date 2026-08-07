@@ -1,0 +1,26 @@
+ELDEHOF 5.4.1 – TESTCHECKLISTE
+
+□ /api/version meldet 5.4.1-LIVE-COCKPIT-20260807
+□ /api/sync/health: ostromCredentialsRenderedOnToday = false
+□ Migration bleibt exakt v5-1-0-sync
+□ Bestehender Sync-Tresor bleibt unverändert
+□ Ohne App-Schlüssel ist „Ostrom verwenden“ deaktiviert
+□ Mit App-Schlüssel lässt sich der Ostrom-Regler einschalten
+□ Einschalten prüft Status und lädt Live-Daten
+□ Ausschalten pausiert Ostrom, löscht den App-Schlüssel aber nicht
+□ Status ist getrennt vom Regler und zeigt Verbunden / Fehler / Offline / Pausiert korrekt
+□ Aktueller Preis erscheint nach erfolgreicher Live-Aktualisierung
+□ Günstigstes und teures Zeitfenster erscheinen, sofern vorhanden
+□ „Warum diese Preisampel?“ erklärt den 24-h-Vergleich
+□ Quellenfrische zeigt Ostrom, Wetter, Smart Meter und Sync
+□ „Jetzt alles aktualisieren“ blockiert verfügbare Quellen nicht gegenseitig
+□ Offline bleibt letzter bekannter Stand sichtbar
+□ „Cockpit anpassen“ ist auf Heute prominent sichtbar
+□ Favoriten lassen sich hoch/runter sortieren
+□ Favoriten lassen sich zwischen Kompakt und Groß umschalten
+□ Widget-Größe bleibt im localStorage erhalten
+□ Datenqualitätsfehler kann direkt den betroffenen Monat öffnen
+□ Privates Backup trägt Version 5.4.1 und enthält ostromControlState
+□ Service Worker verwendet Cache 5.4.1
+□ Mobile 390-px-Ansicht hat keinen horizontalen Überlauf
+□ Keine JavaScript-Seitenfehler

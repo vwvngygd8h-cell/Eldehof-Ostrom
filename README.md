@@ -1,15 +1,21 @@
-# Eldehof 5.4.0 – Energie-Cockpit
+# Eldehof 5.4.1 – Live-Cockpit & Schnellsteuerung
 
-Die Heute-Seite wird zum ruhigen persönlichen Energie-Cockpit:
-- bis zu vier echte Verbrauchsdiagramme als frei sortierbare Widgets
-- sachliche automatische Erkenntnisse aus exakt vergleichbaren Kalendermonaten
-- „Warum sehe ich das?“ mit Quelle, Zeitraum und Schwellwert
-- „Nur Wichtiges“ als lokale Standardansicht
-- kompakte Datenqualitätsanzeige mit direktem Sprung zur bestehenden Prüfung
-- aufgeräumtes „Mehr“ mit Schnellzugriff und eingeklappten seltenen Werkzeugen
+Neu auf „Heute“:
+- Ostrom-Schieberegler; der gespeicherte App-Schlüssel bleibt beim Pausieren erhalten
+- echter Status getrennt vom Schalter: Zugangsdaten fehlen / pausiert / aktualisiert / verbunden / offline / Fehler
+- aktueller Preis, günstigstes und teures Zeitfenster mit nachvollziehbarer Preisampel
+- Quellenfrische für Ostrom, Wetter, Smart Meter und Sync
+- „Jetzt alles aktualisieren“; aktive Quellen werden unabhängig voneinander aktualisiert
+- „Cockpit anpassen“ prominent sichtbar
+- Diagramm-Favoriten jeweils kompakt oder groß
+- letzter voller Smart-Meter-Tag als kurze Veränderungszeile
+- Datenqualitätsfehler kann direkt den ersten betroffenen Monat öffnen
+- Offline: letzter bekannter Stand bleibt sichtbar und wird ausdrücklich als offline/alt markiert
 
-Die Cockpit-Auswertung nutzt dieselben lokalen Monatswerte und Verbrauchsberechnungen wie die Verbrauchszentrale. Sie erzeugt keine Messwerte und behauptet keine Ursachen.
+Der Ostrom-Schalter zeigt oder überträgt keine Zugangsdaten. Er steuert nur, ob dieses Gerät Ostrom-Live-Daten aktiv abfragt. Wetter und andere Worker-Funktionen können den vorhandenen Eldehof-App-Schlüssel weiterhin verwenden.
 
-Der bestehende verschlüsselte Sync-Tresor, gekoppelte Geräte und die Durable-Object-Migration `v5-1-0-sync` bleiben unverändert.
+Keine Hintergrundgarantie bei geschlossener PWA. Keine Gerätesteuerung, keine erfundenen Messwerte und keine automatische Sync-Konfliktlösung.
 
-Build: `5.4.0-ENERGIE-COCKPIT-20260806`
+Sync-Tresor und Durable-Object-Migration `v5-1-0-sync` bleiben unverändert.
+
+Build: `5.4.1-LIVE-COCKPIT-20260807`

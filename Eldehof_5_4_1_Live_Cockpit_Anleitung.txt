@@ -1,0 +1,59 @@
+ELDEHOF 5.4.1 – LIVE-COCKPIT & SCHNELLSTEUERUNG
+
+INSTALLATION
+1. ZIP entpacken.
+2. In GitHub ausschließlich ersetzen:
+   - worker.js
+   - wrangler.jsonc
+3. Cloudflare-Deployment abwarten.
+
+VERSION PRÜFEN
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=541
+
+ERWARTET
+version: 5.4.1-LIVE-COCKPIT-20260807
+liveCockpit: ostrom-switch-live-price-freshness-refresh-all
+ostromTodaySwitch: credentials-preserved-enable-disable-status-separated
+cockpitFreshness: ostrom-weather-smart-meter-sync-age-visible
+cockpitRefreshAll: independent-ostrom-weather-sync-settled-refresh
+cockpitWidgetSizes: per-favorite-compact-or-large-local
+
+FRONTEND FRISCH ÖFFNEN
+https://eldehof.6wdkh7ysv2.workers.dev/?v=5.4.1&cache=live-cockpit-neu
+
+OSTROM AUF HEUTE
+- Unter Mehr → Ostrom-Verbindung bleibt der Eldehof-App-Schlüssel wie bisher hinterlegt.
+- Auf Heute → Energie-Cockpit steht der Schieberegler „Ostrom verwenden“.
+- Ohne App-Schlüssel ist der Regler deaktiviert und „Zugangsdaten fehlen“ wird angezeigt.
+- Einschalten prüft die Verbindung und lädt Live-Daten.
+- Ausschalten pausiert Ostrom auf diesem Gerät. Der App-Schlüssel wird NICHT gelöscht.
+- „Verbindung entfernen“ unter Mehr löscht den lokalen App-Schlüssel weiterhin ausdrücklich.
+- Schalter und echter Status sind getrennt. Ein eingeschalteter Schalter allein wird nicht als „Verbunden“ ausgegeben.
+
+LIVE-COCKPIT
+- Aktueller Preis und Preisampel.
+- Günstigstes und teures Zeitfenster.
+- „Warum diese Preisampel?“ erklärt den Vergleich zum verfügbaren 24-Stunden-Mittel.
+- Frischeanzeige für Ostrom, Wetter, Smart Meter und Sync.
+- Offline bleibt der letzte bekannte Stand sichtbar und wird als Offline gekennzeichnet.
+- „Jetzt alles aktualisieren“ aktualisiert die jeweils verfügbaren Quellen; ein Fehler einer Quelle soll andere nicht blockieren.
+- Die PWA verspricht weiterhin keine Aktualisierung im geschlossenen Zustand.
+
+DIAGRAMM-FAVORITEN
+- Bis zu vier Diagramme bleiben auf Heute sichtbar.
+- „Cockpit anpassen“ ist oben im Cockpit prominent platziert.
+- Im Bearbeitungsmodus: ↑ / ↓ / Kompakt-Groß / Entfernen.
+- Größe und Reihenfolge werden lokal gespeichert.
+
+DATENQUALITÄT
+- Bei einer konkreten Monatslücke oder unplausiblen Aufteilung führt der Cockpit-Knopf direkt zum ersten betroffenen Monat.
+- Es werden keine fehlenden Werte ergänzt oder erfunden.
+
+DATENSCHUTZ / SICHERHEIT
+- Zugangsdaten werden auf Heute nie dargestellt.
+- Ostrom-Pause ist lokaler Gerätezustand und wird nicht als neues Sync-Geheimnis verwendet.
+- Privates Backup 5.4.1 enthält den lokalen Ostrom-Schaltzustand, aber die bestehende Backup-Logik bleibt ansonsten unverändert.
+- Keine Geräte- oder Wärmepumpensteuerung.
+- Keine automatische Konfliktlösung.
+- Sync-Tresor/Wiederherstellungsschlüssel bleiben gültig.
+- Migration bleibt exakt `v5-1-0-sync`.

@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "5.4.0",
-    "ELDEHOF_BUILD_ID": "5.4.0-ENERGIE-COCKPIT-20260806",
+    "ELDEHOF_VERSION": "5.4.1",
+    "ELDEHOF_BUILD_ID": "5.4.1-LIVE-COCKPIT-20260807",
     "ELDEHOF_HISTORY_MODE": "client-seven-day-chunks",
     "ELDEHOF_CANCEL_MODE": "between-and-during-chunks",
     "ELDEHOF_CHUNK_DAYS": "7",
@@ -158,7 +158,13 @@
     "ELDEHOF_COCKPIT_WIDGETS": "up-to-four-live-reorderable",
     "ELDEHOF_COCKPIT_INSIGHTS": "local-factual-no-causal-overclaim",
     "ELDEHOF_COCKPIT_QUALITY": "monthly-completeness-plus-safety-audit",
-    "ELDEHOF_COCKPIT_QUIET_MODE": "important-only-default"
+    "ELDEHOF_COCKPIT_QUIET_MODE": "important-only-default",
+    "ELDEHOF_LIVE_COCKPIT": "ostrom-switch-live-price-freshness-refresh-all",
+    "ELDEHOF_OSTROM_TODAY_SWITCH": "credentials-preserved-enable-disable-status-separated",
+    "ELDEHOF_COCKPIT_FRESHNESS": "ostrom-weather-smart-meter-sync-age-visible",
+    "ELDEHOF_COCKPIT_REFRESH_ALL": "independent-settled-refresh-active-app-only",
+    "ELDEHOF_COCKPIT_WIDGET_SIZES": "compact-large-per-favorite-local",
+    "ELDEHOF_COCKPIT_OFFLINE": "last-known-explicit-stale-status"
   },
   "observability": {
     "enabled": true
