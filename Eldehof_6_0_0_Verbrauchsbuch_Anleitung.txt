@@ -1,0 +1,115 @@
+ELDEHOF 6.0.0 – VERBRAUCHSBUCH
+================================
+Build: 6.0.0-VERBRAUCHSBUCH-20260904
+
+ZIEL
+----
+Eldehof 6.0 ist bewusst stark reduziert. Im Mittelpunkt stehen nur noch:
+- Verbrauch dokumentieren
+- Verbrauch auswerten
+- Ostrom-Preisübersicht auf dem Dashboard
+- Backup / Import / CSV
+
+DASHBOARD
+---------
+Die Übersicht zeigt:
+1. den zuletzt dokumentierten Monat
+2. Gesamtverbrauch, Wärmepumpe, Altenteil und automatisch berechnetes Schlee/Klus
+3. Vergleich zum gleichen Monat des Vorjahres, sofern vorhanden
+4. Ostrom:
+   - aktueller Preis
+   - bestes Preiszeitfenster
+   - schlechtestes Preiszeitfenster
+5. einen kompakten Verlauf des Gesamtverbrauchs
+
+VERBRAUCH EINTRAGEN
+-------------------
+Unter „Verbrauch“ oder direkt über „+ Monat eintragen“:
+- Monat
+- Gesamtverbrauch kWh
+- Wärmepumpe kWh
+- Altenteil kWh
+- optional Strompreis und Fixkosten
+- optional Wärmepumpen-Details / erzeugte Wärme
+- optional Notiz
+
+Schlee/Klus wird automatisch berechnet:
+Gesamtverbrauch – Wärmepumpe – Altenteil
+
+Ergibt die Rechnung einen negativen Wert, warnt Eldehof und speichert den unplausiblen Monat nicht ungeprüft.
+
+AUSWERTUNG
+----------
+Die Auswertung enthält nur noch die für die Verbrauchsdokumentation relevanten Ansichten:
+- Jahreskennzahlen
+- Wärmepumpe / Altenteil / Schlee-Klus als gestapelte Monatsdarstellung
+- Gesamtverbrauch mit Vergleichsjahr
+- Kostenverlauf
+- Wärmepumpen-Arbeitszahl, sofern Wärmemengen dokumentiert sind
+- Jahres-Monatstabelle
+
+OSTROM
+------
+Die Ostrom-Übersicht bleibt bewusst auf dem Dashboard erhalten.
+
+Unter „Daten → Ostrom“ kann der bereits verwendete Eldehof-App-Schlüssel eingetragen bzw. weiterverwendet werden. Außerdem lässt sich das Zeitfenster für „bestes“ und „schlechtestes“ Fenster auf 1–4 Stunden einstellen.
+
+Bestehende Cloudflare-Secrets beim Deployment NICHT löschen.
+
+DATENÜBERNAHME AUS 5.x
+-----------------------
+Die bisherigen Monatswerte werden weiterhin aus dem bestehenden Speicher
+  eldehof-v3-records
+gelesen.
+
+Vorhandene Vaillant-Monatsdaten unter
+  eldehof-v3-vaillant-months-v380
+bleiben erhalten.
+
+Auch vorhandene Ostrom-Einstellungen aus
+  eldehof-v3-settings
+werden weiterverwendet.
+
+WICHTIG: Wenn die Monatswerte auf einem Gerät bereits vor dem Update tatsächlich verloren gegangen sind, kann 6.0 diese nicht aus dem Nichts wiederherstellen. Dann bitte ein vorhandenes privates Eldehof-Backup über „Daten → Backup importieren“ einspielen.
+
+NEUER DATENSCHUTZ GEGEN LEEREN STARTBESTAND
+-------------------------------------------
+Vor jeder normalen Änderung an Monatswerten wird der vorherige Bestand zusätzlich lokal als Schattenkopie gesichert.
+
+Wenn Eldehof beim Start keine Primärdaten findet, aber eine Schattenkopie vorhanden ist, erscheint oben eine Wiederherstellungsoption.
+
+Ein vorhandener Monatsbestand darf nicht mehr durch einen automatischen leeren Startzustand überschrieben werden.
+
+ENTFERNTE / VERSTECKTE FUNKTIONEN
+---------------------------------
+Aus der normalen 6.0-Oberfläche entfernt wurden unter anderem:
+- Autopilot
+- Lernen / Regeln
+- Wochen- und Tagesplanung
+- Erinnerungen
+- Familienmodus
+- Energiejournal
+- Saisonprofile
+- Ziele / Budgets
+- Wetter
+- Energiefluss / PV- und Wallboxplanung
+- Cockpit-Favoriten / Widget-Konfiguration
+- sichtbare Sync-Verwaltung
+
+Alte lokale Funktionsdaten werden beim Update nicht aktiv gelöscht. Der bestehende Sync-Backendcode bleibt aus Migrationssicherheitsgründen im Worker erhalten, ist in 6.0 jedoch nicht mehr Teil der Bedienoberfläche.
+
+DEPLOYMENT
+----------
+Die fünf Dateien aus dem ZIP in das bestehende Cloudflare-Worker-Projekt übernehmen und deployen.
+
+Die Durable-Object-Migration muss unverändert bleiben:
+  v5-1-0-sync
+
+Version danach prüfen:
+https://eldehof.6wdkh7ysv2.workers.dev/api/version?check=600
+
+Erwartet:
+6.0.0-VERBRAUCHSBUCH-20260904
+
+Frisch öffnen:
+https://eldehof.6wdkh7ysv2.workers.dev/?v=6.0.0&cache=verbrauchsbuch-neu

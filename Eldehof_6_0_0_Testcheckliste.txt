@@ -1,0 +1,35 @@
+ELDEHOF 6.0.0 – TESTCHECKLISTE
+==============================
+
+Nach Deployment bitte kurz prüfen:
+
+[ ] /api/version meldet 6.0.0-VERBRAUCHSBUCH-20260904
+[ ] Alte Monatswerte sind unter „Verbrauch“ weiterhin vorhanden
+[ ] Dashboard zeigt den zuletzt dokumentierten Monat
+[ ] Schlee/Klus = Gesamt – Wärmepumpe – Altenteil
+[ ] Neuer Monat lässt sich speichern und wieder bearbeiten
+[ ] Auswertung zeigt gestapelte Aufteilung Wärmepumpe / Altenteil / Schlee-Klus
+[ ] Jahresvergleich lässt sich auswählen
+[ ] Kostenchart funktioniert mit Monats- oder Fallback-Preis
+[ ] Arbeitszahl erscheint nur bei vorhandener Wärmemenge
+[ ] Ostrom zeigt aktuellen Preis
+[ ] Ostrom zeigt bestes Zeitfenster
+[ ] Ostrom zeigt schlechtestes Zeitfenster
+[ ] Ostrom „Aktualisieren“ funktioniert
+[ ] Daten → Backup exportieren funktioniert
+[ ] Backup importieren funktioniert
+[ ] CSV-Export funktioniert
+[ ] Datenqualität meldet fehlende oder unplausible Monatswerte
+[ ] iPhone / Android: kein horizontaler Überlauf
+[ ] Keine alten Autopilot-/Planungs-/Wetter-/Familienfunktionen mehr in der Oberfläche
+
+SICHERHEITSTEST
+---------------
+[ ] Bei vorhandenem Monatsbestand erzeugt eine Änderung eine lokale Schattenkopie
+[ ] Bei fehlendem Primärbestand + vorhandener Schattenkopie erscheint „Wiederherstellen“
+[ ] Ein leerer Startzustand überschreibt vorhandene Monatswerte nicht automatisch
+
+MIGRATION
+---------
+[ ] wrangler.jsonc enthält weiterhin exakt den bestehenden Migrationstag v5-1-0-sync
+[ ] Bestehende Cloudflare-Secrets wurden nicht gelöscht
