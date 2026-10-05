@@ -1,0 +1,11 @@
+Eldehof 6.1.0 – Testcheckliste
+
+[ ] Version 6.1.0 sichtbar
+[ ] Historische Daten 2024–09/2026 vorhanden
+[ ] 03/2024 Gesamtverbrauch = 1.320 kWh trotz Zählerwechsel
+[ ] Basis 01.10.2026: Gesamt 34.255 / Altenteil 9.045
+[ ] Neue Zählerstände berechnen Folgemonat automatisch
+[ ] myVAILLANT-CSV ergänzt Wärmepumpe
+[ ] Schlee/Klus = Gesamt − Altenteil − Wärmepumpe
+[ ] Ostrom aktualisiert bei aktiver App alle 10 Minuten
+[ ] Backup enthält meterReadings

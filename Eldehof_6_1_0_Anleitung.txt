@@ -1,0 +1,10 @@
+Eldehof 6.1.0
+
+Künftig:
+1. Unter Übersicht oder Daten auf „Zählerstände“ tippen.
+2. Nur Gesamt-Zählerstand und Altenteil-Zählerstand eintragen.
+3. Die beiden myVAILLANT-CSV-Dateien importieren.
+4. Eldehof berechnet Gesamt-Monatsverbrauch, Altenteil-Monatsverbrauch und Schlee/Klus automatisch.
+
+Startwert: 01.10.2026 – Gesamt 34.255 kWh, Altenteil 9.045 kWh.
+Der Zählerwechsel am 01.04.2024 ist in den historischen Daten bereits korrekt berücksichtigt.

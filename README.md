@@ -1,14 +1,11 @@
-# Eldehof 6.0.1 – Verbrauchsbuch
+# Eldehof 6.1.0 – Zählerstände + myVAILLANT
 
-Schlanke Verbrauchsdokumentation mit Ostrom-Preisübersicht.
+Manuelle Verbrauchseingabe ist jetzt auf zwei Zählerstände reduziert:
+- Gesamtzähler
+- Altenteil
 
-Neu in 6.0.1:
-- lokaler Import der exportierten myVAILLANT-CSV-Dateien (aroTHERM + uniTOWER)
-- vollständige Monate sowie der aktuelle Teilmonat können übernommen werden
-- vorhandene Werte für Gesamtverbrauch, Altenteil, Preis, Fixkosten und Notiz bleiben erhalten
-- historische unvollständige oder widersprüchliche Monate werden nicht automatisch übernommen
-- Ostrom aktualisiert bei aktivierter Automatik alle 10 Minuten, solange die App aktiv ist
-- nach Rückkehr in die App wird sofort aktualisiert, wenn die Daten älter als 10 Minuten sind
+Wärmepumpenwerte kommen aus dem lokalen myVAILLANT-CSV-Import. Schlee/Klus wird automatisch als Gesamt − Altenteil − Wärmepumpe berechnet.
 
-Die Monatsdaten bleiben unter `eldehof-v3-records`, die Vaillant-Monatsdaten unter `eldehof-v3-vaillant-months-v380` kompatibel.
-Die Durable-Object-Migration bleibt `v5-1-0-sync`.
+Historische Monatswerte 01/2024 bis 09/2026 sind aus den bereitgestellten Daten vorbelegt. Der Gesamtzählerwechsel am 01.04.2024 ist mit 1.320 kWh Monatsverbrauch korrekt berücksichtigt. Ausgangszählerstand für die neue Automatik: 01.10.2026, Gesamt 34.255 kWh, Altenteil 9.045 kWh.
+
+Ostrom bleibt auf dem Dashboard und aktualisiert sich bei aktiver App alle 10 Minuten.
