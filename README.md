@@ -1,11 +1,14 @@
-# Eldehof 6.1.0 – Zählerstände + myVAILLANT
+# Eldehof 6.1.1 – Zählerstände + myVAILLANT + Monatskorrektur
 
-Manuelle Verbrauchseingabe ist jetzt auf zwei Zählerstände reduziert:
-- Gesamtzähler
-- Altenteil
+Der normale Ablauf bleibt schlank:
+- Gesamt- und Altenteil-Zählerstand eintragen
+- myVAILLANT-CSV importieren
+- Schlee/Klus wird automatisch berechnet
 
-Wärmepumpenwerte kommen aus dem lokalen myVAILLANT-CSV-Import. Schlee/Klus wird automatisch als Gesamt − Altenteil − Wärmepumpe berechnet.
+Neu in 6.1.1:
+- jeder vorhandene Monat kann unter Verbrauch wieder über „Bearbeiten“ korrigiert werden
+- der letzte Monat kann zusätzlich direkt auf der Übersicht bearbeitet werden
+- korrigierbar sind Gesamt, Altenteil, Wärmepumpe, Preis, Fixkosten, Wärmepumpen-Details und Notiz
+- gespeicherte kumulative Zählerstände werden bei einer Monatskorrektur nicht verändert
 
-Historische Monatswerte 01/2024 bis 09/2026 sind aus den bereitgestellten Daten vorbelegt. Der Gesamtzählerwechsel am 01.04.2024 ist mit 1.320 kWh Monatsverbrauch korrekt berücksichtigt. Ausgangszählerstand für die neue Automatik: 01.10.2026, Gesamt 34.255 kWh, Altenteil 9.045 kWh.
-
-Ostrom bleibt auf dem Dashboard und aktualisiert sich bei aktiver App alle 10 Minuten.
+Historische Werte, der Zählerwechsel 04/2024, die Basis 01.10.2026 (Gesamt 34.255 / Altenteil 9.045), myVAILLANT-Import und Ostrom 10-Minuten-Aktualisierung bleiben erhalten.

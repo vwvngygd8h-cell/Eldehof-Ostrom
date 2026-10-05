@@ -1,0 +1,14 @@
+Eldehof 6.1.1 – Testcheckliste
+
+[ ] Unter Verbrauch hat jeder Monat „Bearbeiten“
+[ ] Letzter Monat ist auf der Übersicht bearbeitbar
+[ ] Gesamt / Altenteil / Wärmepumpe korrigierbar
+[ ] Schlee/Klus aktualisiert sich direkt im Dialog
+[ ] Negative Restaufteilung wird blockiert
+[ ] Preis / Fixkosten / Notiz korrigierbar
+[ ] Wärmepumpen-Details korrigierbar
+[ ] Zählerstände bleiben bei Monatskorrektur unverändert
+[ ] Neue Zählerstände funktionieren weiterhin
+[ ] myVAILLANT-CSV-Import funktioniert weiterhin
+[ ] Ostrom 10-Minuten-Aktualisierung bleibt erhalten
+[ ] Migration bleibt exakt v5-1-0-sync

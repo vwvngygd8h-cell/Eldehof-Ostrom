@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "6.1.0",
-    "ELDEHOF_BUILD_ID": "6.1.0-ZAEHLERSTAENDE-VAILLANT-OSTROM-20261005",
+    "ELDEHOF_VERSION": "6.1.1",
+    "ELDEHOF_BUILD_ID": "6.1.1-MONATE-BEARBEITEN-20261005",
     "ELDEHOF_MODE": "verbrauchsbuch",
     "ELDEHOF_UI": "overview-consumption-analysis-data",
     "ELDEHOF_OSTROM_DASHBOARD": "current-best-worst-window",
@@ -18,7 +18,8 @@
     "ELDEHOF_ENTRY_MODE": "meter-readings-plus-vaillant-csv",
     "ELDEHOF_OSTROM_REFRESH": "10min-active-app",
     "ELDEHOF_VAILLANT_CSV_IMPORT": "local-arotherm-unitower-monthly",
-    "ELDEHOF_OSTROM_AUTO_REFRESH_MINUTES": "10"
+    "ELDEHOF_OSTROM_AUTO_REFRESH_MINUTES": "10",
+    "ELDEHOF_MONTH_EDITING": "enabled"
   },
   "observability": {
     "enabled": true

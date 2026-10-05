@@ -1,0 +1,10 @@
+Eldehof 6.1.1
+
+MONAT BEARBEITEN
+1. Verbrauch öffnen.
+2. Beim gewünschten Monat auf „Bearbeiten“ tippen.
+3. Gewünschte Werte korrigieren.
+4. „Änderungen speichern“ wählen.
+
+Der normale Monatsablauf bleibt: Zählerstände Gesamt + Altenteil eintragen und danach die myVAILLANT-CSV importieren.
+Bei einem aus Zählerständen berechneten Monat ändert eine manuelle Monatskorrektur nur den Monatswert. Die gespeicherten kumulativen Zählerstände bleiben erhalten.
