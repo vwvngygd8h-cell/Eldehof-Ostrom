@@ -1,12 +1,31 @@
-# Eldehof 6.2.0 – Geräte-Sync, Jahresvergleich & Ostrom-Historie
+# Eldehof 6.2.1 – Ostrom-Preisstatistik
 
-Neu:
-- verschlüsselter automatischer Geräte-Sync über den bereits vorhandenen Eldehof-Durable-Object-Tresor
-- auf App-Start, Rückkehr in die App und während aktiver Nutzung wird der neueste Stand geladen
-- Änderungen an Monatswerten, Zählerständen, Vaillant-Daten und relevanten Ostrom-Einstellungen werden automatisch hochgeladen
-- weitere Geräte werden einmalig über einen Kopplungsschlüssel verbunden
-- Jahresvergleich zeigt alle vorhandenen Jahre gleichzeitig; aktuelles Jahr durchgezogen, vergangene Jahre farbig gestrichelt
-- historische Ostrom-Preise/Kosten können für alle verfügbaren Monate nachgeladen werden; stündliche Preise werden mit stündlichem Verbrauch gewichtet
-- Monatsgrenzen für Ostrom werden in Europe/Berlin berechnet (inkl. Sommer-/Winterzeit)
+Build: `6.2.1-OSTROM-PREISSTATISTIK-20261005`
 
-Die bestehende Durable-Object-Migration bleibt unverändert `v5-1-0-sync`.
+Ergänzt Eldehof 6.2.0 um eine eigene Preisstatistik unter **Auswertung**.
+
+## Neu
+
+- durchschnittlicher Ostrom-Arbeitspreis je Monat
+- verbrauchsgewichteter Durchschnitt je Quartal
+- verbrauchsgewichteter Durchschnitt je Jahr
+- zusätzlich effektiver ct/kWh-Wert inklusive monatlicher Fixkosten
+- Monatsdiagramm für das gewählte Detailjahr
+- Monats-Tabelle mit Ostrom-Verbrauch und Datenstatus
+- Button **Ostrom-Preise aktualisieren** direkt in der Auswertung
+- Preisstatistik wird in privatem Backup und Geräte-Sync mitgeführt
+
+Die Berechnung nutzt die bereits vorhandene Ostrom-Monatsabfrage. Der Monats-Arbeitspreis basiert auf den von Ostrom gelieferten Stundenpreisen und dem tatsächlichen Ostrom-Verbrauch. Quartal und Jahr werden aus Kosten und Verbrauch gewichtet berechnet und nicht als einfacher Mittelwert der Monatswerte.
+
+## Weiter enthalten
+
+- Zählerstände Gesamt + Altenteil
+- myVAILLANT-CSV-Import
+- automatische Berechnung Schlee/Klus
+- Monatsbearbeitung
+- Geräte-Sync
+- Mehrjahresvergleich Verbrauch
+- Ostrom-Livepreis sowie bestes/schlechtestes Zeitfenster
+- historische Ostrom-Preise
+
+Die Durable-Object-Migration bleibt unverändert `v5-1-0-sync`.

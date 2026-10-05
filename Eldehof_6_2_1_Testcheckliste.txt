@@ -1,0 +1,20 @@
+ELDEHOF 6.2.1 – TESTCHECKLISTE
+
+[ ] Version 6.2.1 sichtbar
+[ ] Auswertung enthält Bereich „Ø kWh-Preis · Monat · Quartal · Jahr“
+[ ] Detailjahr steuert die Ostrom-Preisstatistik
+[ ] „Ostrom-Preise aktualisieren“ lädt Monatsdaten
+[ ] Monatspreise werden in ct/kWh angezeigt
+[ ] Q1–Q4 werden verbrauchsgewichtet berechnet
+[ ] Jahreswert wird verbrauchsgewichtet berechnet
+[ ] effektiver Preis inkl. Fixkosten wird zusätzlich angezeigt
+[ ] laufender Monat wird als „laufend“ markiert, sofern Daten vorhanden
+[ ] nicht verfügbare Monate werden nicht geschätzt
+[ ] Preisdiagramm zeigt die Monatswerte
+[ ] Preisstatistik bleibt nach Neustart vorhanden
+[ ] Preisstatistik wird über Geräte-Sync übertragen
+[ ] privates Backup enthält ostromPriceStats
+[ ] vorhandene Monatsbearbeitung funktioniert weiter
+[ ] myVAILLANT-Import funktioniert weiter
+[ ] Mehrjahresvergleich funktioniert weiter
+[ ] Durable-Object-Migration bleibt exakt v5-1-0-sync

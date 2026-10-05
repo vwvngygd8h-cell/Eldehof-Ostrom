@@ -1,0 +1,29 @@
+ELDEHOF 6.2.1 – OSTROM-PREISSTATISTIK
+
+NEUE FUNKTION
+1. Auswertung öffnen.
+2. Oben das gewünschte Detailjahr auswählen.
+3. Im Bereich „Ø kWh-Preis · Monat · Quartal · Jahr“ auf „Ostrom-Preise aktualisieren“ tippen.
+4. Eldehof ruft die verfügbaren Monatsdaten über Ostrom ab.
+
+ANGEZEIGT WIRD
+- Ø Arbeitspreis je Monat in ct/kWh
+- Ø Arbeitspreis Q1, Q2, Q3 und Q4
+- Ø Arbeitspreis für das gesamte gewählte Jahr
+- effektiver Preis inklusive Fixkosten
+- zugehöriger Ostrom-Verbrauch
+
+BERECHNUNG
+Quartal und Jahr sind verbrauchsgewichtet:
+Summe variable Stromkosten / Summe Ostrom-Verbrauch × 100 = ct/kWh.
+Damit zählt ein verbrauchsstarker Wintermonat stärker als ein verbrauchsarmer Sommermonat.
+
+GERÄTE-SYNC
+Geladene Preisstatistiken werden mit dem verschlüsselten Eldehof-Geräte-Sync übertragen. Wird die Statistik auf dem Tablet aktualisiert, ist sie nach dem nächsten Sync auch auf dem Handy vorhanden. Für die Anzeige auf dem zweiten Gerät ist dort kein erneuter Ostrom-Abruf nötig.
+
+HINWEIS
+Beim laufenden aktuellen Monat wird nur der von Ostrom bis dahin verfügbare Zeitraum berücksichtigt. Nicht verfügbare Monate werden als „–“ angezeigt und nicht geschätzt.
+
+VERSION
+/api/version?check=621
+Erwartet: 6.2.1-OSTROM-PREISSTATISTIK-20261005
