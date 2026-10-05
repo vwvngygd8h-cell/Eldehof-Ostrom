@@ -1,0 +1,18 @@
+ELDEHOF 6.0.1 – TESTCHECKLISTE
+
+[ ] Bestehende Monatsdaten bleiben nach Update vorhanden
+[ ] Daten → myVAILLANT-Import sichtbar
+[ ] aroTHERM + uniTOWER CSV gemeinsam auswählbar
+[ ] vollständige Monatswerte werden korrekt summiert und importiert
+[ ] Gesamtverbrauch/Altenteil/Preis/Notiz werden nicht überschrieben
+[ ] aktueller Teilmonat kann importiert werden
+[ ] historischer Teilmonat wird übersprungen
+[ ] widersprüchliche Doppelzeilen werden blockiert
+[ ] Ostrom-Automatik ist aktivierbar
+[ ] automatische Aktualisierung läuft alle 10 Minuten bei aktiver App
+[ ] Rückkehr in App aktualisiert bei Datenalter >10 Minuten
+[ ] manueller Ostrom-Button funktioniert weiter
+[ ] Dashboard zeigt aktuellen, besten und schlechtesten Preis
+[ ] keine horizontale Überbreite auf 390 px
+[ ] keine JavaScript-Seitenfehler
+[ ] Migration bleibt exakt v5-1-0-sync

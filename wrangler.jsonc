@@ -9,12 +9,14 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "6.0.0",
-    "ELDEHOF_BUILD_ID": "6.0.0-VERBRAUCHSBUCH-20260904",
+    "ELDEHOF_VERSION": "6.0.1",
+    "ELDEHOF_BUILD_ID": "6.0.1-WAERMEPUMPEN-IMPORT-OSTROM-10MIN-20261005",
     "ELDEHOF_MODE": "verbrauchsbuch",
     "ELDEHOF_UI": "overview-consumption-analysis-data",
     "ELDEHOF_OSTROM_DASHBOARD": "current-best-worst-window",
-    "ELDEHOF_LOCAL_SHADOW_BACKUP": "enabled"
+    "ELDEHOF_LOCAL_SHADOW_BACKUP": "enabled",
+    "ELDEHOF_VAILLANT_CSV_IMPORT": "local-arotherm-unitower-monthly",
+    "ELDEHOF_OSTROM_AUTO_REFRESH_MINUTES": "10"
   },
   "observability": {
     "enabled": true

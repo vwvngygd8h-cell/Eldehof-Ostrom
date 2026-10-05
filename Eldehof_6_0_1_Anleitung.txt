@@ -1,0 +1,26 @@
+ELDEHOF 6.0.1 – ANLEITUNG
+
+MYVAILLANT-DATEN IMPORTIEREN
+1. In myVAILLANT die Wärmepumpendaten als CSV exportieren.
+2. In Eldehof: Daten → myVAILLANT-Daten importieren.
+3. Die aroTHERM- und uniTOWER-Energiedateien gemeinsam auswählen.
+4. Eldehof prüft die Dateien ausschließlich lokal im Browser.
+5. Den Import bestätigen.
+
+Übernommen werden:
+- Wärmepumpenstrom
+- erzeugte Wärme
+- Heizstrom
+- Warmwasserstrom
+- Heizwärme
+- Warmwasserwärme
+
+Bestehende Werte für Gesamtverbrauch, Altenteil, Strompreis, Fixkosten und Notizen bleiben erhalten.
+Historische Teilmonate und widersprüchliche/unplausible Datensätze werden übersprungen. Der aktuelle offene Teilmonat darf übernommen werden.
+
+OSTROM
+Unter Daten → Ostrom muss „Automatisch alle 10 Minuten aktualisieren“ aktiviert sein. Dann aktualisiert Eldehof die Ostrom-Übersicht alle 10 Minuten, solange die App geöffnet/aktiv ist. Wird die App später wieder geöffnet und die Daten sind älter als 10 Minuten, aktualisiert sie sofort. iOS/Browser erlauben keine verlässliche 10-Minuten-Ausführung, wenn die PWA vollständig geschlossen ist.
+
+VERSION
+/api/version?check=601
+Erwartet: 6.0.1-WAERMEPUMPEN-IMPORT-OSTROM-10MIN-20261005
