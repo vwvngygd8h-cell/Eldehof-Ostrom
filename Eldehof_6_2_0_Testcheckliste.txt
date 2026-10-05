@@ -1,0 +1,18 @@
+ELDEHOF 6.2.0 – TESTCHECKLISTE
+
+[ ] Version 6.2.0 sichtbar
+[ ] bestehende Verbrauchsdaten unverändert vorhanden
+[ ] Monat bearbeiten funktioniert
+[ ] Geräte-Sync lässt sich auf erstem Gerät einrichten
+[ ] Kopplungsschlüssel kann erzeugt und auf zweitem Gerät verwendet werden
+[ ] Vaillant-Import auf Gerät A erscheint nach Sync auf Gerät B
+[ ] Zählerstand auf Gerät A erscheint nach Sync auf Gerät B
+[ ] Jahresvergleich zeigt alle Jahre
+[ ] aktuelles Jahr durchgezogen
+[ ] vergangene Jahre unterschiedlich farbig gestrichelt
+[ ] Ostrom-Historie kann geladen werden
+[ ] verfügbare Monate erhalten gewichteten Ostrom-Arbeitspreis
+[ ] exakte Ostrom-Monatskosten werden verwendet, wenn vollständige Intervalle vorliegen
+[ ] Monatsgrenzen berücksichtigen Europe/Berlin
+[ ] Ostrom-Liveübersicht aktualisiert weiter alle 10 Minuten bei aktiver App
+[ ] Durable-Object-Migration bleibt exakt v5-1-0-sync

@@ -1,0 +1,13 @@
+ELDEHOF 6.2.0 – KURZANLEITUNG
+
+GERÄTE-SYNC
+1. Auf dem ersten Gerät: Daten → Geräte-Sync → Auf diesem Gerät einrichten.
+2. Für ein weiteres Gerät: Weiteres Gerät koppeln → Kopplungsschlüssel kopieren.
+3. Auf dem neuen Gerät Eldehof öffnen → Daten → Geräte-Sync → Schlüssel einfügen → Gerät koppeln.
+4. Danach synchronisiert Eldehof automatisch beim Öffnen, bei Rückkehr in die App, während aktiver Nutzung und nach Änderungen.
+
+JAHRESVERGLEICH
+Unter Auswertung werden im Diagramm „Alle Jahre · Gesamtverbrauch“ alle vorhandenen Jahre gleichzeitig angezeigt. Das aktuelle Jahr ist durchgezogen; vergangene Jahre sind unterschiedlich farbig gestrichelt. Die Auswahl „Jahr für Kennzahlen“ steuert nur Kennzahlen, Aufteilung, Kosten und Monatstabelle.
+
+OSTROM-HISTORIE
+Daten → Ostrom → Historie aktualisieren. Für Monate, für die Ostrom stündliche Verbrauchs- und Preisdaten liefert, berechnet Eldehof den verbrauchsgewichteten Arbeitspreis und die Monatskosten. Nicht verfügbare Monate werden nicht erfunden und behalten den bisherigen/Fallback-Wert.
