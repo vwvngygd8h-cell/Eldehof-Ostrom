@@ -82,14 +82,34 @@
     }
     return Array.from({length:12},(_,i)=>{
       const month=year+"-"+String(i+1).padStart(2,"0");
-      const r=recordForMonth(month),w=climateWeatherFor(month),valid=w?.complete&&Number.isFinite(w.hdd15);
+      const r=recordForMonth(month),w=climateWeatherFor(month),sensor=climateMonths.find(x=>x.month===month),valid=w?.complete&&Number.isFinite(w.hdd15);
       const heat=Number.isFinite(r?.heatingHeat)?r.heatingHeat:null;
       const dhw=Number.isFinite(r?.dhwHeat)?r.dhwHeat:null;
       const baseline=reference.get(month.slice(5));
       const normalized=heat!==null&&valid&&w.hdd15>1&&Number.isFinite(baseline)?heat*baseline/w.hdd15:null;
-      return {month,w,heat,dhw,valid,normalized};
+      return {month,w,sensor,heat,dhw,valid,normalized};
     });
   }
+
+  function renderClimateMultiYear(){
+    const el=$("climateMultiYear");if(!el)return;
+    const available=[...new Set(records.map(r=>Number(r.month?.slice(0,4))))].filter(y=>y>=2024&&y<=new Date().getFullYear()).sort();
+    const candidates=available.map(y=>({year:y,rows:climateRowsFor(y)})).filter(x=>x.rows.filter(r=>r.normalized!==null).length>=3);
+    if(candidates.length<2){el.textContent="Der direkte Jahresvergleich erscheint, sobald mindestens zwei Jahre jeweils drei vollständige vergleichbare Monate mit Heizwärme und Wetterdaten besitzen.";return;}
+    const months=Array.from({length:12},(_,i)=>i+1).filter(m=>candidates.every(c=>c.rows[m-1]?.normalized!==null));
+    if(months.length<3){el.textContent="Für diese Jahre gibt es noch nicht genügend gemeinsame Monate. Fehlende Vaillant-Wärme- oder Wetterwerte ergänzen.";return;}
+    const baseYear=candidates[0].year,baseHeat=months.reduce((s,m)=>s+candidates[0].rows[m-1].normalized,0);
+    const header='<p class="muted">Direktvergleich nur gleicher, vollständig erfasster Monate: '+months.map(m=>MONTHS[m-1]).join(", ")+'. Warmwasser ist ausgeschlossen.</p>';
+    const table='<div class="table-scroll"><table><thead><tr><th>Jahr</th><th>Heizwärme gemessen kWh</th><th>Witterungsbereinigt kWh</th><th>Gegenüber '+baseYear+'</th></tr></thead><tbody>'+
+      candidates.map(c=>{
+        const original=months.reduce((s,m)=>s+c.rows[m-1].heat,0);
+        const adjusted=months.reduce((s,m)=>s+c.rows[m-1].normalized,0);
+        const delta=baseHeat>0?(adjusted/baseHeat-1)*100:null;
+        return '<tr><td>'+c.year+'</td><td>'+num(original)+'</td><td>'+num(adjusted)+'</td><td>'+(delta===null?"–":pct(delta))+'</td></tr>';
+      }).join("")+'</tbody></table></div>';
+    el.innerHTML=header+table;
+  }
+
   function renderClimateAnalysis(){
     if(!$("climateMetrics"))return;
     const year=Number($("analysisYear").value)||new Date().getFullYear(),rows=climateRowsFor(year);
@@ -101,7 +121,8 @@
       ["Bereinigte Heizwärme",n.length?climateFmt(n.reduce((s,x)=>s+x.normalized,0))+" kWh":"–",n.length+" vergleichbare Monate"]
     ];
     $("climateMetrics").innerHTML=metrics.map(([a,b,c])=>'<article><span>'+escapeHtml(a)+'</span><strong>'+escapeHtml(b)+'</strong><small>'+escapeHtml(c)+'</small></article>').join("");
-    $("climateRows").innerHTML=rows.map(x=>'<tr><td>'+escapeHtml(monthLabel(x.month,false))+'</td><td>'+climateFmt(x.w?.meanTemp,1)+'</td><td>'+climateFmt(x.valid?x.w.hdd15:null)+'</td><td>'+climateFmt(x.heat)+'</td><td>'+climateFmt(x.dhw)+'</td><td>'+climateFmt(x.normalized)+'</td></tr>').join("");
+    $("climateRows").innerHTML=rows.map(x=>'<tr><td>'+escapeHtml(monthLabel(x.month,false))+'</td><td>'+climateFmt(x.w?.meanTemp,1)+'</td><td>'+climateFmt(x.sensor?.outdoorMean,1)+'</td><td>'+climateFmt(x.sensor?.roomMean,1)+'</td><td>'+climateFmt(x.sensor?.dhwMean,1)+'</td><td>'+climateFmt(x.valid?x.w.hdd15:null)+'</td><td>'+climateFmt(x.heat)+'</td><td>'+climateFmt(x.dhw)+'</td><td>'+climateFmt(x.normalized)+'</td></tr>').join("");
+    renderClimateMultiYear();
     $("climateInfo").textContent=(climateBusy?"Historische Wetterdaten werden geladen … ":"")+(n.length?n.length+" witterungsbereinigte Monate.":"Bitte historische Wetterdaten laden. ")+"Referenz je Kalendermonat: Heizgradtage 2024/2025. Nur gleiche Zeiträume vergleichen, Warmwasser getrennt.";
   }
   async function loadClimateWeather(){
