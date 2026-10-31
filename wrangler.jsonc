@@ -9,8 +9,8 @@
   "vars": {
     "OSTROM_ZIP_CODE": "19306",
     "OSTROM_ENV": "PRODUCTION",
-    "ELDEHOF_VERSION": "6.3.2",
-    "ELDEHOF_BUILD_ID": "6.3.2-CLIMATE-WEATHER-RECOVERY-20261031",
+    "ELDEHOF_VERSION": "6.3.3",
+    "ELDEHOF_BUILD_ID": "6.3.3-CLIMATE-YEAR-COMPARISON-20261031",
     "ELDEHOF_MODE": "verbrauchsbuch",
     "ELDEHOF_UI": "overview-consumption-analysis-data",
     "ELDEHOF_OSTROM_DASHBOARD": "current-best-worst-window",
