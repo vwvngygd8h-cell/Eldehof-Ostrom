@@ -1,0 +1,118 @@
+{
+  "app": [
+    [
+      "  function safeJsonParse(value, fallback=null){",
+      "@@EXTENSION@@\n  function safeJsonParse(value, fallback=null){"
+    ],
+    [
+      "    return \"unknown\";\n  }\n  function parseVaillantCsvText",
+      "    if(has(\"DateTime\")&&has(\"OutdoorTemperature\"))return \"system-temperature\";\n    if(has(\"DateTime\")&&has(\"CurrentRoomTemperature\"))return \"zone-temperature\";\n    if(has(\"DateTime\")&&has(\"DhwTankTemperature\"))return \"dhw-temperature\";\n    if(has(\"month\")&&has(\"electricityKWh\")&&has(\"heatingHeatKWh\"))return \"monthly-energy\";\n    return \"unknown\";\n  }\n  function parseVaillantCsvText"
+    ],
+    [
+      "    const type=detectVaillantCsvType(headers),rows=[];let invalidRows=0;\n    for(const line of dataLines.slice(1)){",
+      "    const type=detectVaillantCsvType(headers),rows=[];let invalidRows=0;\n    if(type===\"monthly-energy\"){\n      for(const line of dataLines.slice(1)){\n        const parts=line.split(delimiter),raw=Object.fromEntries(headers.map((h,i)=>[h,parts[i]??\"\"])),month=String(raw.month||\"\").trim();\n        if(!/^\\d{4}-(0[1-9]|1[0-2])$/.test(month)){invalidRows++;continue;}\n        const values={};\n        for(const h of headers){\n          if(h===\"month\")continue;\n          values[h]=[\"complete\",\"estimated\"].includes(h)?String(raw[h]).trim().toLowerCase()===\"true\":vaillantCsvNumber(raw[h]);\n        }\n        rows.push({monthKey:month,values});\n      }\n      return {index,type,headers,rows,invalidRows};\n    }\n    for(const line of dataLines.slice(1)){"
+    ],
+    [
+      "    renderOstromPriceStats(selected);\n    drawAllocationChart",
+      "    renderOstromPriceStats(selected);\n    renderClimateAnalysis();\n    drawAllocationChart"
+    ],
+    [
+      "records,vaillantMonths,meterReadings,ostromPriceStats};",
+      "records,vaillantMonths,meterReadings,ostromPriceStats,climateMonths,climateWeather};"
+    ],
+    [
+      "      if(Array.isArray(payload.ostromPriceStats))saveOstromPriceStats(payload.ostromPriceStats);",
+      "      if(Array.isArray(payload.ostromPriceStats))saveOstromPriceStats(payload.ostromPriceStats);\n      if(Array.isArray(payload.climateMonths))saveClimateMonths(payload.climateMonths);\n      if(payload.climateWeather&&typeof payload.climateWeather===\"object\"){climateWeather=payload.climateWeather;localStorage.setItem(CLIMATE_WEATHER_KEY,JSON.stringify(climateWeather));}"
+    ],
+    [
+      "vaillantMonths:Array.isArray(vaillantMonths)?vaillantMonths:[],meterReadings:",
+      "vaillantMonths:Array.isArray(vaillantMonths)?vaillantMonths:[],climateMonths:climateSanitize(climateMonths),meterReadings:"
+    ],
+    [
+      "vaillantMonths:syncMergeByKey(local?.vaillantMonths,remote?.vaillantMonths,\"month\"),meterReadings:",
+      "vaillantMonths:syncMergeByKey(local?.vaillantMonths,remote?.vaillantMonths,\"month\"),climateMonths:climateSanitize(syncMergeByKey(local?.climateMonths,remote?.climateMonths,\"month\")),meterReadings:"
+    ],
+    [
+      "vaillantMonths:payload?.vaillantMonths||[],meterReadings:",
+      "vaillantMonths:payload?.vaillantMonths||[],climateMonths:climateSanitize(payload?.climateMonths||[]),meterReadings:"
+    ],
+    [
+      "vaillantMonths=Array.isArray(payload.vaillantMonths)?payload.vaillantMonths:[];saveVaillantMonths();saveMeterReadings",
+      "vaillantMonths=Array.isArray(payload.vaillantMonths)?payload.vaillantMonths:[];saveVaillantMonths();saveClimateMonths(payload.climateMonths||[]);saveMeterReadings"
+    ],
+    [
+      "    $(\"saveCostSettingsBtn\").addEventListener(\"click\",saveCostSettings);",
+      "    $(\"saveCostSettingsBtn\").addEventListener(\"click\",saveCostSettings);\n    $(\"loadClimateWeatherBtn\").addEventListener(\"click\",loadClimateWeather);"
+    ],
+    [
+      "6.2.1-OSTROM-PREISSTATISTIK-20261005",
+      "6.3.0-VAILLANT-KLIMA-20261031"
+    ],
+    [
+      "payloadVersion:\"6.2.1\"",
+      "payloadVersion:\"6.3.0\""
+    ],
+    [
+      "version:\"6.2.1\"",
+      "version:\"6.3.0\""
+    ],
+    [
+      "sw.js?v=6.2.1",
+      "sw.js?v=6.3.0"
+    ]
+  ],
+  "html": [
+    [
+      "<section class=\"panel\"><div class=\"panel-head\"><div><span class=\"eyebrow\">KOSTEN</span><h2>Monatliche Stromkosten</h2></div>",
+      "<section class=\"panel\" id=\"climateAnalysisPanel\"><div class=\"panel-head\"><div><span class=\"eyebrow\">WITTERUNGSBEREINIGUNG</span><h2>Heizwärme & Wetter</h2></div><button class=\"secondary compact\" id=\"loadClimateWeatherBtn\" type=\"button\">Wetterdaten laden</button></div><p class=\"muted\">Heizgradtage (Basis 15 °C), getrennte Heiz- und Warmwasserwärme. Vergleich je Kalendermonat mit den Heizgradtagen von 2024 und 2025.</p><div class=\"metric-grid analysis-metrics\" id=\"climateMetrics\"></div><div class=\"table-scroll\"><table><thead><tr><th>Monat</th><th>Ø außen °C</th><th>HGT</th><th>Heizwärme kWh</th><th>Warmwasser kWh</th><th>Witterungsbereinigt kWh</th></tr></thead><tbody id=\"climateRows\"></tbody></table></div><p id=\"climateInfo\" class=\"status-text\"></p></section><section class=\"panel\"><div class=\"panel-head\"><div><span class=\"eyebrow\">KOSTEN</span><h2>Monatliche Stromkosten</h2></div>"
+    ],
+    [
+      "Wähle die exportierten CSV-Dateien von aroTHERM und uniTOWER. Daraus übernimmt Eldehof den Wärmepumpenverbrauch und die Wärmemengen. Gesamt und Altenteil kommen ausschließlich aus deinen Zählerständen.",
+      "Wähle aroTHERM und uniTOWER gemeinsam oder die ältere Eldehof-Monatsimport-CSV. Die Temperaturdateien aus System, Zone 0 und Warmwasserspeicher können zusätzlich oder einzeln importiert werden. Nur Monatsaggregate werden gespeichert. Zählerstände und Preise bleiben unverändert."
+    ],
+    [
+      "styles.css?v=6.2.1",
+      "styles.css?v=6.3.0"
+    ],
+    [
+      "app.js?v=6.2.1-syncfix-20261031",
+      "app.js?v=6.3.0"
+    ],
+    [
+      "Eldehof 6.2.1",
+      "Eldehof 6.3.0"
+    ]
+  ],
+  "sw": [
+    [
+      "6-2-1-syncfix-20261031",
+      "6-3-0-climate-20261031"
+    ],
+    [
+      "6.2.1-syncfix-20261031",
+      "6.3.0"
+    ],
+    [
+      "6.2.1",
+      "6.3.0"
+    ]
+  ],
+  "worker": [
+    [
+      "const ELDEHOF_BUILD = \"6.2.1-OSTROM-PREISSTATISTIK-20261005\";",
+      "const ELDEHOF_BUILD = \"6.3.0-VAILLANT-KLIMA-20261031\";"
+    ],
+    [
+      "vaillantCsvImport: \"local-arotherm-unitower-monthly\",",
+      "vaillantCsvImport: \"local-arotherm-unitower-monthly-and-climate\",\n          weatherNormalization: \"archive-HDD15-2024-2025\","
+    ],
+    [
+      "        if (url.pathname === \"/api/weather\") {",
+      "        if (url.pathname === \"/api/weather/archive\") {\n          const year=Number(url.searchParams.get(\"year\"));\n          if(!Number.isInteger(year)||year<2023||year>new Date().getUTCFullYear())throw httpError(400,\"Ungültiges Wetterjahr\");\n          return json(await buildClimateArchive(year,env));\n        }\n        if (url.pathname === \"/api/weather\") {"
+    ],
+    [
+      "async function buildWeatherPayload(env) {",
+      "@@WEATHERFN@@\nasync function buildWeatherPayload(env) {"
+    ]
+  ]
+}
